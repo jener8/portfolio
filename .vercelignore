@@ -1,0 +1,3 @@
+# Force Vercel to clear build cache
+node_modules
+.next

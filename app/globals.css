@@ -1,0 +1,294 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* iOS 26 Liquid Glass - Light cream warm palette */
+  --background: #f5f0e8;
+  --foreground: #1a1200;
+  --card: rgba(255, 255, 255, 0.42);
+  --card-foreground: #1a1200;
+  --popover: #ffffff;
+  --popover-foreground: #1a1200;
+  --primary: #c9960a;
+  --primary-foreground: #f5f0e8;
+  --secondary: #ede6d8;
+  --secondary-foreground: #2d2000;
+  --muted: #ede6d8;
+  --muted-foreground: #5a4a20;
+  --accent: #c9960a;
+  --accent-foreground: #1a1200;
+  --destructive: #c53030;
+  --destructive-foreground: #fafafa;
+  --border: rgba(0, 0, 0, 0.08);
+  --input: #ede6d8;
+  --ring: #c9960a;
+
+  --hero-golden: #c9960a;
+  --hero-golden-foreground: #1a1200;
+
+  /* Glass tokens - iOS 26 frosted glass on light cream */
+  --glass: rgba(255, 255, 255, 0.42);
+  --glass-border: rgba(255, 255, 255, 0.75);
+  --glass-border-bottom: rgba(255, 255, 255, 0.3);
+  --glass-highlight: rgba(255, 255, 255, 0.9);
+
+  --chart-1: #c9960a;
+  --chart-2: #1a6c7a;
+  --chart-3: #3d6a42;
+  --chart-4: #b07d2e;
+  --chart-5: #8c4a6e;
+  --chart-6: #2a7a8e;
+  --chart-7: #9e5a2a;
+  --chart-8: #3a8e5a;
+
+  --radius: 1rem;
+  --sidebar: #f5f0e8;
+  --sidebar-foreground: #1a1200;
+  --sidebar-primary: #c9960a;
+  --sidebar-primary-foreground: #f5f0e8;
+  --sidebar-accent: #ede6d8;
+  --sidebar-accent-foreground: #2d2000;
+  --sidebar-border: rgba(0, 0, 0, 0.08);
+  --sidebar-ring: #c9960a;
+}
+
+@theme inline {
+  --font-sans: "Geist", "Geist Fallback";
+  --font-mono: "Geist Mono", "Geist Mono Fallback";
+  --font-serif-display: "Playfair Display", "Georgia", "serif";
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-hero-golden: var(--hero-golden);
+  --color-hero-golden-foreground: var(--hero-golden-foreground);
+
+  --color-glass: var(--glass);
+  --color-glass-border: var(--glass-border);
+  --color-glass-highlight: var(--glass-highlight);
+
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-chart-6: var(--chart-6);
+  --color-chart-7: var(--chart-7);
+  --color-chart-8: var(--chart-8);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply text-foreground;
+    min-height: 100vh;
+    background-color: #f5f0e8;
+  }
+}
+
+@keyframes spin-three-times {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(1080deg); }
+}
+
+.animate-spin-three-times {
+  animation: spin-three-times 2s ease-in-out forwards;
+}
+
+@keyframes scale-down {
+  from { transform: scale(2); }
+  to { transform: scale(1); }
+}
+
+.animate-scale-down {
+  animation: scale-down 0.5s ease-out forwards;
+}
+
+/* ---- Blob background animations ---- */
+@keyframes blob-drift-1 {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(30px, -20px); }
+  50% { transform: translate(-20px, 30px); }
+  75% { transform: translate(20px, 15px); }
+}
+@keyframes blob-drift-2 {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(-25px, 15px); }
+  50% { transform: translate(30px, -25px); }
+  75% { transform: translate(-15px, -20px); }
+}
+@keyframes blob-drift-3 {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(15px, 25px); }
+  50% { transform: translate(-30px, -15px); }
+  75% { transform: translate(25px, -10px); }
+}
+
+/* Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .blob { animation: none !important; }
+}
+/* Reduce-motion toggle class */
+body.reduced .blob {
+  animation-duration: 0s !important;
+  animation-play-state: paused !important;
+}
+
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  will-change: transform;
+}
+.blob-1 {
+  width: 500px;
+  height: 500px;
+  top: -100px;
+  left: -100px;
+  background: radial-gradient(circle, #d4860a, transparent 70%);
+  opacity: 0.55;
+  animation: blob-drift-1 40s ease-in-out infinite;
+}
+.blob-2 {
+  width: 400px;
+  height: 400px;
+  top: -50px;
+  right: -80px;
+  background: radial-gradient(circle, #f5c842, transparent 70%);
+  opacity: 0.4;
+  animation: blob-drift-2 45s ease-in-out infinite;
+}
+.blob-3 {
+  width: 350px;
+  height: 350px;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: radial-gradient(circle, #b36b00, transparent 70%);
+  opacity: 0.3;
+  animation: blob-drift-3 38s ease-in-out infinite;
+}
+
+/* ---- Section label separator ---- */
+.section-label::after {
+  content: '';
+  display: block;
+  width: 28px;
+  height: 2px;
+  background: #c9960a;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+/* ---- Typography - dark text on light glass, NO text shadows ---- */
+h1, h2, h3, h4, h5, h6 {
+  color: #1a1200;
+  text-shadow: none;
+}
+
+/* ---- Focus visible - gold ring ---- */
+*:focus-visible {
+  outline: 2px solid rgba(201, 150, 10, 0.8);
+  outline-offset: 4px;
+  border-radius: 6px;
+}
+
+/* ---- Glass card utility - iOS 26 Liquid Glass ---- */
+.glass-card {
+  backdrop-filter: blur(28px) saturate(60%) brightness(1.08);
+  -webkit-backdrop-filter: blur(28px) saturate(60%) brightness(1.08);
+  background: rgba(255, 255, 255, 0.42);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-bottom-color: rgba(255, 255, 255, 0.3);
+  border-right-color: rgba(255, 255, 255, 0.5);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.glass-card-solid {
+  backdrop-filter: blur(28px) saturate(60%) brightness(1.05);
+  -webkit-backdrop-filter: blur(28px) saturate(60%) brightness(1.05);
+  background: rgba(255, 255, 255, 0.55);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-bottom-color: rgba(255, 255, 255, 0.3);
+  border-right-color: rgba(255, 255, 255, 0.5);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+/* ---- Glass navigation pill ---- */
+.glass-nav {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(20px) saturate(70%) brightness(1.05);
+  -webkit-backdrop-filter: blur(20px) saturate(70%) brightness(1.05);
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.8),
+    0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+
+/* Remove default outline only when :focus-visible handles it */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+[id^="diagram-"],
+[id^="gallery-image-"] {
+  scroll-margin-top: 100px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
