@@ -498,21 +498,21 @@ export default function Page() {
             <Card className="glass-card overflow-hidden" style={{ padding: '36px', marginBottom: '48px' }}>
               <CardContent className="p-0 flex flex-col justify-center max-w-4xl mx-auto sm:p-4 lg:p-8">
                 {/* Label */}
-                <p className="section-label mb-0" style={{ fontSize: '10px', letterSpacing: '0.14em', fontWeight: 700, color: '#8a5c00', textTransform: 'uppercase' }}>AI UX Product Designer        </p>
+                <p className="section-label mb-0" style={{ fontSize: '10px', letterSpacing: '0.14em', fontWeight: 700, color: '#8a5c00', textTransform: 'uppercase' }}>Senior CX Researcher &amp; Discovery Lead</p>
 
                 {/* H1 */}
                 <h1 className="text-balance" style={{ fontSize: 'clamp(2rem, 3.5vw, 2.8rem)', fontWeight: 900, color: '#1a1200', lineHeight: 1.1, letterSpacing: '-0.02em', marginBottom: '24px' }}>
-                  AI problems. Solved safely, accessibly, compliantly                  
+                  I find out what{"'"}s really going on before you build the wrong thing
                 </h1>
 
                 {/* Primary body */}
                 <p style={{ fontSize: '1rem', color: '#2d2000', lineHeight: 1.75, marginBottom: '24px' }}>
-                  I reimagine AI products and operational challenges others find too complex — and solve them safely, accessibly, and compliantly. I find the angle others missed and build the story that brings the room with me. I work best with teams who want to test and challenge — not just sign off.
+                  I run discovery programmes that turn ambiguity into evidence {"—"} mixed-method research, field studies, stakeholder alignment, and insight synthesis that gives product teams the confidence to commit. I{"'"}ve led research across government, AI, and regulated industries, and I work best with teams who want to challenge assumptions before writing a single line of code.
                 </p>
 
                 {/* Secondary body */}
                 <p style={{ fontSize: '0.9rem', color: '#5a4a20', lineHeight: 1.75, marginBottom: '24px' }}>
-                  AI that isn&apos;t safe doesn&apos;t get adopted. AI that isn&apos;t adopted doesn&apos;t matter. I design for both.
+                  Products built on guesswork fail. Products built on evidence ship with conviction. I make sure you have the evidence.
                 </p>
 
                 {/* Primary CTA */}
@@ -530,13 +530,13 @@ export default function Page() {
                     className="font-bold px-8 shadow-lg min-h-[44px]"
                     style={{ background: '#1a1200', color: '#f5c842', borderRadius: '100px' }}
                   >
-                    {"View My Work"}  
+                    {"See the Evidence"}
                   </Button>
                 </div>
 
                 {/* Secondary credentials line */}
                 <p style={{ fontSize: '11px', color: '#7a6030' }}>
-                  AI Governance Consultant | Accessibility Expert | Product Designer
+                  Discovery Lead | Mixed-Methods Researcher | AI &amp; Accessibility Specialist
                 </p>
               </CardContent>
             </Card>
@@ -553,39 +553,39 @@ export default function Page() {
                     {[
                       {
                         href: "/case-studies/trust-by-design-framework",
-                        label: "AI Governance \u00B7 Strategy \u00B7 Research",
-                        title: "Responsible AI",
-                        role: "Lead Researcher \u00B7 Concept Design \u00B7 Framework Design",
+                        label: "Discovery \u00B7 AI Governance \u00B7 Strategy",
+                        title: "Trust by Design Framework",
+                        role: "Lead Researcher \u00B7 Stakeholder Alignment \u00B7 Framework Synthesis",
                         icon: Icons.Brain,
                         stat: "EU AI Act",
-                        context: "Built a trust framework for high-risk AI systems",
+                        context: "Led discovery across high-risk AI regulation to build an actionable trust framework",
                       },
                       {
                         href: "/case-studies/digital-drivers-licence",
-                        label: "Product Design \u00B7 iOS \u00B7 Android",
-                        title: "End-to-End UX",
-                        role: "Lead UX Designer \u00B7 Research \u00B7 Concept Design",
+                        label: "Field Research \u00B7 Discovery \u00B7 Scale",
+                        title: "Germany\u2019s #1 Gov App",
+                        role: "Discovery Lead \u00B7 200+ User Interviews \u00B7 Field Studies",
                         icon: Icons.Smartphone,
                         stat: "1M+ Users",
-                        context: "Shipped the most-used government consumer app in Germany",
+                        context: "Led the research programme that shaped Germany\u2019s most-used government consumer app",
                       },
                       {
                         href: "/case-studies/digital-identity-services",
-                        label: "Accessibility \u00B7 Compliance \u00B7 Systems",
-                        title: "BITV Compliance",
-                        role: "Accessibility Lead \u00B7 Research \u00B7 Concept Design",
+                        label: "Mixed Methods \u00B7 Accessibility \u00B7 Compliance",
+                        title: "100% BITV Accessible",
+                        role: "Research Lead \u00B7 Co-creation Workshops \u00B7 Audit & Testing",
                         icon: Icons.Accessibility,
-                        stat: "100% Accessible",
-                        context: "Germany\u2019s first fully accessible government app",
+                        stat: "98/98 Criteria",
+                        context: "Research-driven accessibility programme that achieved full BITV certification",
                       },
                       {
                         href: "/case-studies/trustbridge",
-                        label: "AI Interaction Design",
-                        title: "Discovery, Adoption, Enrollment",
-                        role: "UX Designer \u00B7 Research \u00B7 Concepting \u00B7 Adoption & Enrollment",
+                        label: "Generative Research \u00B7 AI Trust \u00B7 Prototyping",
+                        title: "TrustBridge Discovery",
+                        role: "Discovery Lead \u00B7 3 User Groups \u00B7 Hypothesis-Driven Sprints",
                         icon: Icons.ShieldCheck,
-                        stat: "4 Prototyped Journeys",
-                        context: "AI trust interaction design \u2014 ready for B2B, B2C, SaaS, Health and Education",
+                        stat: "4 Tested Journeys",
+                        context: "End-to-end discovery programme across B2B, Health, SaaS, and Education",
                       },
                     ].map((study, i) => (
                       <Link key={i} href={study.href} aria-label={`View case study: ${study.title}`} className="group block">
@@ -629,7 +629,7 @@ export default function Page() {
                     How I got here
                   </p>
                   <p className="text-sm leading-relaxed" style={{ color: '#2d2000' }}>
-                    {"I started as a fine artist, made magic for Harry Potter, and landed in Berlin designing products that actually help people. I\u2019m British-German, a mum of two, and I bring imagination and creativity into everything I do. I see the world in pictures and stories \u2014 and that\u2019s what makes me good at untangling the messy stuff nobody else wants to touch."}
+                    {"I started as a fine artist, made magic for Harry Potter, and landed in Berlin running research programmes for products used by millions. I\u2019m British-German, a mum of two, and I bring curiosity and imagination into every discovery. I see the world in patterns and stories \u2014 and that\u2019s what makes me good at finding the insight others miss."}
                   </p>
                 </div>
               </div>
@@ -649,19 +649,19 @@ export default function Page() {
               </div>
 
               <CardContent className="p-8 relative z-10" style={{ padding: '36px' }}>
-                <h2 id="about-heading" className="text-xl font-bold mb-6 text-primary">What I bring to a product team</h2>
+                <h2 id="about-heading" className="text-xl font-bold mb-6 text-primary">What I bring to a research programme</h2>
                 <div className="space-y-3">
                   <p className="text-sm leading-relaxed" style={{ color: '#2d2000' }}>
-                    {"I fix the AI stuff nobody else wants to touch. The feature people keep turning off. The thing nobody can explain. The rule that\u2019s been ignored for years."}
+                    {"I run the discovery nobody else wants to do. The ambiguous problem space. The stakeholders who can\u2019t agree. The user needs nobody has actually validated yet."}
                   </p>
                   <p className="text-sm leading-relaxed" style={{ color: '#2d2000' }}>
-                    {"I make complicated things simple. I\u2019ve done it for 10+ years on products used by millions of people."}
+                    {"I synthesise complex evidence into clear, actionable insights. I\u2019ve done it for 10+ years on products used by millions of people."}
                   </p>
                   <p className="text-sm leading-relaxed" style={{ color: '#2d2000' }}>
-                    {"I\u2019m creative and hands-on \u2014 but I also zoom out and look at the whole journey, the big picture, and the story it tells."}
+                    {"I\u2019m hands-on in the field \u2014 but I also zoom out and connect findings to strategy, roadmap, and business outcomes."}
                   </p>
                   <p className="text-sm leading-relaxed" style={{ color: '#2d2000' }}>
-                    {"I make sure AI is fair, accessible, and follows the rules \u2014 not as a checklist, but as the starting point. I\u2019m the one who gets everyone in the room to agree and turns that into something real."}
+                    {"I align the room. Engineers, legal, product, and executives \u2014 I get them working from the same evidence and moving in the same direction."}
                   </p>
                 </div>
               </CardContent>
@@ -675,68 +675,68 @@ export default function Page() {
                 <div className="grid grid-cols-1 gap-4">
                   {[
                     {
-                      icon: Icons.ShieldCheck,
-                      title: "AI Product Strategy",
-                      subtitle: "Where AI creates value vs. risk",
-                      description: "I work with product teams to identify where AI creates value and where it creates risk \u2014 and design the layer that makes it adoptable at scale.",
-                      linkText: "See how I did this for EU AI Act compliance \u2192",
-                      linkHref: "/case-studies/trust-by-design-framework",
-                    },
-                    {
-                      icon: Icons.Users,
-                      title: "Regulatory to Roadmap",
-                      subtitle: "From compliance to product decisions",
-                      description: "I translate EU AI Act and compliance requirements into product decisions your team can ship. No legal jargon \u2014 just clear product constraints and opportunities.",
-                      linkText: "See my Trust by Design framework \u2192",
-                      linkHref: "/case-studies/trust-by-design-framework",
+                      icon: Icons.Search,
+                      title: "Discovery Programmes",
+                      subtitle: "From ambiguity to evidence-based direction",
+                      description: "I scope and run end-to-end discovery \u2014 defining research questions, recruiting participants, running fieldwork, and synthesising findings into clear product direction.",
+                      linkText: "See the i-Kfz discovery programme \u2192",
+                      linkHref: "/case-studies/digital-drivers-licence",
                     },
                     {
                       icon: Icons.Target,
-                      title: "Prioritisation & Scoping",
-                      subtitle: "Cut through AI feature noise",
-                      description: "I help product and design teams cut through AI feature noise \u2014 ranking use cases by user impact, technical feasibility, and business value.",
-                      linkText: "See my approach \u2192",
-                      linkHref: "/case-studies/trust-by-design-framework",
+                      title: "Mixed-Method Research",
+                      subtitle: "Qualitative depth, quantitative confidence",
+                      description: "Interviews, contextual inquiry, diary studies, surveys, usability testing, co-creation workshops \u2014 I choose and combine methods based on what the question actually needs.",
+                      linkText: "See how I ran 200+ user interviews \u2192",
+                      linkHref: "/case-studies/digital-drivers-licence",
                     },
                     {
                       icon: Icons.Handshake,
                       title: "Stakeholder Alignment",
                       subtitle: "Getting the room to a decision",
-                      description: "I\u2019ve aligned engineers, legal, executives, and frontline teams on complex product decisions. I know how to get the room to a decision.",
-                      linkText: "See how I run governance workshops \u2192",
+                      description: "I\u2019ve aligned engineers, legal, executives, and frontline teams around research findings. I know how to turn contested insights into shared conviction.",
+                      linkText: "See how I run alignment workshops \u2192",
+                      linkHref: "/case-studies/trust-by-design-framework",
+                    },
+                    {
+                      icon: Icons.Map,
+                      title: "Insight-to-Action Synthesis",
+                      subtitle: "From raw data to strategic recommendations",
+                      description: "I don\u2019t just hand over a research report. I synthesise findings into prioritised recommendations, opportunity maps, and frameworks that product teams can act on immediately.",
+                      linkText: "See the Trust by Design framework \u2192",
+                      linkHref: "/case-studies/trust-by-design-framework",
+                    },
+                    {
+                      icon: Icons.ShieldCheck,
+                      title: "AI & Regulated Contexts",
+                      subtitle: "Research in high-stakes environments",
+                      description: "I\u2019ve led research in government, healthcare, and EU AI Act contexts. I understand how to navigate compliance, ethics boards, and sensitive user groups.",
+                      linkText: "See the Responsible AI case study \u2192",
                       linkHref: "/case-studies/trust-by-design-framework",
                     },
                     {
                       icon: Icons.Accessibility,
-                      title: "Accessibility at Scale",
-                      subtitle: "WCAG and BITV as design constraints",
-                      description: "I\u2019ve shipped accessible products used by over a million people. WCAG and BITV aren\u2019t checklists for me \u2014 they\u2019re design constraints I build from.",
-                      linkText: "See the i-Kfz case study \u2192",
-                      linkHref: "/case-studies/digital-drivers-licence",
+                      title: "Inclusive Research",
+                      subtitle: "Reaching the users others miss",
+                      description: "I\u2019ve run research with assistive technology users, elderly citizens, non-native speakers, and low-digital-literacy groups. Accessibility isn\u2019t an afterthought \u2014 it\u2019s built into my research design.",
+                      linkText: "See the BITV accessibility programme \u2192",
+                      linkHref: "/case-studies/digital-identity-services",
                     },
                     {
-                      icon: Icons.Sparkles,
-                      title: "Explainable AI Interfaces",
-                      subtitle: "Making AI legible and contestable",
-                      description: "I design the moments where AI surfaces a decision to a user \u2014 making it legible, trustworthy, and contestable without friction.",
-                      linkText: "See the TrustBridge project \u2192",
-                      linkHref: "/case-studies/trustbridge",
-                    },
-                    {
-                      icon: Icons.Search,
-                      title: "User Research",
-                      subtitle: "The insight that changes the direction",
-                      description: "I\u2019ve run research across 14+ product teams and hundreds of users. I find the insight that changes the direction, not just the one that confirms it.",
+                      icon: Icons.Users,
+                      title: "Research Ops & Scaling",
+                      subtitle: "Building research culture in teams",
+                      description: "I set up participant panels, research repositories, and insight-sharing rituals. I\u2019ve embedded research practices across 14+ product teams.",
                       linkText: "See my research approach \u2192",
                       linkHref: "/case-studies/digital-drivers-licence",
                     },
                     {
-                      icon: Icons.Map,
-                      title: "Service & Journey Design",
-                      subtitle: "End-to-end multi-touchpoint mapping",
-                      description: "I map end-to-end user journeys across complex multi-touchpoint products \u2014 finding where AI-assisted flows break down and why.",
-                      linkText: "See how I mapped AI consent journeys \u2192",
-                      linkHref: "/case-studies/trustbridge#journey-mapping",
+                      icon: Icons.Sparkles,
+                      title: "Generative & Evaluative Research",
+                      subtitle: "Exploring the unknown, validating the known",
+                      description: "I run generative research to uncover new opportunities and evaluative research to test assumptions. I know when to explore and when to validate.",
+                      linkText: "See the TrustBridge discovery sprints \u2192",
+                      linkHref: "/case-studies/trustbridge",
                     },
                   ].map((item, index) => {
                     const isExpanded = expandedExpertise === index
@@ -1029,7 +1029,7 @@ export default function Page() {
                 Who I work with
               </h2>
               <p className="text-sm" style={{ color: '#5a4a20' }}>
-                Teams building AI products who{"'"}ve hit one of these walls:
+                Teams who{"'"}ve hit one of these research gaps:
               </p>
             </div>
           </div>
@@ -1038,33 +1038,33 @@ export default function Page() {
             {[
               {
                 icon: Icons.TrendingDown,
-                title: "Nobody uses the AI feature",
-                desc: "You built it. People ignore it. I find out why and fix the design so they trust it.",
+                title: "You shipped without evidence",
+                desc: "The feature launched but nobody uses it. I run the research to find out what users actually need \u2014 before the next build cycle.",
               },
               {
                 icon: Icons.XCircle,
-                title: "Legal is blocking the roadmap",
-                desc: "Rules keep arriving late. I turn them into simple design decisions your team can actually use.",
+                title: "Stakeholders can\u2019t agree on the problem",
+                desc: "Everyone has a different hypothesis. I gather the evidence that aligns the room and turns debate into direction.",
               },
               {
                 icon: Icons.Scale,
-                title: "One wrong AI answer loses the user",
-                desc: "AI gets it wrong and there\u2019s no way back. I build a safety net into every step.",
+                title: "Nobody has talked to users yet",
+                desc: "Assumptions are driving the roadmap. I set up and run the fieldwork that gives your team real confidence.",
               },
               {
-  icon: Icons.Sparkles,
-  title: "The problem nobody can agree on",
-  desc: "Everyone has a different idea and nobody will budge. I listen to all of it, find what\u2019s actually going on, and help the team finally get on the same page.",
+                icon: Icons.Sparkles,
+                title: "The insight never reaches the roadmap",
+                desc: "Research happens but nothing changes. I synthesise findings into prioritised, actionable recommendations that product teams can ship.",
               },
               {
                 icon: Icons.HelpCircle,
-                title: "Nobody can explain the service",
-                desc: "Users get lost or call support. I map the whole experience and make it make sense.",
+                title: "Complex user journeys keep breaking",
+                desc: "Users drop off and nobody knows where or why. I map end-to-end journeys and pinpoint the moments that matter.",
               },
               {
                 icon: Icons.Map,
-                title: "Accessibility keeps getting skipped",
-                desc: "It\u2019s always next sprint. I make it part of the design from day one \u2014 not an afterthought.",
+                title: "Regulated contexts slow everything down",
+                desc: "Legal, compliance, and ethics reviews keep blocking progress. I embed research into the process so discovery and governance move together.",
               },
             ].map((item, i) => (
               <div
@@ -1094,7 +1094,7 @@ export default function Page() {
 
           {/* Stat pills */}
           <div className="flex flex-wrap items-center justify-center gap-3 mt-6">
-            {["10+ years shipping at scale", "1M+ users", "EU AI Act specialist"].map((stat) => (
+            {["200+ user interviews", "10+ years in research", "Mixed-methods specialist"].map((stat) => (
               <span
                 key={stat}
                 className="px-4 py-2 rounded-full text-xs font-semibold"
@@ -1117,7 +1117,7 @@ export default function Page() {
               Currently available for
             </h2>
             <div className="flex flex-wrap items-center justify-center gap-3 mb-6">
-              {["Senior UX Designer", "Lead Product Designer", "AI UX Specialist", "Contract & Freelance"].map((tag) => (
+              {["Senior CX Researcher", "Discovery Lead", "Research Programme Lead", "Contract & Freelance"].map((tag) => (
                 <span
                   key={tag}
                   className="px-4 py-2 rounded-full text-sm font-medium"

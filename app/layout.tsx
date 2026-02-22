@@ -19,23 +19,23 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: "Jennifer Simonds-Spellmann — Product Design",
-  description: "Product design for complex, regulated digital systems — AI, accessibility, and public services.",
+  title: "Jennifer Simonds-Spellmann — Senior CX Researcher & Discovery Lead",
+  description: "Discovery programmes and mixed-method research for complex, regulated digital products — AI, accessibility, and public services.",
   generator: "v0.app",
   icons: {
     icon: "/favicon.png",
   },
   openGraph: {
-    title: "Jennifer Simonds-Spellmann — Product Design",
-    description: "Product design for complex, regulated digital systems — AI, accessibility, and public services.",
+    title: "Jennifer Simonds-Spellmann — Senior CX Researcher & Discovery Lead",
+    description: "Discovery programmes and mixed-method research for complex, regulated digital products — AI, accessibility, and public services.",
     type: "website",
     url: "https://jennifersimonds.com",
     siteName: "Jennifer Simonds-Spellmann",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jennifer Simonds-Spellmann — Product Design",
-    description: "Product design for complex, regulated digital systems — AI, accessibility, and public services.",
+    title: "Jennifer Simonds-Spellmann — Senior CX Researcher & Discovery Lead",
+    description: "Discovery programmes and mixed-method research for complex, regulated digital products — AI, accessibility, and public services.",
   },
 }
 
