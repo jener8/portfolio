@@ -563,7 +563,7 @@ export default function Page() {
                       {
                         href: "/case-studies/digital-drivers-licence",
                         label: "Product Design \u00B7 iOS \u00B7 Android",
-                        title: "Germany\u2019s #1 Gov App",
+                        title: "End-to-End UX",
                         role: "Lead UX Designer \u00B7 Research \u00B7 Concept Design",
                         icon: Icons.Smartphone,
                         stat: "1M+ Users",
@@ -581,7 +581,7 @@ export default function Page() {
                       {
                         href: "/case-studies/trustbridge",
                         label: "AI Interaction Design",
-                        title: "End to End UX",
+                        title: "Discovery, Adoption, Enrollment",
                         role: "UX Designer \u00B7 Research \u00B7 Concepting \u00B7 Adoption & Enrollment",
                         icon: Icons.ShieldCheck,
                         stat: "4 Prototyped Journeys",
