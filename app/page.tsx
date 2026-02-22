@@ -498,7 +498,7 @@ export default function Page() {
             <Card className="glass-card overflow-hidden" style={{ padding: '36px', marginBottom: '48px' }}>
               <CardContent className="p-0 flex flex-col justify-center max-w-4xl mx-auto sm:p-4 lg:p-8">
                 {/* Label */}
-                <p className="section-label mb-0" style={{ fontSize: '10px', letterSpacing: '0.14em', fontWeight: 700, color: '#8a5c00', textTransform: 'uppercase' }}>Senior CX UX AI Researcher &amp; Discovery Lead</p>
+                <p className="section-label mb-0" style={{ fontSize: '10px', letterSpacing: '0.14em', fontWeight: 700, color: '#8a5c00', textTransform: 'uppercase' }}>Discovery &amp; AI Product Experience Lead</p>
 
                 {/* H1 */}
                 <h1 className="text-balance" style={{ fontSize: 'clamp(2rem, 3.5vw, 2.8rem)', fontWeight: 900, color: '#1a1200', lineHeight: 1.1, letterSpacing: '-0.02em', marginBottom: '24px' }}>
