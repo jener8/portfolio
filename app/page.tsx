@@ -553,7 +553,7 @@ export default function Page() {
                         <div className="bg-white/70 hover:bg-white/80 transition-all duration-200 rounded-md border border-slate-200 hover:border-primary/50 overflow-hidden h-full">
                           <div className="relative h-40 bg-slate-100 overflow-hidden">
                             <Image
-                              src={study.image}
+                              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20Mar%2025%2C%202026%2C%2003_51_52%20PM-AbYlvsdaju5Z37QMI717oM0JHXSbSa.png"
                               alt={study.title}
                               fill
                               className="object-cover group-hover:scale-105 transition-transform duration-300"
