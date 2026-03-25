@@ -608,7 +608,7 @@ export default function Page() {
                           {/* Image placeholder - replace src with your uploaded image */}
                           <div className="relative h-40 bg-slate-100 overflow-hidden">
                             <Image
-                              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20Mar%2025%2C%202026%2C%2002_17_29%20PM-N21nUnJnYkFqNhGuYADb7vr5cC3ARA.png"
+                              src={study.image}
                               alt={study.title}
                               fill
                               className="object-cover group-hover:scale-105 transition-transform duration-300"
