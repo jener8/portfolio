@@ -905,7 +905,7 @@ export default function Page() {
                 <div className="glass-card-solid rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer border border-glass-border hover:border-primary/30">
                   <div className="aspect-[4/3] relative">
                     <img
-                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20Feb%2012%2C%202026%2C%2004_25_46%20PM-4loRj3v503tpXMdCGipoh3q61yEssX.png"
+                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20Mar%2025%2C%202026%2C%2001_19_06%20PM-lKJc6sxA6adK6rvief6gZEMwV5etnG.png"
                       alt="Component library showing accessible form elements and color system"
                       className="w-full h-full object-cover"
                     />
