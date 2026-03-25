@@ -501,7 +501,7 @@ export default function Page() {
               <div className="flex-shrink-0 w-full md:w-auto">
                 <div className="relative w-48 h-56 md:w-56 md:h-64 rounded-md overflow-hidden shadow-lg">
                   <Image
-                    src="/images/jennifer-avatar.jpg"
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202026-03-25%20at%2015.47.28-lWKANJftraPKvr85RD5V9gbSuN10yH.png"
                     alt="Jennifer Simonds - Research & Discovery Lead"
                     fill
                     className="object-cover"
@@ -625,133 +625,11 @@ export default function Page() {
               </CardContent>
             </Card>
 
-            <Card id="expertise" className="glass-card scroll-mt-24" role="region" aria-labelledby="expertise-heading">
-              <CardContent className="p-6 sm:p-8">
-                <h2 id="expertise-heading" className="text-xl font-bold mb-6 text-primary">Leistungen</h2>
-
-                <div className="grid grid-cols-1 gap-4">
-                  {[
-                    {
-                      icon: Icons.ShieldCheck,
-                      title: "AI Governance & Compliance",
-                      subtitle: "EU AI Act | High-Risk Systems | Regulatory Translation",
-                      description: "Governance frameworks for high-risk AI systems. Translating EU AI Act requirements into actionable product constraints and compliance roadmaps.",
-                      linkText: "Trust by Design Framework →",
-                      linkHref: "/case-studies/trust-by-design-framework",
-                    },
-                    {
-                      icon: Icons.Search,
-                      title: "Discovery & Research",
-                      subtitle: "Evidence-Based Decision Making | Field Studies",
-                      description: "End-to-end discovery programmes delivering the evidence needed for confident product decisions in complex, regulated environments.",
-                      linkText: "i-Kfz Research Programme →",
-                      linkHref: "/case-studies/digital-drivers-licence",
-                    },
-                    {
-                      icon: Icons.Accessibility,
-                      title: "Accessibility & BITV",
-                      subtitle: "BITV 2.0 | WCAG 2.1 | Inclusive Design",
-                      description: "Comprehensive accessibility programmes from audit to certification. Achieving full BITV compliance for government and public sector applications.",
-                      linkText: "BITV Certification Programme →",
-                      linkHref: "/case-studies/digital-identity-services",
-                    },
-                    {
-                      icon: Icons.Handshake,
-                      title: "Stakeholder Alignment",
-                      subtitle: "Cross-Functional Coordination | Governance Workshops",
-                      description: "Aligning engineering, legal, product, and executive stakeholders around research findings. Turning evidence into decisive organisational action.",
-                      linkText: "Governance Workshop Approach →",
-                      linkHref: "/case-studies/trust-by-design-framework",
-                    },
-                    {
-                      icon: Icons.Brain,
-                      title: "Regulated Industries",
-                      subtitle: "Government | Healthcare | Critical Infrastructure",
-                      description: "Research and discovery in high-stakes environments. Navigating compliance requirements, ethics boards, and sensitive user groups.",
-                      linkText: "Government Services Portfolio →",
-                      linkHref: "/case-studies/trust-by-design-framework",
-                    },
-                    {
-                      icon: Icons.Accessibility,
-                      title: "Inclusive Research",
-                      subtitle: "Reaching the users others miss",
-                      description: "I’ve run research with assistive technology users, elderly citizens, non-native speakers, and low-digital-literacy groups. Accessibility isn’t an afterthought — it’s built into my research design.",
-                      linkText: "See the BITV accessibility programme →",
-                      linkHref: "/case-studies/digital-identity-services",
-                    },
-                    {
-                      icon: Icons.Users,
-                      title: "Research Ops & Scaling",
-                      subtitle: "Building research culture in teams",
-                      description: "I set up participant panels, research repositories, and insight-sharing rituals. I’ve embedded research practices across 14+ product teams.",
-                      linkText: "See my research approach →",
-                      linkHref: "/case-studies/digital-drivers-licence",
-                    },
-                    {
-                      icon: Icons.Sparkles,
-                      title: "Generative & Evaluative Research",
-                      subtitle: "Exploring the unknown, validating the known",
-                      description: "I run generative research to uncover new opportunities and evaluative research to test assumptions. I know when to explore and when to validate.",
-                      linkText: "See the TrustBridge discovery sprints →",
-                      linkHref: "/case-studies/trustbridge",
-                    },
-                  ].map((item, index) => {
-                    const isExpanded = expandedExpertise === index
-                    const IconComponent = item.icon
-                    return (
-                      <div
-                        key={index}
-                        className="w-full rounded-md glass-card overflow-hidden transition-all duration-200 hover:shadow-md hover:shadow-[rgba(0,0,0,0.08)]"
-                      >
-                        <button
-                          type="button"
-                          aria-expanded={isExpanded}
-                          aria-controls={`expertise-content-${index}`}
-                          onClick={() => setExpandedExpertise(isExpanded ? null : index)}
-                          className="w-full text-left p-4 flex items-center justify-between cursor-pointer hover:bg-white/30 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:ring-offset-2"
-                        >
-                          <div className="flex items-center gap-3">
-                            <div className="w-10 h-10 rounded-full bg-primary/8 flex items-center justify-center flex-shrink-0">
-                              <IconComponent className="h-5 w-5 text-[#c4a052]" aria-hidden="true" />
-                            </div>
-                            <div>
-                              <h4 className="text-sm font-bold text-foreground">{item.title}</h4>
-                              <p className="text-xs text-muted-foreground">{item.subtitle}</p>
-                            </div>
-                          </div>
-                          <Icons.ChevronDown className={`h-5 w-5 text-muted-foreground transition-transform duration-300 flex-shrink-0 ml-auto ${isExpanded ? "rotate-180" : ""}`} aria-hidden="true" />
-                        </button>
-                        <div
-                          id={`expertise-content-${index}`}
-                          className="overflow-hidden transition-all duration-300 ease-in-out"
-                          role="region"
-                          aria-hidden={!isExpanded}
-                          style={{ maxHeight: isExpanded ? "300px" : "0px", opacity: isExpanded ? 1 : 0 }}
-                        >
-                          <div className="px-4 pb-4 pt-2 border-t border-border/30">
-                            <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
-                            <Link
-                              href={item.linkHref}
-                              onClick={(e) => e.stopPropagation()}
-                              className="mt-3 inline-flex items-center text-xs font-medium text-primary hover:underline transition-colors"
-                            >
-                              {item.linkText}
-                            </Link>
-                          </div>
-                        </div>
-                      </div>
-                    )
-                  })}
-                </div>
-              </CardContent>
-            </Card>
-
+main
             <div className="lg:hidden mt-4">{ToolsUsedCard}</div>
           </div>
         </div>
       </main>
-
-      <section id="inside-the-work" className="container mx-auto px-4 scroll-mt-24 pt-0">
       </section>
 
       <section id="tools" className="container mx-auto px-4 py-16 scroll-mt-24">
