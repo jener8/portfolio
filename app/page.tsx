@@ -649,7 +649,7 @@ export default function Page() {
             >
               <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5">
                 <img
-                  src={study.image}
+                  src="/images/jennifer-avatar.jpg"
                   alt="Jennifer Simonds"
                   className="w-[88px] h-[88px] rounded-full object-cover flex-shrink-0"
                 />
