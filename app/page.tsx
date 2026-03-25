@@ -1,11 +1,13 @@
 "use client"
 
-import React from "react"
+import React, { useEffect, useState, useRef } from "react"
 import Image from "next/image"
+import Link from "next/link"
 
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { RememberHomeScroll } from "@/components/scroll-to-top"
 import {
   Sparkles,
   Mail,
@@ -118,11 +120,6 @@ const Icons = {
   AlertTriangle,
   HelpCircle,
 }
-import { useEffect, useState, useRef } from "react"
-
-import Link from "next/link"
-// import { ImageEditor } from "@/components/image-editor"
-import { RememberHomeScroll } from "@/components/scroll-to-top"
 
 const caseStudies = [
   {
@@ -625,12 +622,10 @@ export default function Page() {
               </CardContent>
             </Card>
 
-main
             <div className="lg:hidden mt-4">{ToolsUsedCard}</div>
           </div>
         </div>
       </main>
-      </section>
 
       <section id="tools" className="container mx-auto px-4 py-16 scroll-mt-24">
         <div className="mb-10">
