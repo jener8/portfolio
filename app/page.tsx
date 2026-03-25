@@ -344,13 +344,13 @@ export default function Page() {
         <div className="container mx-auto px-4">
           <div className="glass-nav px-4 py-2.5 flex items-center justify-between gap-3">
             <div className="flex items-center gap-3">
-              <Avatar className="h-11 w-11 min-w-[44px] min-h-[44px]" style={{ background: 'linear-gradient(135deg, #c9960a, #8a5c00)', padding: '2px' }}>
+              <Avatar className="h-11 w-11 min-w-[44px] min-h-[44px]" style={{ background: 'linear-gradient(135deg, #0891b2, #164e63)', padding: '2px' }}>
                 <AvatarImage src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/me%20gold-jqUw9JRBFNYLumFONY7dGqY8lrmEB1.jpg" alt="Jennifer Simonds-Spellmann" className="rounded-full" />
-                <AvatarFallback style={{ background: 'linear-gradient(135deg, #c9960a, #8a5c00)', color: '#f5f0e8' }} className="text-sm font-bold">JS</AvatarFallback>
+                <AvatarFallback style={{ background: 'linear-gradient(135deg, #0891b2, #164e63)', color: '#ffffff' }} className="text-sm font-bold">JS</AvatarFallback>
               </Avatar>
               <div>
-                <h1 className="text-sm font-semibold" style={{ color: '#1a1200' }}>Jennifer Simonds</h1>
-                <p className="text-xs hidden sm:block" style={{ color: '#5a4a20' }}>
+                        <h1 className="text-sm font-semibold" style={{ color: '#0a1628' }}>Jennifer Simonds</h1>
+                        <p className="text-xs hidden sm:block" style={{ color: '#64748b' }}>
                   AI UX Designer · Service Designer · Design Strategist
                 </p>
               </div>
@@ -366,7 +366,7 @@ export default function Page() {
               <Button
                 size="sm"
                 className="h-9 min-h-[44px] font-bold rounded-full px-5"
-                style={{ background: '#1a1200', color: '#f5c842' }}
+                style={{ background: '#0891b2', color: '#ffffff' }}
                 asChild
               >
                 <a href="mailto:info@jennifersimonds.com">
@@ -390,7 +390,7 @@ export default function Page() {
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="sm:hidden p-2 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-md transition-colors"
-              style={{ color: '#1a1200' }}
+                        style={{ color: '#0a1628' }}
               aria-label="Toggle menu"
             >
               <Icons.Menu className="h-6 w-6" />
@@ -464,7 +464,7 @@ export default function Page() {
                 <Button
                   size="sm"
                   className="w-full font-semibold h-10 min-h-[44px] shadow-sm rounded-full"
-                  style={{ background: '#1a1200', color: '#f5c842' }}
+                        style={{ background: '#0891b2', color: '#ffffff' }}
                   asChild
                 >
                   <a href="mailto:info@jennifersimonds.com">
@@ -498,21 +498,21 @@ export default function Page() {
             <Card className="glass-card overflow-hidden" style={{ padding: '36px', marginBottom: '48px' }}>
               <CardContent className="p-0 flex flex-col justify-center max-w-4xl mx-auto sm:p-4 lg:p-8">
                 {/* Label */}
-                <p className="section-label mb-0" style={{ fontSize: '10px', letterSpacing: '0.14em', fontWeight: 700, color: '#8a5c00', textTransform: 'uppercase' }}>Senior CX UX AI Researcher &amp; Discovery Lead</p>
+                <p className="section-label mb-0" style={{ fontSize: '10px', letterSpacing: '0.14em', fontWeight: 700, color: '#0891b2', textTransform: 'uppercase' }}>Research &amp; Discovery | Digital Trust | Made in Germany</p>
 
                 {/* H1 */}
-                <h1 className="text-balance" style={{ fontSize: 'clamp(2rem, 3.5vw, 2.8rem)', fontWeight: 900, color: '#1a1200', lineHeight: 1.1, letterSpacing: '-0.02em', marginBottom: '24px' }}>
-                  I find out what{"'"}s really going on before you build the wrong thing
+                <h1 className="text-balance" style={{ fontSize: 'clamp(2rem, 3.5vw, 2.8rem)', fontWeight: 900, color: '#0a1628', lineHeight: 1.1, letterSpacing: '-0.02em', marginBottom: '24px' }}>
+                  Creating Trust in Digital Systems
                 </h1>
 
                 {/* Primary body */}
-                <p style={{ fontSize: '1rem', color: '#2d2000', lineHeight: 1.75, marginBottom: '24px' }}>
-                  I run discovery programmes that turn ambiguity into evidence {"—"} mixed-method research, field studies, stakeholder alignment, and insight synthesis that gives product teams the confidence to commit. I{"'"}ve led research across government, AI, and regulated industries, and I work best with teams who want to challenge assumptions before writing a single line of code.
+                <p style={{ fontSize: '1rem', color: '#1e293b', lineHeight: 1.75, marginBottom: '24px' }}>
+                  I lead research and discovery programmes for organisations building secure, compliant digital products. From EU AI Act governance to accessible government services, I deliver the evidence and frameworks that enable confident product decisions in regulated environments.
                 </p>
 
                 {/* Secondary body */}
-                <p style={{ fontSize: '0.9rem', color: '#5a4a20', lineHeight: 1.75, marginBottom: '24px' }}>
-                  Products built on guesswork fail. Products built on evidence ship with conviction. I make sure you have the evidence.
+                <p style={{ fontSize: '0.9rem', color: '#64748b', lineHeight: 1.75, marginBottom: '24px' }}>
+                  Trust requires evidence. Evidence requires rigour. I bring both to every engagement.
                 </p>
 
                 {/* Primary CTA */}
@@ -528,15 +528,15 @@ export default function Page() {
                     }}
                     size="lg"
                     className="font-bold px-8 shadow-lg min-h-[44px]"
-                    style={{ background: '#1a1200', color: '#f5c842', borderRadius: '100px' }}
+                    style={{ background: '#0891b2', color: '#ffffff', borderRadius: '100px' }}
                   >
-                    {"See the Evidence"}
+                    {"View Case Studies"}
                   </Button>
                 </div>
 
                 {/* Secondary credentials line */}
-                <p style={{ fontSize: '11px', color: '#7a6030' }}>
-                  Discovery Lead | Mixed-Methods Researcher | AI &amp; Accessibility Specialist
+                <p style={{ fontSize: '11px', color: '#64748b' }}>
+                  EU AI Act | BITV 2.0 Compliant | Government &amp; Critical Infrastructure
                 </p>
               </CardContent>
             </Card>
@@ -553,43 +553,43 @@ export default function Page() {
                     {[
                       {
                         href: "/case-studies/trust-by-design-framework",
-                        label: "Discovery \u00B7 AI Governance \u00B7 Strategy",
-                        title: "Trust by Design Framework",
-                        role: "Lead Researcher \u00B7 Stakeholder Alignment \u00B7 Framework Synthesis",
+                        label: "AI Governance \u00B7 EU Compliance \u00B7 Framework",
+                        title: "Trust by Design",
+                        role: "Lead Researcher \u00B7 Regulatory Translation \u00B7 Governance Framework",
                         icon: Icons.Brain,
                         stat: "EU AI Act",
-                        context: "Led discovery across high-risk AI regulation to build an actionable trust framework",
+                        context: "Governance framework for high-risk AI systems meeting EU regulatory requirements",
                       },
                       {
                         href: "/case-studies/digital-drivers-licence",
-                        label: "Field Research \u00B7 Discovery \u00B7 Scale",
-                        title: "Germany\u2019s #1 Gov App",
-                        role: "Discovery Lead \u00B7 200+ User Interviews \u00B7 Field Studies",
+                        label: "Government \u00B7 Critical Infrastructure \u00B7 Scale",
+                        title: "i-Kfz Digital Services",
+                        role: "Research Lead \u00B7 Federal Government \u00B7 KBA",
                         icon: Icons.Smartphone,
                         stat: "1M+ Users",
-                        context: "Led the research programme that shaped Germany\u2019s most-used government consumer app",
+                        context: "Research programme for Germany\u2019s most-used government digital service",
                       },
                       {
                         href: "/case-studies/digital-identity-services",
-                        label: "Mixed Methods \u00B7 Accessibility \u00B7 Compliance",
-                        title: "100% BITV Accessible",
-                        role: "Research Lead \u00B7 Co-creation Workshops \u00B7 Audit & Testing",
+                        label: "Accessibility \u00B7 BITV 2.0 \u00B7 Compliance",
+                        title: "Full BITV Certification",
+                        role: "Accessibility Lead \u00B7 Audit \u00B7 Certification",
                         icon: Icons.Accessibility,
                         stat: "98/98 Criteria",
-                        context: "Research-driven accessibility programme that achieved full BITV certification",
+                        context: "Germany\u2019s first fully BITV-compliant government mobile application",
                       },
                       {
                         href: "/case-studies/trustbridge",
-                        label: "Generative Research \u00B7 AI Trust \u00B7 Prototyping",
-                        title: "TrustBridge Discovery",
-                        role: "Discovery Lead \u00B7 3 User Groups \u00B7 Hypothesis-Driven Sprints",
+                        label: "AI Trust \u00B7 Security \u00B7 Regulated Industries",
+                        title: "TrustBridge Framework",
+                        role: "Discovery Lead \u00B7 Health \u00B7 Finance \u00B7 Education",
                         icon: Icons.ShieldCheck,
-                        stat: "4 Tested Journeys",
-                        context: "End-to-end discovery programme across B2B, Health, SaaS, and Education",
+                        stat: "4 Verticals",
+                        context: "AI trust and consent frameworks for regulated industry applications",
                       },
                     ].map((study, i) => (
                       <Link key={i} href={study.href} aria-label={`View case study: ${study.title}`} className="group block">
-                        <div className="bg-white/40 hover:bg-white/50 transition-all duration-200 rounded-2xl border border-[#d4c9a8] hover:border-primary/50 p-6 sm:p-5 lg:p-7 flex flex-col items-center text-center h-full">
+                        <div className="bg-white/60 hover:bg-white/70 transition-all duration-200 rounded-xl border border-slate-200 hover:border-primary/50 p-6 sm:p-5 lg:p-7 flex flex-col items-center text-center h-full">
                           <study.icon className="h-8 w-8 text-primary mb-4" />
                           <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground mb-2">{study.label}</p>
                           <h3 className="text-base font-bold text-foreground mb-2">{study.title}</h3>
@@ -615,8 +615,8 @@ export default function Page() {
             {/* How I Got Here */}
             <div
               id="about"
-              className="mt-4 rounded-2xl p-6 sm:p-8 scroll-mt-24"
-              style={{ background: '#f9f6f0', border: '1px solid rgba(212,201,168,0.4)' }}
+              className="mt-4 rounded-xl p-6 sm:p-8 scroll-mt-24"
+              style={{ background: '#f1f5f9', border: '1px solid rgba(148,163,184,0.3)' }}
             >
               <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5">
                 <img
@@ -628,8 +628,8 @@ export default function Page() {
                   <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground mb-3">
                     How I got here
                   </p>
-                  <p className="text-sm leading-relaxed" style={{ color: '#2d2000' }}>
-                    {"I started as a fine artist, made magic for Harry Potter, and landed in Berlin running research programmes for products used by millions. I\u2019m British-German, a mum of two, and I bring curiosity and imagination into every discovery. I see the world in patterns and stories \u2014 and that\u2019s what makes me good at finding the insight others miss."}
+                  <p className="text-sm leading-relaxed" style={{ color: '#1e293b' }}>
+                    {"With over a decade of experience in research and discovery, I\u2019ve led programmes across government, critical infrastructure, and regulated industries. Based in Berlin, I specialise in translating complex regulatory requirements into actionable product strategy \u2014 from EU AI Act compliance to BITV accessibility certification."}
                   </p>
                 </div>
               </div>
@@ -640,7 +640,7 @@ export default function Page() {
 
           <div className="lg:col-span-1 space-y-6 order-4">
             <Card className="glass-card p-0 overflow-hidden" role="region" aria-labelledby="about-heading">
-              <div className="relative h-32 overflow-hidden" style={{ background: 'linear-gradient(135deg, #1a1200, #3d2800)' }}>
+              <div className="relative h-32 overflow-hidden" style={{ background: 'linear-gradient(135deg, #0a1628, #164e63)' }}>
                 <img
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/f8f19abf-9d96-47d9-8b32-26be54979267-4IKbuW7Ee5jefw7w9jmpaghNW5iSZy.png"
                   alt=""
@@ -649,19 +649,19 @@ export default function Page() {
               </div>
 
               <CardContent className="p-8 relative z-10" style={{ padding: '36px' }}>
-                <h2 id="about-heading" className="text-xl font-bold mb-6 text-primary">What I bring to a research programme</h2>
+                <h2 id="about-heading" className="text-xl font-bold mb-6 text-primary">Expertise &amp; Capabilities</h2>
                 <div className="space-y-3">
-                  <p className="text-sm leading-relaxed" style={{ color: '#2d2000' }}>
-                    {"I run the discovery nobody else wants to do. The ambiguous problem space. The stakeholders who can\u2019t agree. The user needs nobody has actually validated yet."}
+                  <p className="text-sm leading-relaxed" style={{ color: '#1e293b' }}>
+                    {"Evidence-based discovery for complex, regulated digital systems. From EU AI Act governance to BITV accessibility compliance."}
                   </p>
-                  <p className="text-sm leading-relaxed" style={{ color: '#2d2000' }}>
-                    {"I synthesise complex evidence into clear, actionable insights. I\u2019ve done it for 10+ years on products used by millions of people."}
+                  <p className="text-sm leading-relaxed" style={{ color: '#1e293b' }}>
+                    {"10+ years delivering research programmes for government, critical infrastructure, and high-risk AI applications."}
                   </p>
-                  <p className="text-sm leading-relaxed" style={{ color: '#2d2000' }}>
-                    {"I\u2019m hands-on in the field \u2014 but I also zoom out and connect findings to strategy, roadmap, and business outcomes."}
+                  <p className="text-sm leading-relaxed" style={{ color: '#1e293b' }}>
+                    {"Stakeholder alignment across engineering, legal, product, and executive teams \u2014 turning research into decisive action."}
                   </p>
-                  <p className="text-sm leading-relaxed" style={{ color: '#2d2000' }}>
-                    {"I align the room. Engineers, legal, product, and executives \u2014 I get them working from the same evidence and moving in the same direction."}
+                  <p className="text-sm leading-relaxed" style={{ color: '#1e293b' }}>
+                    {"Trusted by federal agencies, the Bundesdruckerei ecosystem, and organisations building secure digital services."}
                   </p>
                 </div>
               </CardContent>
@@ -670,48 +670,48 @@ export default function Page() {
             {/* My Expertise Card */}
             <Card id="expertise" className="glass-card scroll-mt-24" role="region" aria-labelledby="expertise-heading">
               <CardContent className="p-6 sm:p-8">
-                <h2 id="expertise-heading" className="text-xl font-bold mb-6 text-primary">My Expertise</h2>
+                <h2 id="expertise-heading" className="text-xl font-bold mb-6 text-primary">Leistungen</h2>
 
                 <div className="grid grid-cols-1 gap-4">
                   {[
                     {
+                      icon: Icons.ShieldCheck,
+                      title: "AI Governance & Compliance",
+                      subtitle: "EU AI Act | High-Risk Systems | Regulatory Translation",
+                      description: "Governance frameworks for high-risk AI systems. Translating EU AI Act requirements into actionable product constraints and compliance roadmaps.",
+                      linkText: "Trust by Design Framework \u2192",
+                      linkHref: "/case-studies/trust-by-design-framework",
+                    },
+                    {
                       icon: Icons.Search,
-                      title: "Discovery Programmes",
-                      subtitle: "From ambiguity to evidence-based direction",
-                      description: "I scope and run end-to-end discovery \u2014 defining research questions, recruiting participants, running fieldwork, and synthesising findings into clear product direction.",
-                      linkText: "See the i-Kfz discovery programme \u2192",
+                      title: "Discovery & Research",
+                      subtitle: "Evidence-Based Decision Making | Field Studies",
+                      description: "End-to-end discovery programmes delivering the evidence needed for confident product decisions in complex, regulated environments.",
+                      linkText: "i-Kfz Research Programme \u2192",
                       linkHref: "/case-studies/digital-drivers-licence",
                     },
                     {
-                      icon: Icons.Target,
-                      title: "Mixed-Method Research",
-                      subtitle: "Qualitative depth, quantitative confidence",
-                      description: "Interviews, contextual inquiry, diary studies, surveys, usability testing, co-creation workshops \u2014 I choose and combine methods based on what the question actually needs.",
-                      linkText: "See how I ran 200+ user interviews \u2192",
-                      linkHref: "/case-studies/digital-drivers-licence",
+                      icon: Icons.Accessibility,
+                      title: "Accessibility & BITV",
+                      subtitle: "BITV 2.0 | WCAG 2.1 | Inclusive Design",
+                      description: "Comprehensive accessibility programmes from audit to certification. Achieving full BITV compliance for government and public sector applications.",
+                      linkText: "BITV Certification Programme \u2192",
+                      linkHref: "/case-studies/digital-identity-services",
                     },
                     {
                       icon: Icons.Handshake,
                       title: "Stakeholder Alignment",
-                      subtitle: "Getting the room to a decision",
-                      description: "I\u2019ve aligned engineers, legal, executives, and frontline teams around research findings. I know how to turn contested insights into shared conviction.",
-                      linkText: "See how I run alignment workshops \u2192",
+                      subtitle: "Cross-Functional Coordination | Governance Workshops",
+                      description: "Aligning engineering, legal, product, and executive stakeholders around research findings. Turning evidence into decisive organisational action.",
+                      linkText: "Governance Workshop Approach \u2192",
                       linkHref: "/case-studies/trust-by-design-framework",
                     },
                     {
-                      icon: Icons.Map,
-                      title: "Insight-to-Action Synthesis",
-                      subtitle: "From raw data to strategic recommendations",
-                      description: "I don\u2019t just hand over a research report. I synthesise findings into prioritised recommendations, opportunity maps, and frameworks that product teams can act on immediately.",
-                      linkText: "See the Trust by Design framework \u2192",
-                      linkHref: "/case-studies/trust-by-design-framework",
-                    },
-                    {
-                      icon: Icons.ShieldCheck,
-                      title: "AI & Regulated Contexts",
-                      subtitle: "Research in high-stakes environments",
-                      description: "I\u2019ve led research in government, healthcare, and EU AI Act contexts. I understand how to navigate compliance, ethics boards, and sensitive user groups.",
-                      linkText: "See the Responsible AI case study \u2192",
+                      icon: Icons.Brain,
+                      title: "Regulated Industries",
+                      subtitle: "Government | Healthcare | Critical Infrastructure",
+                      description: "Research and discovery in high-stakes environments. Navigating compliance requirements, ethics boards, and sensitive user groups.",
+                      linkText: "Government Services Portfolio \u2192",
                       linkHref: "/case-studies/trust-by-design-framework",
                     },
                     {
@@ -966,15 +966,15 @@ export default function Page() {
 
               {/* Middle: Quick stats */}
               <div className="flex flex-wrap gap-3 lg:w-1/3 lg:justify-center">
-                <div className="flex items-center gap-2 rounded-full px-3 py-1.5" style={{ background: "rgba(255,255,255,0.5)", border: "1px solid #d4c9a8" }}>
+                <div className="flex items-center gap-2 rounded-full px-3 py-1.5" style={{ background: "rgba(255,255,255,0.65)", border: "1px solid rgba(148,163,184,0.3)" }}>
                   <Icons.Layers className="h-3.5 w-3.5 text-primary" />
                   <span className="text-xs font-semibold text-foreground">3 Contexts</span>
                 </div>
-                <div className="flex items-center gap-2 rounded-full px-3 py-1.5" style={{ background: "rgba(255,255,255,0.5)", border: "1px solid #d4c9a8" }}>
+                <div className="flex items-center gap-2 rounded-full px-3 py-1.5" style={{ background: "rgba(255,255,255,0.65)", border: "1px solid rgba(148,163,184,0.3)" }}>
                   <Icons.CheckCircle className="h-3.5 w-3.5 text-primary" />
                   <span className="text-xs font-semibold text-foreground">1 Toolkit Live</span>
                 </div>
-                <div className="flex items-center gap-2 rounded-full px-3 py-1.5" style={{ background: "rgba(255,255,255,0.5)", border: "1px solid #d4c9a8" }}>
+                <div className="flex items-center gap-2 rounded-full px-3 py-1.5" style={{ background: "rgba(255,255,255,0.65)", border: "1px solid rgba(148,163,184,0.3)" }}>
                   <Icons.Check className="h-3.5 w-3.5 text-primary" />
                   <span className="text-xs font-semibold text-foreground">EU AI Act Ready</span>
                 </div>
@@ -1002,34 +1002,34 @@ export default function Page() {
             >
               <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
                 {/* Connection lines */}
-                <line x1="28" y1="14" x2="14" y2="34" stroke="#c9960a" strokeWidth="1.5" strokeOpacity="0.4" />
-                <line x1="28" y1="14" x2="42" y2="34" stroke="#c9960a" strokeWidth="1.5" strokeOpacity="0.4" />
-                <line x1="14" y1="34" x2="42" y2="34" stroke="#c9960a" strokeWidth="1.5" strokeOpacity="0.4" />
-                <line x1="28" y1="14" x2="28" y2="44" stroke="#c9960a" strokeWidth="1.5" strokeOpacity="0.4" />
-                <line x1="14" y1="34" x2="28" y2="44" stroke="#c9960a" strokeWidth="1.5" strokeOpacity="0.4" />
-                <line x1="42" y1="34" x2="28" y2="44" stroke="#c9960a" strokeWidth="1.5" strokeOpacity="0.4" />
+                <line x1="28" y1="14" x2="14" y2="34" stroke="#0891b2" strokeWidth="1.5" strokeOpacity="0.4" />
+                <line x1="28" y1="14" x2="42" y2="34" stroke="#0891b2" strokeWidth="1.5" strokeOpacity="0.4" />
+                <line x1="14" y1="34" x2="42" y2="34" stroke="#0891b2" strokeWidth="1.5" strokeOpacity="0.4" />
+                <line x1="28" y1="14" x2="28" y2="44" stroke="#0891b2" strokeWidth="1.5" strokeOpacity="0.4" />
+                <line x1="14" y1="34" x2="28" y2="44" stroke="#0891b2" strokeWidth="1.5" strokeOpacity="0.4" />
+                <line x1="42" y1="34" x2="28" y2="44" stroke="#0891b2" strokeWidth="1.5" strokeOpacity="0.4" />
                 {/* Nodes */}
-                <circle cx="28" cy="14" r="6" fill="#c9960a" fillOpacity="0.15" stroke="#c9960a" strokeWidth="1.5" />
-                <circle cx="28" cy="14" r="2.5" fill="#c9960a" />
-                <circle cx="14" cy="34" r="5" fill="#c9960a" fillOpacity="0.15" stroke="#c9960a" strokeWidth="1.5" />
-                <circle cx="14" cy="34" r="2" fill="#c9960a" />
-                <circle cx="42" cy="34" r="5" fill="#c9960a" fillOpacity="0.15" stroke="#c9960a" strokeWidth="1.5" />
-                <circle cx="42" cy="34" r="2" fill="#c9960a" />
-                <circle cx="28" cy="44" r="4" fill="#c9960a" fillOpacity="0.15" stroke="#c9960a" strokeWidth="1.5" />
-                <circle cx="28" cy="44" r="1.5" fill="#c9960a" />
+                <circle cx="28" cy="14" r="6" fill="#0891b2" fillOpacity="0.15" stroke="#0891b2" strokeWidth="1.5" />
+                <circle cx="28" cy="14" r="2.5" fill="#0891b2" />
+                <circle cx="14" cy="34" r="5" fill="#0891b2" fillOpacity="0.15" stroke="#0891b2" strokeWidth="1.5" />
+                <circle cx="14" cy="34" r="2" fill="#0891b2" />
+                <circle cx="42" cy="34" r="5" fill="#0891b2" fillOpacity="0.15" stroke="#0891b2" strokeWidth="1.5" />
+                <circle cx="42" cy="34" r="2" fill="#0891b2" />
+                <circle cx="28" cy="44" r="4" fill="#0891b2" fillOpacity="0.15" stroke="#0891b2" strokeWidth="1.5" />
+                <circle cx="28" cy="44" r="1.5" fill="#0891b2" />
                 {/* Small accent dots */}
-                <circle cx="21" cy="24" r="1.5" fill="#c9960a" fillOpacity="0.3" />
-                <circle cx="35" cy="24" r="1.5" fill="#c9960a" fillOpacity="0.3" />
-                <circle cx="21" cy="39" r="1" fill="#c9960a" fillOpacity="0.25" />
-                <circle cx="35" cy="39" r="1" fill="#c9960a" fillOpacity="0.25" />
+                <circle cx="21" cy="24" r="1.5" fill="#0891b2" fillOpacity="0.3" />
+                <circle cx="35" cy="24" r="1.5" fill="#0891b2" fillOpacity="0.3" />
+                <circle cx="21" cy="39" r="1" fill="#0891b2" fillOpacity="0.25" />
+                <circle cx="35" cy="39" r="1" fill="#0891b2" fillOpacity="0.25" />
               </svg>
             </div>
             <div>
-              <h2 className="text-xl sm:text-2xl font-bold mb-1" style={{ color: '#1a1200' }}>
-                Who I work with
+              <h2 className="text-xl sm:text-2xl font-bold mb-1" style={{ color: '#0a1628' }}>
+                Sectors &amp; Challenges
               </h2>
-              <p className="text-sm" style={{ color: '#5a4a20' }}>
-                Teams who{"'"}ve hit one of these research gaps:
+              <p className="text-sm" style={{ color: '#64748b' }}>
+                Organisations navigating these requirements:
               </p>
             </div>
           </div>
@@ -1037,68 +1037,68 @@ export default function Page() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
               {
-                icon: Icons.TrendingDown,
-                title: "You shipped without evidence",
-                desc: "The feature launched but nobody uses it. I run the research to find out what users actually need \u2014 before the next build cycle.",
+                icon: Icons.ShieldCheck,
+                title: "EU AI Act Compliance",
+                desc: "High-risk AI systems requiring governance frameworks, risk assessment, and documentation for regulatory compliance.",
               },
               {
-                icon: Icons.XCircle,
-                title: "Stakeholders can\u2019t agree on the problem",
-                desc: "Everyone has a different hypothesis. I gather the evidence that aligns the room and turns debate into direction.",
+                icon: Icons.Accessibility,
+                title: "BITV &amp; Accessibility Certification",
+                desc: "Government and public sector applications requiring full BITV 2.0 or WCAG 2.1 compliance and certification.",
               },
               {
-                icon: Icons.Scale,
-                title: "Nobody has talked to users yet",
-                desc: "Assumptions are driving the roadmap. I set up and run the fieldwork that gives your team real confidence.",
+                icon: Icons.Brain,
+                title: "Critical Infrastructure",
+                desc: "Digital services for government, healthcare, and public administration requiring security-first research approaches.",
               },
               {
-                icon: Icons.Sparkles,
-                title: "The insight never reaches the roadmap",
-                desc: "Research happens but nothing changes. I synthesise findings into prioritised, actionable recommendations that product teams can ship.",
+                icon: Icons.Target,
+                title: "Digital Sovereignty",
+                desc: "Organisations prioritising data protection, transparent AI, and Made in Germany quality standards.",
               },
               {
-                icon: Icons.HelpCircle,
-                title: "Complex user journeys keep breaking",
-                desc: "Users drop off and nobody knows where or why. I map end-to-end journeys and pinpoint the moments that matter.",
+                icon: Icons.Handshake,
+                title: "Cross-Agency Coordination",
+                desc: "Federal programmes requiring stakeholder alignment across ministries, agencies, and technical partners.",
               },
               {
-                icon: Icons.Map,
-                title: "Regulated contexts slow everything down",
-                desc: "Legal, compliance, and ethics reviews keep blocking progress. I embed research into the process so discovery and governance move together.",
+                icon: Icons.Search,
+                title: "Evidence-Based Transformation",
+                desc: "Digital transformation initiatives requiring rigorous research to inform strategic decisions.",
               },
             ].map((item, i) => (
               <div
                 key={i}
                 className="flex gap-4 p-5"
                 style={{
-                  background: 'rgba(255,255,255,0.45)',
-                  border: '1px solid rgba(212,201,168,0.4)',
-                  borderRadius: '16px',
+                  background: 'rgba(255,255,255,0.65)',
+                  border: '1px solid rgba(148,163,184,0.3)',
+                  borderRadius: '12px',
                 }}
               >
-                <item.icon className="h-5 w-5 mt-0.5 flex-shrink-0" style={{ color: '#c9960a' }} />
+                <item.icon className="h-5 w-5 mt-0.5 flex-shrink-0" style={{ color: '#0891b2' }} />
                 <div>
-                  <p className="text-sm font-bold mb-1" style={{ color: '#1a1200' }}>{item.title}</p>
-                  <p className="text-xs leading-relaxed" style={{ color: '#5a4a20' }}>{item.desc}</p>
+                  <p className="text-sm font-bold mb-1" style={{ color: '#0a1628' }}>{item.title}</p>
+                  <p className="text-xs leading-relaxed" style={{ color: '#64748b' }}>{item.desc}</p>
                 </div>
               </div>
             ))}
           </div>
 
           {/* Callout */}
-          <div className="mt-6 rounded-xl p-5" style={{ background: 'rgba(201,150,10,0.06)', border: '2px solid rgba(201,150,10,0.3)' }}>
-            <p className="text-sm leading-relaxed" style={{ color: '#2d2000' }}>
-              I work best when someone senior has already decided: getting AI right for users is a requirement, not a nice-to-have.
+          <div className="mt-6 rounded-xl p-5" style={{ background: 'rgba(8,145,178,0.06)', border: '2px solid rgba(8,145,178,0.25)' }}>
+            <p className="text-sm leading-relaxed" style={{ color: '#1e293b' }}>
+              I partner with organisations who understand that trust, security, and compliance are competitive advantages {"—"} not obstacles.
             </p>
           </div>
 
           {/* Stat pills */}
           <div className="flex flex-wrap items-center justify-center gap-3 mt-6">
-            {["200+ user interviews", "10+ years in research", "Mixed-methods specialist"].map((stat) => (
+            {["Federal Government", "EU AI Act Specialist", "BITV 2.0 Certified"].map((stat) => (
               <span
                 key={stat}
                 className="px-4 py-2 rounded-full text-xs font-semibold"
-                style={{ background: '#1a1200', color: '#ffffff' }}
+                style={{ background: '#0a1628', color: '#ffffff' }}
               >
                 {stat}
               </span>
@@ -1113,21 +1113,21 @@ export default function Page() {
 
           {/* Currently Available For */}
           <div className="rounded-2xl p-8 flex flex-col justify-center" style={{ background: '#f9f6f0' }}>
-            <h2 className="text-xl sm:text-2xl font-bold mb-6 text-center" style={{ color: '#1a1200' }}>
+                <h2 className="text-xl sm:text-2xl font-bold mb-6 text-center" style={{ color: '#0a1628' }}>
               Currently available for
             </h2>
             <div className="flex flex-wrap items-center justify-center gap-3 mb-6">
-              {["Senior CX Researcher", "Discovery Lead", "Research Programme Lead", "Contract & Freelance"].map((tag) => (
+              {["AI Governance", "Discovery Lead", "Accessibility Specialist", "Regulated Industries"].map((tag) => (
                 <span
-                  key={tag}
-                  className="px-4 py-2 rounded-full text-sm font-medium"
-                  style={{ background: 'rgba(201,150,10,0.1)', color: '#3d2800', border: '1px solid rgba(201,150,10,0.25)' }}
+                key={tag}
+                className="px-4 py-2 rounded-full text-sm font-medium"
+                style={{ background: 'rgba(8,145,178,0.1)', color: '#0a1628', border: '1px solid rgba(8,145,178,0.25)' }}
                 >
                   {tag}
                 </span>
               ))}
             </div>
-            <p className="text-sm text-center" style={{ color: '#5a4a20' }}>
+                <p className="text-sm text-center" style={{ color: '#64748b' }}>
               Based in Berlin {"\u00B7"} Remote-first {"\u00B7"} English and German
             </p>
           </div>
@@ -1221,7 +1221,7 @@ export default function Page() {
       <Button
         type="submit"
         disabled={bookingSubmitting}
-        className="w-full font-semibold min-h-[44px]" style={{ background: '#1a1200', color: '#f5c842', borderRadius: '12px' }}
+        className="w-full font-semibold min-h-[44px]" style={{ background: '#0891b2', color: '#ffffff', borderRadius: '12px' }}
       >
         {bookingSubmitting ? (
           <>
