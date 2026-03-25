@@ -3,6 +3,12 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@layer base {
+  * {
+    border-radius: 5 !important;
+  }
+}
+
 :root {
   /* Bundesdruckerei-inspired - Professional Navy/Teal/Cool White palette */
   --background: #f7f9fc;
