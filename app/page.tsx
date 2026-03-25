@@ -691,9 +691,12 @@ export default function Page() {
             {/* My Expertise Card */}
             <Card id="expertise" className="glass-card scroll-mt-24" role="region" aria-labelledby="expertise-heading">
               <CardContent className="p-6 sm:p-8">
-                <h2 id="expertise-heading" className="text-xl font-bold mb-6 text-primary">Leistungen</h2>
+                <div className="mb-6">
+                  <h2 id="expertise-heading" className="text-lg font-semibold mb-1" style={{ color: '#0a1628' }}>Services</h2>
+                  <p className="text-sm" style={{ color: '#64748b' }}>What I can help you with</p>
+                </div>
 
-                <div className="grid grid-cols-1 gap-4">
+                <div className="grid grid-cols-1 gap-3">
                   {[
                     {
                       icon: Icons.ShieldCheck,
