@@ -813,7 +813,7 @@ export default function Page() {
               step: "03",
               title: "Deliver",
               desc: "Translate insights into actionable documentation, governance frameworks, and implementation roadmaps.",
-              icon: Icons.FileCheck,
+              icon: Icons.CheckCircle,
             },
           ].map((item) => (
             <div key={item.step} className="relative p-6 bg-white border border-slate-200 rounded-md hover:border-primary/40 transition-colors">
