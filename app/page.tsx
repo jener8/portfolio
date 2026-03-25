@@ -640,13 +640,7 @@ export default function Page() {
 
           <div className="lg:col-span-1 space-y-6 order-4">
             <Card className="glass-card p-0 overflow-hidden" role="region" aria-labelledby="about-heading">
-              <div className="relative h-32 overflow-hidden" style={{ background: 'linear-gradient(135deg, #0a1628, #164e63)' }}>
-                <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20Mar%2025%2C%202026%2C%2012_59_24%20PM-ul4TAia7HTAwa0bJKbWv8u5vvUJLGQ.png"
-                  alt=""
-                  className="w-full h-full object-cover"
-                />
-              </div>
+              
 
               <CardContent className="p-8 relative z-10" style={{ padding: '36px' }}>
                 <h2 id="about-heading" className="text-xl font-bold mb-6 text-primary">Expertise &amp; Capabilities</h2>
