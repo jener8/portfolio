@@ -556,7 +556,7 @@ export default function Page() {
               <div className="flex-shrink-0 w-full md:w-auto">
                 <div className="relative w-48 h-56 md:w-56 md:h-64 rounded-md overflow-hidden shadow-lg">
                   <Image
-                    src="/images/jennifer-avatar.jpg"
+                    src={JENNIFER_PHOTO}
                     alt="Jennifer Simonds - Research & Discovery Lead"
                     fill
                     className="object-cover"
