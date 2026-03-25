@@ -622,12 +622,10 @@ export default function Page() {
               </CardContent>
             </Card>
 
-main
             <div className="lg:hidden mt-4">{ToolsUsedCard}</div>
           </div>
         </div>
       </main>
-      </section>
 
       <section id="tools" className="container mx-auto px-4 py-16 scroll-mt-24">
         <div className="mb-10">
