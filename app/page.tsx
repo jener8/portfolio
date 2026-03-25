@@ -498,7 +498,7 @@ export default function Page() {
               <div className="flex-shrink-0 w-full md:w-auto">
                 <div className="relative w-48 h-56 md:w-56 md:h-64 rounded-md overflow-hidden shadow-lg">
                   <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202026-03-25%20at%2015.47.28-lWKANJftraPKvr85RD5V9gbSuN10yH.png"
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/2fb41464-25d1-4586-a977-3065f0ee9174-824uU37PdFtozkFqholj3Gb9PKFNPX.png"
                     alt="Jennifer Simonds - Research & Discovery Lead"
                     fill
                     className="object-cover"
