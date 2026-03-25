@@ -114,7 +114,7 @@ export default function TrustByDesignCaseStudy() {
         <header
           className="sticky top-0 z-40 py-3"
           style={{
-            background: "rgba(245, 240, 232, 0.6)",
+            background: "rgba(247, 249, 252, 0.85)",
             backdropFilter: "blur(20px)",
             WebkitBackdropFilter: "blur(20px)",
           }}
@@ -124,7 +124,7 @@ export default function TrustByDesignCaseStudy() {
               <Link
                 href="/"
                 className="flex items-center gap-2 text-sm min-h-[44px] transition-colors"
-                style={{ color: "#1a1200" }}
+                style={{ color: "#0a1628" }}
               >
                 <Icons.ArrowLeft className="h-4 w-4" />
                 Back to Start
@@ -133,7 +133,7 @@ export default function TrustByDesignCaseStudy() {
                 <Button
                   size="sm"
                   className="h-9 min-h-[44px] font-bold px-5 rounded-full"
-                  style={{ background: "#1a1200", color: "#f5c842" }}
+                  style={{ background: "#0891b2", color: "#ffffff" }}
                   asChild
                 >
                   <a href="mailto:info@jennifersimonds.com">
@@ -169,7 +169,7 @@ export default function TrustByDesignCaseStudy() {
                     key={tag}
                     variant="secondary"
                     className="bg-primary/10 border-primary/20 font-medium"
-                    style={{ color: "#5a4a20" }}
+                    style={{ color: "#0a1628" }}
                   >
                     {tag}
                   </Badge>
@@ -182,7 +182,7 @@ export default function TrustByDesignCaseStudy() {
                 style={{
                   fontSize: "clamp(2rem, 4vw, 3rem)",
                   fontWeight: 800,
-                  color: "#1a1200",
+                  color: "#0a1628",
                   letterSpacing: "-0.02em",
                   lineHeight: 1.15,
                   marginBottom: "16px",
@@ -195,7 +195,7 @@ export default function TrustByDesignCaseStudy() {
               <p
                 style={{
                   fontSize: "1.08rem",
-                  color: "#3d2800",
+                  color: "#1e293b",
                   lineHeight: 1.7,
                   maxWidth: "640px",
                 }}
@@ -208,9 +208,9 @@ export default function TrustByDesignCaseStudy() {
                 href="https://www.trust-by-design.org/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 mt-5 px-6 py-3 rounded-full font-bold text-sm transition-all duration-200 hover:scale-[1.03] hover:shadow-lg"
+                className="inline-flex items-center gap-2 mt-5 px-6 py-3 rounded-md font-bold text-sm transition-all duration-200 hover:scale-[1.02] hover:shadow-lg"
                 style={{
-                  background: "#c9960a",
+                  background: "#0891b2",
                   color: "#fff",
                   textDecoration: "none",
                   letterSpacing: "0.01em",
@@ -225,16 +225,16 @@ export default function TrustByDesignCaseStudy() {
                 {STATS.map((s) => (
                   <div
                     key={s.label}
-                    className="glass-card rounded-xl p-4 text-center"
+                    className="glass-card rounded-md p-4 text-center"
                   >
-                    <div className="text-xl font-bold" style={{ color: "#c9960a" }}>{s.num}</div>
+                    <div className="text-xl font-bold" style={{ color: "#0891b2" }}>{s.num}</div>
                     <div className="text-xs text-muted-foreground mt-0.5">{s.label}</div>
                   </div>
                 ))}
               </div>
 
               {/* Hero Image */}
-              <div className="relative rounded-2xl overflow-hidden mt-6" style={{ border: "1px solid rgba(212,201,168,0.4)" }}>
+              <div className="relative rounded-md overflow-hidden mt-6" style={{ border: "1px solid rgba(148,163,184,0.3)" }}>
                 <Image
                   src="/images/trust-meeting-new.png"
                   alt="Trust by Design research and advisory presentation"
@@ -254,7 +254,7 @@ export default function TrustByDesignCaseStudy() {
             {/* ============================================ */}
             <section className="py-12 border-t border-border/50">
               <div className="flex items-center gap-3 mb-6">
-                <div className="bg-primary/10 p-2.5 rounded-xl">
+                <div className="bg-primary/10 p-2.5 rounded-md">
                   <Icons.Target className="h-5 w-5 text-primary" />
                 </div>
                 <h2 className="text-xl font-bold text-foreground">The Problem I Set Out to Solve</h2>
@@ -275,7 +275,7 @@ export default function TrustByDesignCaseStudy() {
             {/* ============================================ */}
             <section className="py-12 border-t border-border/50">
               <div className="flex items-center gap-3 mb-6">
-                <div className="bg-primary/10 p-2.5 rounded-xl">
+                <div className="bg-primary/10 p-2.5 rounded-md">
                   <Icons.Search className="h-5 w-5 text-primary" />
                 </div>
                 <h2 className="text-xl font-bold text-foreground">What I Investigated</h2>
@@ -288,7 +288,7 @@ export default function TrustByDesignCaseStudy() {
               {/* 2+1 Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                 {SYSTEMS.slice(0, 2).map((sys) => (
-                  <div key={sys.name} className="bg-card rounded-xl border border-border p-5 flex flex-col">
+                  <div key={sys.name} className="bg-card rounded-md border border-border p-5 flex flex-col">
                     <div className="flex items-center gap-2 mb-3">
                       <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                         <Icons.Server className="h-4 w-4 text-primary" />
@@ -311,7 +311,7 @@ export default function TrustByDesignCaseStudy() {
               </div>
               <div className="max-w-md mx-auto">
                 {SYSTEMS.slice(2).map((sys) => (
-                  <div key={sys.name} className="bg-card rounded-xl border border-border p-5 flex flex-col">
+                  <div key={sys.name} className="bg-card rounded-md border border-border p-5 flex flex-col">
                     <div className="flex items-center gap-2 mb-3">
                       <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                         <Icons.Server className="h-4 w-4 text-primary" />
@@ -336,7 +336,7 @@ export default function TrustByDesignCaseStudy() {
               {/* Blockquote */}
               <blockquote
                 className="mt-8 text-base font-semibold italic text-center max-w-lg mx-auto"
-                style={{ color: "#c9960a" }}
+                style={{ color: "#0891b2" }}
               >
                 {"\u201C"}Technical perfection does not automatically create experienced trustworthiness.{"\u201D"}
               </blockquote>
@@ -347,7 +347,7 @@ export default function TrustByDesignCaseStudy() {
             {/* ============================================ */}
             <section className="py-12 border-t border-border/50">
               <div className="flex items-center gap-3 mb-6">
-                <div className="bg-primary/10 p-2.5 rounded-xl">
+                <div className="bg-primary/10 p-2.5 rounded-md">
                   <Icons.Layers className="h-5 w-5 text-primary" />
                 </div>
                 <h2 className="text-xl font-bold text-foreground">What I Built</h2>
@@ -364,8 +364,8 @@ export default function TrustByDesignCaseStudy() {
                   return (
                     <div
                       key={p.title}
-                      className="flex items-start gap-4 bg-card rounded-xl border border-border p-5"
-                      style={{ borderLeft: "3px solid #c9960a" }}
+                      className="flex items-start gap-4 bg-card rounded-md border border-border p-5"
+                      style={{ borderLeft: "3px solid #0891b2" }}
                     >
                       <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
                         <Icon className="h-5 w-5 text-primary" />
@@ -389,7 +389,7 @@ export default function TrustByDesignCaseStudy() {
             {/* ============================================ */}
             <section className="py-12 border-t border-border/50">
               <div className="flex items-center gap-3 mb-6">
-                <div className="bg-primary/10 p-2.5 rounded-xl">
+                <div className="bg-primary/10 p-2.5 rounded-md">
                   <Icons.Shield className="h-5 w-5 text-primary" />
                 </div>
                 <h2 className="text-xl font-bold text-foreground">The Trust Layer</h2>
@@ -400,21 +400,21 @@ export default function TrustByDesignCaseStudy() {
               </p>
 
               {/* Stacked Band Diagram */}
-              <div className="rounded-xl overflow-hidden border border-border mb-4" style={{ maxWidth: "600px" }}>
+              <div className="rounded-md overflow-hidden border border-border mb-4" style={{ maxWidth: "600px" }}>
                 {/* Top Band */}
                 <div className="px-5 py-4 text-center" style={{ background: "rgba(245,240,232,0.8)" }}>
                   <div className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">Users</div>
                   <div className="text-sm font-bold text-foreground">Citizens / Patients / Frontline Staff</div>
                 </div>
                 {/* Middle Band - Trust Layer */}
-                <div className="px-5 py-5 text-center" style={{ background: "rgba(201,150,10,0.15)" }}>
-                  <div className="text-xs font-bold uppercase tracking-wider mb-2" style={{ color: "#c9960a" }}>Trust Layer</div>
+                <div className="px-5 py-5 text-center" style={{ background: "rgba(8,145,178,0.15)" }}>
+                  <div className="text-xs font-bold uppercase tracking-wider mb-2" style={{ color: "#0891b2" }}>Trust Layer</div>
                   <div className="flex flex-wrap justify-center gap-2">
                     {["Explainability", "Recovery", "Human Control", "Accessibility"].map((item) => (
                       <span
                         key={item}
                         className="text-xs font-semibold px-3 py-1 rounded-full"
-                        style={{ background: "rgba(201,150,10,0.2)", color: "#7a5800" }}
+                        style={{ background: "rgba(8,145,178,0.2)", color: "#0e7490" }}
                       >
                         {item}
                       </span>
@@ -422,7 +422,7 @@ export default function TrustByDesignCaseStudy() {
                   </div>
                 </div>
                 {/* Bottom Band */}
-                <div className="px-5 py-4 text-center" style={{ background: "#1a1200", color: "#f5f0e8" }}>
+                <div className="px-5 py-4 text-center" style={{ background: "#0a1628", color: "#f5f0e8" }}>
                   <div className="text-xs font-semibold uppercase tracking-wider mb-1" style={{ color: "rgba(245,240,232,0.6)" }}>Infrastructure</div>
                   <div className="text-sm font-bold">AI Models &middot; Data Infrastructure &middot; Risk & Compliance Tooling</div>
                 </div>
@@ -438,7 +438,7 @@ export default function TrustByDesignCaseStudy() {
             {/* ============================================ */}
             <section className="py-12 border-t border-border/50">
               <div className="flex items-center gap-3 mb-6">
-                <div className="bg-primary/10 p-2.5 rounded-xl">
+                <div className="bg-primary/10 p-2.5 rounded-md">
                   <Icons.GitCompareArrows className="h-5 w-5 text-primary" />
                 </div>
                 <h2 className="text-xl font-bold text-foreground">Without vs With</h2>
@@ -450,7 +450,7 @@ export default function TrustByDesignCaseStudy() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {/* Without */}
-                <div className="rounded-xl border overflow-hidden" style={{ borderColor: "rgba(197,48,48,0.25)", background: "rgba(197,48,48,0.04)" }}>
+                <div className="rounded-md border overflow-hidden" style={{ borderColor: "rgba(197,48,48,0.25)", background: "rgba(197,48,48,0.04)" }}>
                   <div className="px-5 py-3" style={{ background: "rgba(197,48,48,0.08)" }}>
                     <h3 className="text-sm font-bold" style={{ color: "#c53030" }}>Without Trust Layer</h3>
                   </div>
@@ -477,7 +477,7 @@ export default function TrustByDesignCaseStudy() {
                 </div>
 
                 {/* With */}
-                <div className="rounded-xl border overflow-hidden" style={{ borderColor: "rgba(61,106,66,0.25)", background: "rgba(61,106,66,0.04)" }}>
+                <div className="rounded-md border overflow-hidden" style={{ borderColor: "rgba(61,106,66,0.25)", background: "rgba(61,106,66,0.04)" }}>
                   <div className="px-5 py-3" style={{ background: "rgba(61,106,66,0.08)" }}>
                     <h3 className="text-sm font-bold" style={{ color: "#3d6a42" }}>With Trust Layer</h3>
                   </div>
@@ -510,7 +510,7 @@ export default function TrustByDesignCaseStudy() {
             {/* ============================================ */}
             <section className="py-12 border-t border-border/50">
               <div className="flex items-center gap-3 mb-6">
-                <div className="bg-primary/10 p-2.5 rounded-xl">
+                <div className="bg-primary/10 p-2.5 rounded-md">
                   <Icons.Rocket className="h-5 w-5 text-primary" />
                 </div>
                 <h2 className="text-xl font-bold text-foreground">From Research to Practice</h2>
@@ -522,7 +522,7 @@ export default function TrustByDesignCaseStudy() {
 
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
                 {/* Left - The Practice */}
-                <div className="bg-card rounded-xl border border-border p-6">
+                <div className="bg-card rounded-md border border-border p-6">
                   <h3 className="text-base font-bold text-foreground mb-3">The Practice</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                     I offer three services: <strong className="text-foreground">Trust Audits</strong> to identify gaps, <strong className="text-foreground">Framework Implementation</strong> to design the Trust Layer into existing systems, and <strong className="text-foreground">EU AI Act Readiness</strong> to build human-centred compliance before the August 2026 deadline.
@@ -544,7 +544,7 @@ export default function TrustByDesignCaseStudy() {
                 </div>
 
                 {/* Right - The Tools */}
-                <div className="bg-card rounded-xl border border-border p-6">
+                <div className="bg-card rounded-md border border-border p-6">
                   <h3 className="text-base font-bold text-foreground mb-3">The Tools I Built</h3>
                   <div className="space-y-4">
                     <div className="bg-background/50 rounded-lg border border-border/50 p-4">
@@ -581,15 +581,15 @@ export default function TrustByDesignCaseStudy() {
             {/* ============================================ */}
             <section className="py-12 border-t border-border/50">
               <div className="flex items-center gap-3 mb-6">
-                <div className="bg-primary/10 p-2.5 rounded-xl">
+                <div className="bg-primary/10 p-2.5 rounded-md">
                   <Icons.Presentation className="h-5 w-5 text-primary" />
                 </div>
                 <h2 className="text-xl font-bold text-foreground">Taking It Into Practice</h2>
               </div>
 
               <div
-                className="bg-card rounded-xl border border-border p-6"
-                style={{ borderLeft: "3px solid #c9960a" }}
+                className="bg-card rounded-md border border-border p-6"
+                style={{ borderLeft: "3px solid #0891b2" }}
               >
                 <p className="text-[0.95rem] text-muted-foreground leading-relaxed">
                   I also brought the framework into practice through internal advisory sessions {"\u2014"} presenting to process management leaders and cross-functional teams within regulated government institutions. These sessions focused on AI literacy, Trust Layer integration, and translating abstract trust concepts into concrete process improvements. Seeing the framework land with operational teams {"\u2014"} and watching them connect the principles to their own systems {"\u2014"} was the moment I knew the research had real-world traction.
@@ -602,7 +602,7 @@ export default function TrustByDesignCaseStudy() {
             {/* ============================================ */}
             <section className="py-12 border-t border-border/50">
               <div className="flex items-center gap-3 mb-6">
-                <div className="bg-primary/10 p-2.5 rounded-xl">
+                <div className="bg-primary/10 p-2.5 rounded-md">
                   <Icons.Globe className="h-5 w-5 text-primary" />
                 </div>
                 <h2 className="text-xl font-bold text-foreground">Where It Applies</h2>
@@ -614,7 +614,7 @@ export default function TrustByDesignCaseStudy() {
 
               <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
                 {DOMAINS.map((d) => (
-                  <div key={d.title} className="bg-card rounded-xl border border-border p-4">
+                  <div key={d.title} className="bg-card rounded-md border border-border p-4">
                     <h4 className="text-sm font-bold text-foreground mb-2.5">{d.title}</h4>
                     <ul className="space-y-1">
                       {d.cases.map((c) => (
@@ -634,7 +634,7 @@ export default function TrustByDesignCaseStudy() {
             {/* ============================================ */}
             <section className="py-12 border-t border-border/50">
               <div className="flex items-center gap-3 mb-6">
-                <div className="bg-primary/10 p-2.5 rounded-xl">
+                <div className="bg-primary/10 p-2.5 rounded-md">
                   <Icons.BarChart3 className="h-5 w-5 text-primary" />
                 </div>
                 <h2 className="text-xl font-bold text-foreground">Outcomes</h2>
@@ -648,7 +648,7 @@ export default function TrustByDesignCaseStudy() {
                 {OUTCOMES.map((o) => (
                   <div
                     key={o.stat}
-                    className="bg-card rounded-xl border border-border p-5 text-center flex flex-col items-center"
+                    className="bg-card rounded-md border border-border p-5 text-center flex flex-col items-center"
                   >
                     <div className="text-sm font-bold text-primary mb-1.5 leading-tight">{o.stat}</div>
                     <p className="text-xs text-muted-foreground leading-relaxed">{o.description}</p>
@@ -662,7 +662,7 @@ export default function TrustByDesignCaseStudy() {
             {/* ============================================ */}
             <section className="py-12 border-t border-border/50">
               <div className="flex items-center gap-3 mb-6">
-                <div className="bg-primary/10 p-2.5 rounded-xl">
+                <div className="bg-primary/10 p-2.5 rounded-md">
                   <Icons.Quote className="h-5 w-5 text-primary" />
                 </div>
                 <h2 className="text-xl font-bold text-foreground">Reflection</h2>
@@ -686,7 +686,7 @@ export default function TrustByDesignCaseStudy() {
                   href="mailto:info@jennifersimonds.com"
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-bold text-sm transition-all duration-200 hover:scale-[1.03] hover:shadow-lg"
                   style={{
-                    background: "#1a1200",
+                    background: "#0a1628",
                     color: "#f5c842",
                     textDecoration: "none",
                   }}

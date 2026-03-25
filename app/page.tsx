@@ -498,7 +498,7 @@ export default function Page() {
             <Card className="glass-card overflow-hidden" style={{ padding: '36px', marginBottom: '48px' }}>
               <CardContent className="p-0 flex flex-col justify-center max-w-4xl mx-auto sm:p-4 lg:p-8">
                 {/* Label */}
-                <p className="section-label mb-0" style={{ fontSize: '10px', letterSpacing: '0.14em', fontWeight: 700, color: '#0891b2', textTransform: 'uppercase' }}>Research &amp; Discovery | Digital Trust | Made in Europe</p>
+                <p className="section-label mb-0" style={{ fontSize: '10px', letterSpacing: '0.14em', fontWeight: 700, color: '#0891b2', textTransform: 'uppercase' }}>Research &amp; Discovery | Digital Trust | Made in Germany</p>
 
                 {/* H1 */}
                 <h1 className="text-balance" style={{ fontSize: 'clamp(2rem, 3.5vw, 2.8rem)', fontWeight: 900, color: '#0a1628', lineHeight: 1.1, letterSpacing: '-0.02em', marginBottom: '24px' }}>
@@ -640,7 +640,13 @@ export default function Page() {
 
           <div className="lg:col-span-1 space-y-6 order-4">
             <Card className="glass-card p-0 overflow-hidden" role="region" aria-labelledby="about-heading">
-              
+              <div className="relative h-32 overflow-hidden" style={{ background: 'linear-gradient(135deg, #0a1628, #164e63)' }}>
+                <img
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/f8f19abf-9d96-47d9-8b32-26be54979267-4IKbuW7Ee5jefw7w9jmpaghNW5iSZy.png"
+                  alt=""
+                  className="w-full h-full object-cover"
+                />
+              </div>
 
               <CardContent className="p-8 relative z-10" style={{ padding: '36px' }}>
                 <h2 id="about-heading" className="text-xl font-bold mb-6 text-primary">Expertise &amp; Capabilities</h2>
@@ -815,7 +821,7 @@ export default function Page() {
                 <div className="glass-card-solid rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer border border-glass-border hover:border-primary/30">
                   <div className="aspect-[4/3] relative">
                     <img
-                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20Mar%2025%2C%202026%2C%2001_23_19%20PM-AzQiiWBvrM8IyrQLkGeO14QwEZGKV1.png"
+                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20Feb%2012%2C%202026%2C%2004_03_56%20PM-XdSjEVNbdZME28ONow9B8HPraoh3Kx.png"
                       alt="Workshop materials showing risk assessment framework with sticky notes and decision tree diagrams"
                       className="w-full h-full object-cover"
                     />
@@ -899,7 +905,7 @@ export default function Page() {
                 <div className="glass-card-solid rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer border border-glass-border hover:border-primary/30">
                   <div className="aspect-[4/3] relative">
                     <img
-                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20Mar%2025%2C%202026%2C%2001_19_06%20PM-buUHPqBEoTKef9FKYEokClkoDa2chh.png"
+                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20Feb%2012%2C%202026%2C%2004_25_46%20PM-4loRj3v503tpXMdCGipoh3q61yEssX.png"
                       alt="Component library showing accessible form elements and color system"
                       className="w-full h-full object-cover"
                     />

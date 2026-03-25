@@ -2069,13 +2069,13 @@ export default function CaseStudyPageClient({ params }: { params: { slug: string
 
       <div className="min-h-screen">
         {/* Header - Glass pill nav matching homepage */}
-        <header className="sticky top-0 z-40 py-3" style={{ background: 'rgba(245, 240, 232, 0.6)', backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)' }}>
+        <header className="sticky top-0 z-40 py-3" style={{ background: 'rgba(247, 249, 252, 0.85)', backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)' }}>
           <div className="container mx-auto px-4">
             <div className="glass-nav px-4 py-2.5 flex items-center justify-between">
               <Link
                 href="/"
                 className="flex items-center gap-2 text-sm min-h-[44px] transition-colors"
-                style={{ color: '#1a1200' }}
+                style={{ color: '#0a1628' }}
               >
                 <Icons.ArrowLeft className="h-4 w-4" />
                 Back to Start
@@ -2083,8 +2083,8 @@ export default function CaseStudyPageClient({ params }: { params: { slug: string
               <div className="flex items-center gap-3">
                 <Button
                   size="sm"
-                  className="h-9 min-h-[44px] font-bold px-5 rounded-full"
-                  style={{ background: '#1a1200', color: '#f5c842' }}
+                  className="h-9 min-h-[44px] font-bold px-5 rounded-md"
+                  style={{ background: '#0891b2', color: '#ffffff' }}
                   asChild
                 >
                   <a href="mailto:info@jennifersimonds.com">
@@ -2114,7 +2114,7 @@ export default function CaseStudyPageClient({ params }: { params: { slug: string
           <div className="mb-0">
             <div className="flex flex-wrap gap-2 mb-6">
               {caseStudy.tags.map((tag, index) => (
-                <Badge key={index} variant="secondary" className="bg-primary/10 border-primary/20 font-medium" style={{ color: '#5a4a20' }}>
+                <Badge key={index} variant="secondary" className="bg-primary/10 border-primary/20 font-medium" style={{ color: '#0a1628' }}>
                   {tag}
                 </Badge>
               ))}
@@ -2130,7 +2130,7 @@ export default function CaseStudyPageClient({ params }: { params: { slug: string
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-bold text-sm transition-all duration-200 hover:scale-[1.03] hover:shadow-lg"
                   style={{
-                    background: "#c9960a",
+                    background: "#0891b2",
                     color: "#fff",
                     textDecoration: "none",
                     letterSpacing: "0.01em",
@@ -2148,8 +2148,8 @@ export default function CaseStudyPageClient({ params }: { params: { slug: string
                   href="https://apps.apple.com/de/app/i-kfz/id1114824854"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 px-6 py-4 rounded-xl font-bold text-base transition-all shadow-lg hover:shadow-xl min-h-[44px]"
-                  style={{ background: '#1a1200', color: '#f5c842' }}
+                  className="inline-flex items-center gap-3 px-6 py-4 rounded-md font-bold text-base transition-all shadow-lg hover:shadow-xl min-h-[44px]"
+                  style={{ background: '#0891b2', color: '#ffffff' }}
                 >
                   {/* CHANGE: Fixed double > to single > */}
                   <svg className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
@@ -2161,8 +2161,8 @@ export default function CaseStudyPageClient({ params }: { params: { slug: string
                   href="https://play.google.com/store/apps/details?id=de.kba.ikfz&hl=de"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 px-6 py-4 rounded-xl font-bold text-base transition-all shadow-lg hover:shadow-xl min-h-[44px]"
-                  style={{ background: '#2d2000', color: '#f5c842' }}
+                  className="inline-flex items-center gap-3 px-6 py-4 rounded-md font-bold text-base transition-all shadow-lg hover:shadow-xl min-h-[44px]"
+                  style={{ background: '#0a1628', color: '#ffffff' }}
                 >
                   {/* CHANGE: Fixed double > to single > */}
                   <svg className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
@@ -2174,7 +2174,7 @@ export default function CaseStudyPageClient({ params }: { params: { slug: string
             )}
 
             {/* Hero Image */}
-            <div className="rounded-2xl overflow-hidden shadow-lg">
+            <div className="rounded-lg overflow-hidden shadow-lg">
               {/* HERO IMAGE - To change, upload new image then update caseStudy.hero path above */}
               <img
                 src={caseStudy.hero || "/placeholder.svg"}

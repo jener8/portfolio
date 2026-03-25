@@ -47,7 +47,7 @@ export default function WorkshopToolsCaseStudy() {
         <header
           className="sticky top-0 z-40 py-3"
           style={{
-            background: "rgba(245, 240, 232, 0.6)",
+            background: "rgba(247, 249, 252, 0.85)",
             backdropFilter: "blur(20px)",
             WebkitBackdropFilter: "blur(20px)",
           }}
@@ -57,7 +57,7 @@ export default function WorkshopToolsCaseStudy() {
               <Link
                 href="/"
                 className="flex items-center gap-2 text-sm min-h-[44px] transition-colors"
-                style={{ color: "#1a1200" }}
+                style={{ color: "#0a1628" }}
               >
                 <Icons.ArrowLeft className="h-4 w-4" />
                 Back to Start
@@ -65,8 +65,8 @@ export default function WorkshopToolsCaseStudy() {
               <div className="flex items-center gap-3">
                 <Button
                   size="sm"
-                  className="h-9 min-h-[44px] font-bold px-5 rounded-full"
-                  style={{ background: "#1a1200", color: "#f5c842" }}
+                  className="h-9 min-h-[44px] font-bold px-5 rounded-md"
+                  style={{ background: "#0891b2", color: "#ffffff" }}
                   asChild
                 >
                   <a href="mailto:info@jennifersimonds.com">
@@ -100,7 +100,7 @@ export default function WorkshopToolsCaseStudy() {
                     key={tag}
                     variant="secondary"
                     className="bg-primary/10 border-primary/20 font-medium"
-                    style={{ color: "#5a4a20" }}
+                    style={{ color: "#64748b" }}
                   >
                     {tag}
                   </Badge>
@@ -113,7 +113,7 @@ export default function WorkshopToolsCaseStudy() {
                 style={{
                   fontSize: "clamp(2rem, 4vw, 3rem)",
                   fontWeight: 800,
-                  color: "#1a1200",
+                  color: "#0a1628",
                   letterSpacing: "-0.02em",
                   lineHeight: 1.15,
                   marginBottom: "16px",
@@ -126,7 +126,7 @@ export default function WorkshopToolsCaseStudy() {
               <p
                 style={{
                   fontSize: "1.08rem",
-                  color: "#3d2800",
+                  color: "#1e293b",
                   lineHeight: 1.7,
                   maxWidth: "640px",
                 }}
@@ -141,7 +141,7 @@ export default function WorkshopToolsCaseStudy() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 mt-5 px-6 py-3 rounded-full font-bold text-sm transition-all duration-200 hover:scale-[1.03] hover:shadow-lg"
                 style={{
-                  background: "#c9960a",
+                  background: "#0891b2",
                   color: "#fff",
                   textDecoration: "none",
                   letterSpacing: "0.01em",
@@ -167,11 +167,11 @@ export default function WorkshopToolsCaseStudy() {
                     style={{
                       padding: "20px 16px",
                       background: "rgba(255,255,255,0.45)",
-                      border: "1px solid rgba(212,201,168,0.4)",
+                      border: "1px solid rgba(148,163,184,0.4)",
                       borderRadius: "16px",
                     }}
                   >
-                    <div style={{ fontSize: "1.5rem", fontWeight: 800, color: "#1a1200", lineHeight: 1.2 }}>
+                    <div style={{ fontSize: "1.5rem", fontWeight: 800, color: "#0a1628", lineHeight: 1.2 }}>
                       {s.num}
                     </div>
                     <div style={{ fontSize: "0.78rem", color: "#6b5a30", marginTop: "4px" }}>
@@ -197,7 +197,7 @@ export default function WorkshopToolsCaseStudy() {
               <div
                 style={{
                   background: "rgba(255,255,255,0.45)",
-                  border: "1px solid rgba(212,201,168,0.4)",
+                  border: "1px solid rgba(148,163,184,0.4)",
                   borderRadius: "20px",
                   overflow: "hidden",
                   marginBottom: "32px",
@@ -216,16 +216,16 @@ export default function WorkshopToolsCaseStudy() {
                 <div style={{ padding: "28px 28px 32px" }}>
                   {/* Tool name + type badge */}
                   <div className="flex items-center gap-3 mb-4 flex-wrap">
-                    <h3 style={{ fontSize: "1.25rem", fontWeight: 800, color: "#1a1200", margin: 0 }}>
+                    <h3 style={{ fontSize: "1.25rem", fontWeight: 800, color: "#0a1628", margin: 0 }}>
                       AI Trust Audit Toolkit
                     </h3>
                     <span
                       style={{
                         fontSize: "0.72rem",
                         fontWeight: 700,
-                        color: "#c9960a",
-                        background: "rgba(201,150,10,0.1)",
-                        border: "1px solid rgba(201,150,10,0.2)",
+                        color: "#0891b2",
+                        background: "rgba(8,145,178,0.1)",
+                        border: "1px solid rgba(8,145,178,0.2)",
                         borderRadius: "100px",
                         padding: "4px 12px",
                       }}
@@ -235,23 +235,23 @@ export default function WorkshopToolsCaseStudy() {
                   </div>
 
                   {/* What it is */}
-                  <h4 style={{ fontSize: "0.82rem", fontWeight: 700, color: "#1a1200", marginBottom: "6px", textTransform: "uppercase", letterSpacing: "0.05em" }}>
+                  <h4 style={{ fontSize: "0.82rem", fontWeight: 700, color: "#0a1628", marginBottom: "6px", textTransform: "uppercase", letterSpacing: "0.05em" }}>
                     What it is
                   </h4>
-                  <p style={{ fontSize: "0.9rem", color: "#3d2800", lineHeight: 1.7, marginBottom: "24px" }}>
+                  <p style={{ fontSize: "0.9rem", color: "#1e293b", lineHeight: 1.7, marginBottom: "24px" }}>
                     A two-part facilitation toolkit combining a structured questionnaire with a facilitated group workshop. Designed to surface how people in an organisation really feel about AI {"\u2014"} not the official position, but the actual human signal underneath it.
                   </p>
 
                   {/* What problem it solves */}
-                  <h4 style={{ fontSize: "0.82rem", fontWeight: 700, color: "#1a1200", marginBottom: "6px", textTransform: "uppercase", letterSpacing: "0.05em" }}>
+                  <h4 style={{ fontSize: "0.82rem", fontWeight: 700, color: "#0a1628", marginBottom: "6px", textTransform: "uppercase", letterSpacing: "0.05em" }}>
                     What problem it solves
                   </h4>
-                  <p style={{ fontSize: "0.9rem", color: "#3d2800", lineHeight: 1.7, marginBottom: "24px" }}>
+                  <p style={{ fontSize: "0.9rem", color: "#1e293b", lineHeight: 1.7, marginBottom: "24px" }}>
                     Most AI adoption processes measure readiness at the system level. This tool measures it at the human level {"\u2014"} the fears, the misunderstandings, the resistance, and the genuine needs that determine whether implementation succeeds or fails. The questionnaire captures honest individual views before group dynamics shape them. The workshop goes deeper into what the questionnaire surfaces.
                   </p>
 
                   {/* Three contexts */}
-                  <h4 style={{ fontSize: "0.82rem", fontWeight: 700, color: "#1a1200", marginBottom: "12px", textTransform: "uppercase", letterSpacing: "0.05em" }}>
+                  <h4 style={{ fontSize: "0.82rem", fontWeight: 700, color: "#0a1628", marginBottom: "12px", textTransform: "uppercase", letterSpacing: "0.05em" }}>
                     Contexts it works in
                   </h4>
                   <div className="flex flex-col gap-3" style={{ marginBottom: "24px" }}>
@@ -278,21 +278,21 @@ export default function WorkshopToolsCaseStudy() {
                         style={{
                           padding: "14px 16px",
                           background: "rgba(255,255,255,0.4)",
-                          border: "1px solid rgba(212,201,168,0.3)",
+                          border: "1px solid rgba(148,163,184,0.3)",
                           borderRadius: "12px",
                         }}
                       >
-                        <ctx.icon className="h-4.5 w-4.5 mt-0.5 flex-shrink-0" style={{ color: "#c9960a" }} />
+                        <ctx.icon className="h-4.5 w-4.5 mt-0.5 flex-shrink-0" style={{ color: "#0891b2" }} />
                         <div>
-                          <span style={{ fontSize: "0.85rem", fontWeight: 700, color: "#1a1200" }}>{ctx.label}</span>
-                          <p style={{ fontSize: "0.82rem", color: "#5a4a20", lineHeight: 1.6, margin: "2px 0 0" }}>{ctx.text}</p>
+                          <span style={{ fontSize: "0.85rem", fontWeight: 700, color: "#0a1628" }}>{ctx.label}</span>
+                          <p style={{ fontSize: "0.82rem", color: "#64748b", lineHeight: 1.6, margin: "2px 0 0" }}>{ctx.text}</p>
                         </div>
                       </div>
                     ))}
                   </div>
 
                   {/* What it produces */}
-                  <h4 style={{ fontSize: "0.82rem", fontWeight: 700, color: "#1a1200", marginBottom: "10px", textTransform: "uppercase", letterSpacing: "0.05em" }}>
+                  <h4 style={{ fontSize: "0.82rem", fontWeight: 700, color: "#0a1628", marginBottom: "10px", textTransform: "uppercase", letterSpacing: "0.05em" }}>
                     What it produces
                   </h4>
                   <ul style={{ listStyle: "none", padding: 0, margin: "0 0 24px", display: "flex", flexDirection: "column", gap: "8px" }}>
@@ -302,8 +302,8 @@ export default function WorkshopToolsCaseStudy() {
                       "Documented compliance evidence for EU AI Act human oversight requirements",
                     ].map((item, i) => (
                       <li key={i} className="flex items-start gap-2.5">
-                        <Icons.CheckCircle className="h-4 w-4 mt-0.5 flex-shrink-0" style={{ color: "#c9960a" }} />
-                        <span style={{ fontSize: "0.88rem", color: "#3d2800", lineHeight: 1.55 }}>{item}</span>
+                        <Icons.CheckCircle className="h-4 w-4 mt-0.5 flex-shrink-0" style={{ color: "#0891b2" }} />
+                        <span style={{ fontSize: "0.88rem", color: "#1e293b", lineHeight: 1.55 }}>{item}</span>
                       </li>
                     ))}
                   </ul>
@@ -312,7 +312,7 @@ export default function WorkshopToolsCaseStudy() {
                   <div
                     style={{
                       paddingTop: "16px",
-                      borderTop: "1px solid rgba(212,201,168,0.3)",
+                      borderTop: "1px solid rgba(148,163,184,0.3)",
                     }}
                   >
                     <p style={{ fontSize: "0.8rem", color: "#6b5a30", margin: 0 }}>
@@ -321,7 +321,7 @@ export default function WorkshopToolsCaseStudy() {
                         href="https://trustaudit.tools"
                         target="_blank"
                         rel="noopener noreferrer"
-                        style={{ color: "#c9960a", fontWeight: 700, textDecoration: "none" }}
+                        style={{ color: "#0891b2", fontWeight: 700, textDecoration: "none" }}
                       >
                         trustaudit.tools
                       </a>
@@ -338,15 +338,15 @@ export default function WorkshopToolsCaseStudy() {
                 style={{
                   marginTop: "48px",
                   padding: "36px 28px",
-                  background: "rgba(201,150,10,0.04)",
-                  border: "1px solid rgba(201,150,10,0.15)",
+                  background: "rgba(8,145,178,0.04)",
+                  border: "1px solid rgba(8,145,178,0.15)",
                   borderRadius: "20px",
                 }}
               >
-                <h3 style={{ fontSize: "1.15rem", fontWeight: 700, color: "#1a1200", marginBottom: "12px" }}>
+                <h3 style={{ fontSize: "1.15rem", fontWeight: 700, color: "#0a1628", marginBottom: "12px" }}>
                   This toolkit is one of several in development.
                 </h3>
-                <p style={{ fontSize: "0.9rem", color: "#5a4a20", lineHeight: 1.7, maxWidth: "580px", margin: "0 auto 24px" }}>
+                <p style={{ fontSize: "0.9rem", color: "#64748b", lineHeight: 1.7, maxWidth: "580px", margin: "0 auto 24px" }}>
                   Workshop facilitation tools for AI governance, accessibility research, and responsible design practice are added here as they are built and tested. If you{"'"}re looking for a specific kind of facilitated session and want to know what tools exist or what could be built, get in touch.
                 </p>
 
@@ -359,7 +359,7 @@ export default function WorkshopToolsCaseStudy() {
                         fontSize: "0.78rem",
                         fontWeight: 600,
                         color: "rgba(90,74,32,0.5)",
-                        border: "1px solid rgba(212,201,168,0.4)",
+                        border: "1px solid rgba(148,163,184,0.4)",
                         borderRadius: "100px",
                         padding: "5px 14px",
                         background: "transparent",
@@ -375,7 +375,7 @@ export default function WorkshopToolsCaseStudy() {
                   style={{
                     fontSize: "0.88rem",
                     fontWeight: 700,
-                    color: "#c9960a",
+                    color: "#0891b2",
                     textDecoration: "none",
                   }}
                 >
@@ -391,13 +391,13 @@ export default function WorkshopToolsCaseStudy() {
                 A workshop is only as good as the question it{"'"}s designed to ask.
               </PullQuote>
 
-              <p style={{ fontSize: "0.92rem", color: "#3d2800", lineHeight: 1.75, marginBottom: "16px" }}>
+              <p style={{ fontSize: "0.92rem", color: "#1e293b", lineHeight: 1.75, marginBottom: "16px" }}>
                 Off-the-shelf workshop canvases are built for average situations. Most situations I work in are not average {"\u2014"} a governance team that{"'"}s defensive about AI risk, a community of older adults who{"'"}ve never been consulted about technology that affects them, end users whose real concerns have never been heard in a design process.
               </p>
-              <p style={{ fontSize: "0.92rem", color: "#3d2800", lineHeight: 1.75, marginBottom: "16px" }}>
+              <p style={{ fontSize: "0.92rem", color: "#1e293b", lineHeight: 1.75, marginBottom: "16px" }}>
                 Building the right tool means starting from the specific conversation that needs to happen, not the exercise that{"'"}s easiest to run. The AI Trust Audit toolkit took four iterations before it produced outputs that were genuinely useful rather than just interesting.
               </p>
-              <p style={{ fontSize: "0.92rem", color: "#3d2800", lineHeight: 1.75, marginBottom: "40px" }}>
+              <p style={{ fontSize: "0.92rem", color: "#1e293b", lineHeight: 1.75, marginBottom: "40px" }}>
                 The tools on this page are the ones that survived that process. They work because they were designed to work {"\u2014"} not because they were convenient.
               </p>
 
@@ -415,7 +415,7 @@ export default function WorkshopToolsCaseStudy() {
                   style={{
                     fontSize: "1.2rem",
                     fontStyle: "italic",
-                    color: "#1a1200",
+                    color: "#0a1628",
                     fontWeight: 500,
                     margin: 0,
                     lineHeight: 1.5,
@@ -434,11 +434,11 @@ export default function WorkshopToolsCaseStudy() {
                   marginTop: "48px",
                   padding: "36px",
                   background: "rgba(255,255,255,0.45)",
-                  border: "1px solid rgba(212,201,168,0.4)",
+                  border: "1px solid rgba(148,163,184,0.4)",
                   borderRadius: "20px",
                 }}
               >
-                <h3 style={{ fontSize: "1.3rem", fontWeight: 700, color: "#1a1200", marginBottom: "10px" }}>
+                <h3 style={{ fontSize: "1.3rem", fontWeight: 700, color: "#0a1628", marginBottom: "10px" }}>
                   Want to see a tool in action {"\u2014"} or commission one?
                 </h3>
                 <p style={{ fontSize: "0.9rem", color: "#6b5a30", marginBottom: "24px", maxWidth: "540px", margin: "0 auto 24px" }}>
@@ -450,7 +450,7 @@ export default function WorkshopToolsCaseStudy() {
                     className="inline-flex font-bold min-h-[44px] items-center"
                     style={{
                       padding: "12px 28px",
-                      background: "#1a1200",
+                      background: "#0a1628",
                       color: "#f5c842",
                       borderRadius: "100px",
                       fontSize: "14px",
@@ -465,7 +465,7 @@ export default function WorkshopToolsCaseStudy() {
                     style={{
                       padding: "12px 28px",
                       border: "2px solid #1a1200",
-                      color: "#1a1200",
+                      color: "#0a1628",
                       borderRadius: "100px",
                       fontSize: "14px",
                       textDecoration: "none",
@@ -495,7 +495,7 @@ function SectionHeading({ children }: { children: React.ReactNode }) {
       style={{
         fontSize: "1.5rem",
         fontWeight: 800,
-        color: "#1a1200",
+        color: "#0a1628",
         margin: "48px 0 16px",
         letterSpacing: "-0.01em",
       }}
@@ -520,7 +520,7 @@ function PullQuote({ children }: { children: React.ReactNode }) {
         style={{
           fontSize: "1.05rem",
           fontStyle: "italic",
-          color: "#1a1200",
+          color: "#0a1628",
           fontWeight: 500,
           margin: 0,
           lineHeight: 1.5,
@@ -537,7 +537,7 @@ function Divider() {
     <div
       style={{
         height: "1px",
-        background: "rgba(212,201,168,0.4)",
+        background: "rgba(148,163,184,0.4)",
         margin: "40px 0",
       }}
     />
