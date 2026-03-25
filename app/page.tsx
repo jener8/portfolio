@@ -785,38 +785,64 @@ export default function Page() {
         
       </section>
 
-      {/* Workshop Tools - Clean Bundesdruckerei style */}
-      <section id="tools" className="container mx-auto px-4 pt-8 scroll-mt-24">
+      {/* My Process - Workshop Tools */}
+      <section id="tools" className="container mx-auto px-4 py-16 scroll-mt-24">
+        <div className="mb-10">
+          <h2 className="text-2xl font-bold mb-2" style={{ color: '#0a1628' }}>My Process</h2>
+          <p className="text-sm max-w-xl" style={{ color: '#64748b' }}>
+            I developed facilitation tools that turn complex stakeholder requirements into actionable outcomes.
+          </p>
+        </div>
+
+        {/* Process Steps */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+          {[
+            {
+              step: "01",
+              title: "Discover",
+              desc: "Map stakeholder needs, regulatory constraints, and technical requirements through structured interviews and workshops.",
+              icon: Icons.Search,
+            },
+            {
+              step: "02",
+              title: "Align",
+              desc: "Facilitate consensus across diverse teams using visual frameworks that make complex decisions tangible.",
+              icon: Icons.Handshake,
+            },
+            {
+              step: "03",
+              title: "Deliver",
+              desc: "Translate insights into actionable documentation, governance frameworks, and implementation roadmaps.",
+              icon: Icons.FileCheck,
+            },
+          ].map((item) => (
+            <div key={item.step} className="relative p-6 bg-white border border-slate-200 rounded-md hover:border-primary/40 transition-colors">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="text-xs font-bold text-primary">{item.step}</span>
+                <div className="h-px flex-1 bg-slate-200" />
+                <item.icon className="h-5 w-5 text-primary" />
+              </div>
+              <h3 className="text-base font-bold mb-2" style={{ color: '#0a1628' }}>{item.title}</h3>
+              <p className="text-sm leading-relaxed" style={{ color: '#64748b' }}>{item.desc}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Workshop Toolkit CTA */}
         <Link href="/case-studies/workshop-tools" className="group block">
-          <div
-            className="relative p-6 sm:p-8 transition-all duration-200 hover:bg-slate-50/50 border-b border-slate-200"
-          >
-            <div className="flex flex-col lg:flex-row lg:items-center gap-6">
-              {/* Left: Icon + Title */}
-              <div className="flex items-center gap-4 lg:w-2/5">
-                <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded bg-primary/10">
-                  <Icons.Layers className="h-6 w-6 text-primary" />
-                </div>
-                <div>
-                  <h2 className="text-lg font-bold" style={{ color: '#0a1628' }}>Workshop Tools</h2>
-                  <p className="text-sm" style={{ color: '#64748b' }}>Facilitation artefacts for complex stakeholder conversations</p>
-                </div>
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 p-5 bg-slate-50 border border-slate-200 rounded-md hover:border-primary/40 transition-colors">
+            <div className="flex items-center gap-4">
+              <div className="w-10 h-10 flex items-center justify-center rounded bg-primary/10">
+                <Icons.Layers className="h-5 w-5 text-primary" />
               </div>
-
-              {/* Middle: Quick stats */}
-              <div className="flex flex-wrap gap-2 lg:w-1/3 lg:justify-center">
-                <span className="text-xs font-medium px-3 py-1 rounded bg-slate-100" style={{ color: '#0a1628' }}>3 Contexts</span>
-                <span className="text-xs font-medium px-3 py-1 rounded bg-slate-100" style={{ color: '#0a1628' }}>1 Toolkit Live</span>
-                <span className="text-xs font-medium px-3 py-1 rounded bg-primary/10 text-primary">EU AI Act Ready</span>
-              </div>
-
-              {/* Right: CTA arrow */}
-              <div className="lg:w-1/3 flex lg:justify-end">
-                <span className="text-sm font-semibold text-primary group-hover:underline flex items-center gap-1.5">
-                  Explore tools <Icons.ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </span>
+              <div>
+                <h3 className="text-sm font-bold" style={{ color: '#0a1628' }}>Workshop Toolkit</h3>
+                <p className="text-xs" style={{ color: '#64748b' }}>Explore the facilitation artefacts I use in practice</p>
               </div>
             </div>
+            <span className="text-sm font-semibold text-primary group-hover:underline flex items-center gap-1.5">
+              View toolkit <Icons.ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </span>
           </div>
         </Link>
       </section>
