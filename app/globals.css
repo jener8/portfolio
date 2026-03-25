@@ -268,8 +268,6 @@ h1, h2, h3, h4, h5, h6 {
     0 2px 16px rgba(10, 22, 40, 0.06);
 }
 
-
-
 /* Remove default outline only when :focus-visible handles it */
 :focus:not(:focus-visible) {
   outline: none;

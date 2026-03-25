@@ -172,30 +172,30 @@ export default function Page() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [reducedMotion, setReducedMotion] = useState(false)
 
-  // Reduce-motion toggle
   useEffect(() => {
     if (reducedMotion) {
-      document.body.classList.add('reduced')
+      document.body.classList.add("reduced")
     } else {
-      document.body.classList.remove('reduced')
+      document.body.classList.remove("reduced")
     }
   }, [reducedMotion])
+
   const [bookingModalOpen, setBookingModalOpen] = useState(false)
   const [bookingForm, setBookingForm] = useState({ name: "", email: "", message: "", preferredDate: "", preferredTime: "" })
   const [bookingSubmitting, setBookingSubmitting] = useState(false)
   const [bookingSubmitted, setBookingSubmitted] = useState(false)
   const [feedbackVotes, setFeedbackVotes] = useState<Record<string, string>>({})
   const [feedbackCounts, setFeedbackCounts] = useState<Record<string, number>>({
-    "easy_yes": 24, "easy_no": 3,
-    "understand_yes": 31, "understand_no": 2,
-    "work_yes": 18, "work_maybe": 12, "work_no": 5,
-    "contact_yes": 29, "contact_no": 4
+    easy_yes: 24, easy_no: 3,
+    understand_yes: 31, understand_no: 2,
+    work_yes: 18, work_maybe: 12, work_no: 5,
+    contact_yes: 29, contact_no: 4
   })
   const [expandedExpertise, setExpandedExpertise] = useState<number | null>(null)
   const [feedbackText, setFeedbackText] = useState("")
   const [submittedQuestions, setSubmittedQuestions] = useState<{text: string, timestamp: number}[]>([])
   const [feedbackSubmitted, setFeedbackSubmitted] = useState(false)
-  // Load saved feedback data from localStorage
+
   useEffect(() => {
     try {
       const savedVotes = localStorage.getItem("feedbackVotes")
@@ -216,11 +216,10 @@ export default function Page() {
   }, [])
 
   const handleFeedbackVote = (questionId: string, option: string) => {
-    // Allow multiple votes - update selection and increment count
     const newVotes = { ...feedbackVotes, [questionId]: option }
     setFeedbackVotes(newVotes)
     localStorage.setItem("feedbackVotes", JSON.stringify(newVotes))
-    
+
     const countKey = `${questionId}_${option}`
     const newCounts = { ...feedbackCounts, [countKey]: (feedbackCounts[countKey] || 0) + 1 }
     setFeedbackCounts(newCounts)
@@ -230,7 +229,7 @@ export default function Page() {
   const handleSubmitQuestion = () => {
     if (!feedbackText.trim()) return
     const newQuestion = { text: feedbackText.trim(), timestamp: Date.now() }
-    const newQuestions = [...submittedQuestions, newQuestion].slice(-5) // Keep last 5
+    const newQuestions = [...submittedQuestions, newQuestion].slice(-5)
     setSubmittedQuestions(newQuestions)
     localStorage.setItem("feedbackQuestions", JSON.stringify(newQuestions))
     setFeedbackText("")
@@ -240,16 +239,16 @@ export default function Page() {
     const yesKey = `${questionId}_yes`
     const noKey = `${questionId}_no`
     const maybeKey = `${questionId}_maybe`
-    
+
     const yes = feedbackCounts[yesKey] || 0
     const no = feedbackCounts[noKey] || 0
     const maybe = feedbackCounts[maybeKey] || 0
     const total = yes + no + maybe
-    
+
     if (total === 0) return 0
     return Math.round((feedbackCounts[`${questionId}_${option}`] || 0) / total * 100)
   }
-  
+
   const getTotalVotes = () => Object.values(feedbackCounts).reduce((a, b) => a + b, 0)
 
   const galleryScrollRef = useRef<HTMLDivElement>(null)
@@ -257,14 +256,13 @@ export default function Page() {
   const handleBookingSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setBookingSubmitting(true)
-    
-    // Send email via mailto (opens email client)
+
     const subject = encodeURIComponent(`Booking Request from ${bookingForm.name}`)
     const body = encodeURIComponent(
       `Name: ${bookingForm.name}\nEmail: ${bookingForm.email}\nPreferred Date: ${bookingForm.preferredDate}\nPreferred Time: ${bookingForm.preferredTime}\n\nMessage:\n${bookingForm.message}`
     )
     window.location.href = `mailto:info@jennifersimonds.com?subject=${subject}&body=${body}`
-    
+
     setBookingSubmitting(false)
     setBookingSubmitted(true)
     setTimeout(() => {
@@ -274,9 +272,7 @@ export default function Page() {
     }, 2000)
   }
 
-  const ToolsUsedCard = (
-    null
-  )
+  const ToolsUsedCard = null
 
   useEffect(() => {
     const hash = window.location.hash?.replace("#", "")
@@ -290,13 +286,10 @@ export default function Page() {
     }
   }, [])
 
-  // Removed the duplicate useEffect for scroll restoration.
-  // The RememberHomeScroll component will now handle this logic.
-
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id)
     if (element) {
-      const offset = 80 // pixels above the element
+      const offset = 80
       const elementPosition = element.getBoundingClientRect().top + window.scrollY
       window.scrollTo({ top: elementPosition - offset, behavior: "smooth" })
     }
@@ -324,7 +317,6 @@ export default function Page() {
       galleryScrollRef.current.scrollLeft = Number.parseInt(savedScrollLeft, 10)
     }
 
-    // Save horizontal scroll position while user scrolls
     const container = galleryScrollRef.current
     if (!container) return
 
@@ -340,34 +332,33 @@ export default function Page() {
     <div className="min-h-screen">
       <RememberHomeScroll />
 
-      {/* Header - iOS Glass Pill Nav */}
       <header className="sticky top-0 z-40 py-3">
         <div className="container mx-auto px-4">
           <div className="glass-nav px-4 py-2.5 flex items-center justify-between gap-3">
             <div className="flex items-center gap-3">
-              <Avatar className="h-11 w-11 min-w-[44px] min-h-[44px]" style={{ background: 'linear-gradient(135deg, #0891b2, #164e63)', padding: '2px' }}>
+              <Avatar className="h-11 w-11 min-w-[44px] min-h-[44px]" style={{ background: "linear-gradient(135deg, #0891b2, #164e63)", padding: "2px" }}>
                 <AvatarImage src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/me%20gold-jqUw9JRBFNYLumFONY7dGqY8lrmEB1.jpg" alt="Jennifer Simonds-Spellmann" className="rounded-full" />
-                <AvatarFallback style={{ background: 'linear-gradient(135deg, #0891b2, #164e63)', color: '#ffffff' }} className="text-sm font-bold">JS</AvatarFallback>
+                <AvatarFallback style={{ background: "linear-gradient(135deg, #0891b2, #164e63)", color: "#ffffff" }} className="text-sm font-bold">JS</AvatarFallback>
               </Avatar>
               <div>
-                        <h1 className="text-sm font-semibold" style={{ color: '#0a1628' }}>Jennifer Simonds</h1>
-                        <p className="text-xs hidden sm:block" style={{ color: '#64748b' }}>
+                <h1 className="text-sm font-semibold" style={{ color: "#0a1628" }}>Jennifer Simonds</h1>
+                <p className="text-xs hidden sm:block" style={{ color: "#64748b" }}>
                   UX CX AI Researcher · Design Strategist
                 </p>
               </div>
             </div>
 
             <nav aria-label="Main navigation" className="hidden sm:flex items-center gap-1 text-sm">
-<a href="#case-studies" className="px-3 py-2 rounded-md text-sm font-medium transition-colors hover:bg-black/5" style={{ color: '#1e293b' }}>Work</a>
-                <a href="#about" className="px-3 py-2 rounded-md text-sm font-medium transition-colors hover:bg-black/5" style={{ color: '#1e293b' }}>About</a>
-                <a href="#expertise" className="px-3 py-2 rounded-md text-sm font-medium transition-colors hover:bg-black/5" style={{ color: '#1e293b' }}>Expertise</a>
-                <a href="#inside-the-work" className="px-3 py-2 rounded-md text-sm font-medium transition-colors hover:bg-black/5" style={{ color: '#1e293b' }}>Gallery</a>
-                <a href="#tools" className="px-3 py-2 rounded-md text-sm font-medium transition-colors hover:bg-black/5" style={{ color: '#1e293b' }}>Tools</a>
-              
+              <a href="#case-studies" className="px-3 py-2 rounded-md text-sm font-medium transition-colors hover:bg-black/5" style={{ color: "#1e293b" }}>Work</a>
+              <a href="#about" className="px-3 py-2 rounded-md text-sm font-medium transition-colors hover:bg-black/5" style={{ color: "#1e293b" }}>About</a>
+              <a href="#expertise" className="px-3 py-2 rounded-md text-sm font-medium transition-colors hover:bg-black/5" style={{ color: "#1e293b" }}>Expertise</a>
+              <a href="#inside-the-work" className="px-3 py-2 rounded-md text-sm font-medium transition-colors hover:bg-black/5" style={{ color: "#1e293b" }}>Gallery</a>
+              <a href="#tools" className="px-3 py-2 rounded-md text-sm font-medium transition-colors hover:bg-black/5" style={{ color: "#1e293b" }}>Tools</a>
+
               <Button
                 size="sm"
                 className="h-9 min-h-[44px] font-bold rounded-md px-5"
-                style={{ background: '#0891b2', color: '#ffffff' }}
+                style={{ background: "#0891b2", color: "#ffffff" }}
                 asChild
               >
                 <a href="mailto:info@jennifersimonds.com">
@@ -391,7 +382,7 @@ export default function Page() {
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="sm:hidden p-2 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-md transition-colors"
-                        style={{ color: '#0a1628' }}
+              style={{ color: "#0a1628" }}
               aria-label="Toggle menu"
             >
               <Icons.Menu className="h-6 w-6" />
@@ -402,13 +393,10 @@ export default function Page() {
 
       {mobileMenuOpen && (
         <>
-          {/* Overlay */}
           <div className="fixed inset-0 bg-black/20 z-50 sm:hidden" onClick={() => setMobileMenuOpen(false)} aria-hidden="true" />
 
-          {/* Slide-in menu */}
-          <nav aria-label="Mobile navigation" className="fixed top-0 right-0 bottom-0 w-64 glass-card-solid border-l z-50 sm:hidden shadow-lg animate-in slide-in-from-right duration-300" style={{ borderColor: 'rgba(0,0,0,0.08)' }}>
+          <nav aria-label="Mobile navigation" className="fixed top-0 right-0 bottom-0 w-64 glass-card-solid border-l z-50 sm:hidden shadow-lg animate-in slide-in-from-right duration-300" style={{ borderColor: "rgba(0,0,0,0.08)" }}>
             <div className="flex flex-col h-full">
-              {/* Menu header */}
               <div className="flex items-center justify-between p-4 border-b border-border">
                 <span className="font-semibold">Menu</span>
                 <button
@@ -420,52 +408,19 @@ export default function Page() {
                 </button>
               </div>
 
-              {/* Menu links */}
               <div className="flex-1 flex flex-col gap-2 p-4">
-                <a
-                  href="#case-studies"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="px-4 py-3 rounded-md hover:bg-accent transition-colors text-sm font-medium"
-                >
-                  Work
-                </a>
-                <a
-                  href="#about"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="px-4 py-3 rounded-md hover:bg-accent transition-colors text-sm font-medium"
-                >
-                  About
-                </a>
-                <a
-                  href="#expertise"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="px-4 py-3 rounded-md hover:bg-accent transition-colors text-sm font-medium"
-                >
-                  Expertise
-                </a>
-                <a
-                  href="#inside-the-work"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="px-4 py-3 rounded-md hover:bg-accent transition-colors text-sm font-medium"
-                >
-                  Gallery
-                </a>
-                <a
-                  href="#tools"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="px-4 py-3 rounded-md hover:bg-accent transition-colors text-sm font-medium"
-                >
-                  Tools
-                </a>
-
+                <a href="#case-studies" onClick={() => setMobileMenuOpen(false)} className="px-4 py-3 rounded-md hover:bg-accent transition-colors text-sm font-medium">Work</a>
+                <a href="#about" onClick={() => setMobileMenuOpen(false)} className="px-4 py-3 rounded-md hover:bg-accent transition-colors text-sm font-medium">About</a>
+                <a href="#expertise" onClick={() => setMobileMenuOpen(false)} className="px-4 py-3 rounded-md hover:bg-accent transition-colors text-sm font-medium">Expertise</a>
+                <a href="#inside-the-work" onClick={() => setMobileMenuOpen(false)} className="px-4 py-3 rounded-md hover:bg-accent transition-colors text-sm font-medium">Gallery</a>
+                <a href="#tools" onClick={() => setMobileMenuOpen(false)} className="px-4 py-3 rounded-md hover:bg-accent transition-colors text-sm font-medium">Tools</a>
               </div>
 
-              {/* Contact button at bottom */}
               <div className="p-4 border-t border-border space-y-3">
                 <Button
                   size="sm"
                   className="w-full font-semibold h-10 min-h-[44px] shadow-sm rounded-md"
-                        style={{ background: '#0891b2', color: '#ffffff' }}
+                  style={{ background: "#0891b2", color: "#ffffff" }}
                   asChild
                 >
                   <a href="mailto:info@jennifersimonds.com">
@@ -491,30 +446,22 @@ export default function Page() {
       )}
 
       <main id="main-content" className="container mx-auto px-4 pt-6 pb-2">
-        {/* Hero Section - Mobile First with Visual Signal Blocks */}
         <div className="flex flex-col lg:grid lg:grid-cols-3 gap-6">
-          {/* LEFT COLUMN: Hero + Case Studies */}
           <div className="lg:col-span-2 order-1 space-y-6">
-            {/* Hero - Split Layout */}
             <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-start mb-12">
-              {/* Left: Text Content */}
               <div className="flex-1">
-                {/* Label */}
-                <p className="mb-3" style={{ fontSize: '11px', letterSpacing: '0.12em', fontWeight: 600, color: '#0891b2', textTransform: 'uppercase' }}>
+                <p className="mb-3" style={{ fontSize: "11px", letterSpacing: "0.12em", fontWeight: 600, color: "#0891b2", textTransform: "uppercase" }}>
                   Research &amp; Discovery | Digital Trust
                 </p>
 
-                {/* H1 */}
-                <h1 className="text-balance" style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 800, color: '#0a1628', lineHeight: 1.1, letterSpacing: '-0.02em', marginBottom: '20px' }}>
+                <h1 className="text-balance" style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 800, color: "#0a1628", lineHeight: 1.1, letterSpacing: "-0.02em", marginBottom: "20px" }}>
                   Creating Trust in Digital Systems
                 </h1>
 
-                {/* Primary body */}
-                <p style={{ fontSize: '1.05rem', color: '#1e293b', lineHeight: 1.75, marginBottom: '24px' }}>
+                <p style={{ fontSize: "1.05rem", color: "#1e293b", lineHeight: 1.75, marginBottom: "24px" }}>
                   I lead research and discovery programmes for organisations building secure, compliant digital products. From EU AI Act governance to accessible government services, I deliver the evidence that enables confident decisions.
                 </p>
 
-                {/* Primary CTA */}
                 <div className="flex flex-wrap items-center gap-4">
                   <Button
                     onClick={() => {
@@ -527,7 +474,7 @@ export default function Page() {
                     }}
                     size="lg"
                     className="font-bold px-8 shadow-sm min-h-[48px]"
-                    style={{ background: '#0891b2', color: '#ffffff', borderRadius: '6px' }}
+                    style={{ background: "#0891b2", color: "#ffffff", borderRadius: "6px" }}
                   >
                     View Case Studies
                   </Button>
@@ -536,23 +483,21 @@ export default function Page() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-sm font-medium hover:underline flex items-center gap-1.5"
-                    style={{ color: '#0a1628' }}
+                    style={{ color: "#0a1628" }}
                   >
                     <Icons.Linkedin className="h-4 w-4" /> Connect on LinkedIn
                   </a>
                 </div>
 
-                {/* Credentials */}
                 <div className="flex flex-wrap gap-2 mt-6">
                   {["EU AI Act", "BITV 2.0", "Government", "Critical Infrastructure"].map((tag) => (
-                    <span key={tag} className="text-xs font-medium px-3 py-1 rounded bg-slate-100" style={{ color: '#64748b' }}>
+                    <span key={tag} className="text-xs font-medium px-3 py-1 rounded bg-slate-100" style={{ color: "#64748b" }}>
                       {tag}
                     </span>
                   ))}
                 </div>
               </div>
 
-              {/* Right: Photo */}
               <div className="flex-shrink-0 w-full md:w-auto">
                 <div className="relative w-48 h-56 md:w-56 md:h-64 rounded-md overflow-hidden shadow-lg">
                   <Image
@@ -563,89 +508,84 @@ export default function Page() {
                     priority
                   />
                 </div>
-                <p className="text-center mt-3 text-sm font-medium" style={{ color: '#0a1628' }}>Jennifer Simonds</p>
-                <p className="text-center text-xs" style={{ color: '#64748b' }}>Research & Discovery Lead</p>
+                <p className="text-center mt-3 text-sm font-medium" style={{ color: "#0a1628" }}>Jennifer Simonds</p>
+                <p className="text-center text-xs" style={{ color: "#64748b" }}>Research & Discovery Lead</p>
               </div>
             </div>
 
-  <section id="case-studies" aria-labelledby="case-studies-heading">
-  <Card className="glass-card">
-    <CardContent className="p-5 sm:p-6">
-      <h2
-        id="case-studies-heading"
-        className="text-xl sm:text-2xl font-bold mb-5 text-primary"
-      >
-        Case Studies
-      </h2>
+            <section id="case-studies" aria-labelledby="case-studies-heading">
+              <Card className="glass-card">
+                <CardContent className="p-5 sm:p-6">
+                  <h2 id="case-studies-heading" className="text-xl sm:text-2xl font-bold mb-5 text-primary">
+                    Case Studies
+                  </h2>
 
-      <div className="flex flex-col gap-4 sm:grid sm:grid-cols-2 sm:gap-4">
-        {[
-          {
-            href: "/case-studies/trust-by-design-framework",
-            title: "Trust by Design",
-            stat: "EU AI Act",
-            image: "/images/case-study-trust.jpg",
-          },
-          {
-            href: "/case-studies/digital-drivers-licence",
-            title: "i-Kfz Digital Services",
-            stat: "1M+ Users",
-            image: "/images/case-study-ikfz.jpg",
-          },
-          {
-            href: "/case-studies/digital-identity-services",
-            title: "BITV Certification",
-            stat: "98/98 Criteria",
-            image: "/images/case-study-bitv.jpg",
-          },
-          {
-            href: "/case-studies/trustbridge",
-            title: "TrustBridge",
-            stat: "4 Verticals",
-            image: "/images/case-study-trustbridge.jpg",
-          },
-        ].map((study) => (
-          <Link
-            key={study.href}
-            href={study.href}
-            aria-label={`View case study: ${study.title}`}
-            className="group block"
-          >
-            <div className="bg-white/70 hover:bg-white/80 transition-all duration-200 rounded-md border border-slate-200 hover:border-primary/50 overflow-hidden h-full">
-              <div className="relative h-40 bg-slate-100 overflow-hidden">
-                <Image
-                  src={study.image}
-                  alt={study.title}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute top-3 right-3 px-2 py-1 bg-white/90 rounded text-xs font-bold text-primary">
-                  {study.stat}
-                </div>
-              </div>
+                  <div className="flex flex-col gap-4 sm:grid sm:grid-cols-2 sm:gap-4">
+                    {[
+                      {
+                        href: "/case-studies/trust-by-design-framework",
+                        title: "Trust by Design",
+                        stat: "EU AI Act",
+                        image: "/images/case-study-trust.jpg",
+                      },
+                      {
+                        href: "/case-studies/digital-drivers-licence",
+                        title: "i-Kfz Digital Services",
+                        stat: "1M+ Users",
+                        image: "/images/case-study-ikfz.jpg",
+                      },
+                      {
+                        href: "/case-studies/digital-identity-services",
+                        title: "BITV Certification",
+                        stat: "98/98 Criteria",
+                        image: "/images/case-study-bitv.jpg",
+                      },
+                      {
+                        href: "/case-studies/trustbridge",
+                        title: "TrustBridge",
+                        stat: "4 Verticals",
+                        image: "/images/case-study-trustbridge.jpg",
+                      },
+                    ].map((study) => (
+                      <Link
+                        key={study.href}
+                        href={study.href}
+                        aria-label={`View case study: ${study.title}`}
+                        className="group block"
+                      >
+                        <div className="bg-white/70 hover:bg-white/80 transition-all duration-200 rounded-md border border-slate-200 hover:border-primary/50 overflow-hidden h-full">
+                          <div className="relative h-40 bg-slate-100 overflow-hidden">
+                            <Image
+                              src={study.image}
+                              alt={study.title}
+                              fill
+                              className="object-cover group-hover:scale-105 transition-transform duration-300"
+                            />
+                            <div className="absolute top-3 right-3 px-2 py-1 bg-white/90 rounded text-xs font-bold text-primary">
+                              {study.stat}
+                            </div>
+                          </div>
 
-              <div className="p-4">
-                <h3 className="text-base font-bold text-foreground mb-2">
-                  {study.title}
-                </h3>
-                <span className="text-sm font-medium text-primary group-hover:underline flex items-center gap-1">
-                  View Case Study{" "}
-                  <Icons.ArrowRight className="h-3.5 w-3.5" />
-                </span>
-              </div>
-            </div>
-          </Link>
-        ))}
-      </div>
-    </CardContent>
-  </Card>
-</section>
+                          <div className="p-4">
+                            <h3 className="text-base font-bold text-foreground mb-2">
+                              {study.title}
+                            </h3>
+                            <span className="text-sm font-medium text-primary group-hover:underline flex items-center gap-1">
+                              View Case Study <Icons.ArrowRight className="h-3.5 w-3.5" />
+                            </span>
+                          </div>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            </section>
 
-            {/* How I Got Here */}
             <div
               id="about"
               className="mt-4 rounded-md p-6 sm:p-8 scroll-mt-24"
-              style={{ background: '#f1f5f9', border: '1px solid rgba(148,163,184,0.3)' }}
+              style={{ background: "#f1f5f9", border: "1px solid rgba(148,163,184,0.3)" }}
             >
               <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5">
                 <img
@@ -657,8 +597,8 @@ export default function Page() {
                   <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground mb-3">
                     How I got here
                   </p>
-                  <p className="text-sm leading-relaxed" style={{ color: '#1e293b' }}>
-                    {"With over a decade of experience in research and discovery, I\u2019ve led programmes across government, critical infrastructure, and regulated industries. Based in Berlin, I specialise in translating complex regulatory requirements into actionable product strategy \u2014 from EU AI Act compliance to BITV accessibility certification."}
+                  <p className="text-sm leading-relaxed" style={{ color: "#1e293b" }}>
+                    {"With over a decade of experience in research and discovery, I’ve led programmes across government, critical infrastructure, and regulated industries. Based in Berlin, I specialise in translating complex regulatory requirements into actionable product strategy — from EU AI Act compliance to BITV accessibility certification."}
                   </p>
                 </div>
               </div>
@@ -669,26 +609,22 @@ export default function Page() {
 
           <div className="lg:col-span-1 space-y-6 order-4">
             <Card className="glass-card p-0 overflow-hidden" role="region" aria-labelledby="about-heading">
-              
-
-              <CardContent className="p-8 relative z-10" style={{ padding: '36px' }}>
+              <CardContent className="p-8 relative z-10" style={{ padding: "36px" }}>
                 <h2 id="about-heading" className="text-xl font-bold mb-6 text-primary">Expertise &amp; Capabilities</h2>
                 <div className="space-y-3">
-                  <p className="text-sm leading-relaxed" style={{ color: '#1e293b' }}>
+                  <p className="text-sm leading-relaxed" style={{ color: "#1e293b" }}>
                     {"Evidence-based discovery for complex, regulated digital systems. From EU AI Act governance to BITV accessibility compliance."}
                   </p>
-                  <p className="text-sm leading-relaxed" style={{ color: '#1e293b' }}>
+                  <p className="text-sm leading-relaxed" style={{ color: "#1e293b" }}>
                     {"10+ years delivering research programmes for government, critical infrastructure, and high-risk AI applications."}
                   </p>
-                  <p className="text-sm leading-relaxed" style={{ color: '#1e293b' }}>
-                    {"Stakeholder alignment across engineering, legal, product, and executive teams \u2014 turning research into decisive action."}
+                  <p className="text-sm leading-relaxed" style={{ color: "#1e293b" }}>
+                    {"Stakeholder alignment across engineering, legal, product, and executive teams — turning research into decisive action."}
                   </p>
-                  
                 </div>
               </CardContent>
             </Card>
 
-            {/* My Expertise Card */}
             <Card id="expertise" className="glass-card scroll-mt-24" role="region" aria-labelledby="expertise-heading">
               <CardContent className="p-6 sm:p-8">
                 <h2 id="expertise-heading" className="text-xl font-bold mb-6 text-primary">Leistungen</h2>
@@ -700,7 +636,7 @@ export default function Page() {
                       title: "AI Governance & Compliance",
                       subtitle: "EU AI Act | High-Risk Systems | Regulatory Translation",
                       description: "Governance frameworks for high-risk AI systems. Translating EU AI Act requirements into actionable product constraints and compliance roadmaps.",
-                      linkText: "Trust by Design Framework \u2192",
+                      linkText: "Trust by Design Framework →",
                       linkHref: "/case-studies/trust-by-design-framework",
                     },
                     {
@@ -708,7 +644,7 @@ export default function Page() {
                       title: "Discovery & Research",
                       subtitle: "Evidence-Based Decision Making | Field Studies",
                       description: "End-to-end discovery programmes delivering the evidence needed for confident product decisions in complex, regulated environments.",
-                      linkText: "i-Kfz Research Programme \u2192",
+                      linkText: "i-Kfz Research Programme →",
                       linkHref: "/case-studies/digital-drivers-licence",
                     },
                     {
@@ -716,7 +652,7 @@ export default function Page() {
                       title: "Accessibility & BITV",
                       subtitle: "BITV 2.0 | WCAG 2.1 | Inclusive Design",
                       description: "Comprehensive accessibility programmes from audit to certification. Achieving full BITV compliance for government and public sector applications.",
-                      linkText: "BITV Certification Programme \u2192",
+                      linkText: "BITV Certification Programme →",
                       linkHref: "/case-studies/digital-identity-services",
                     },
                     {
@@ -724,7 +660,7 @@ export default function Page() {
                       title: "Stakeholder Alignment",
                       subtitle: "Cross-Functional Coordination | Governance Workshops",
                       description: "Aligning engineering, legal, product, and executive stakeholders around research findings. Turning evidence into decisive organisational action.",
-                      linkText: "Governance Workshop Approach \u2192",
+                      linkText: "Governance Workshop Approach →",
                       linkHref: "/case-studies/trust-by-design-framework",
                     },
                     {
@@ -732,23 +668,23 @@ export default function Page() {
                       title: "Regulated Industries",
                       subtitle: "Government | Healthcare | Critical Infrastructure",
                       description: "Research and discovery in high-stakes environments. Navigating compliance requirements, ethics boards, and sensitive user groups.",
-                      linkText: "Government Services Portfolio \u2192",
+                      linkText: "Government Services Portfolio →",
                       linkHref: "/case-studies/trust-by-design-framework",
                     },
                     {
                       icon: Icons.Accessibility,
                       title: "Inclusive Research",
                       subtitle: "Reaching the users others miss",
-                      description: "I\u2019ve run research with assistive technology users, elderly citizens, non-native speakers, and low-digital-literacy groups. Accessibility isn\u2019t an afterthought \u2014 it\u2019s built into my research design.",
-                      linkText: "See the BITV accessibility programme \u2192",
+                      description: "I’ve run research with assistive technology users, elderly citizens, non-native speakers, and low-digital-literacy groups. Accessibility isn’t an afterthought — it’s built into my research design.",
+                      linkText: "See the BITV accessibility programme →",
                       linkHref: "/case-studies/digital-identity-services",
                     },
                     {
                       icon: Icons.Users,
                       title: "Research Ops & Scaling",
                       subtitle: "Building research culture in teams",
-                      description: "I set up participant panels, research repositories, and insight-sharing rituals. I\u2019ve embedded research practices across 14+ product teams.",
-                      linkText: "See my research approach \u2192",
+                      description: "I set up participant panels, research repositories, and insight-sharing rituals. I’ve embedded research practices across 14+ product teams.",
+                      linkText: "See my research approach →",
                       linkHref: "/case-studies/digital-drivers-licence",
                     },
                     {
@@ -756,7 +692,7 @@ export default function Page() {
                       title: "Generative & Evaluative Research",
                       subtitle: "Exploring the unknown, validating the known",
                       description: "I run generative research to uncover new opportunities and evaluative research to test assumptions. I know when to explore and when to validate.",
-                      linkText: "See the TrustBridge discovery sprints \u2192",
+                      linkText: "See the TrustBridge discovery sprints →",
                       linkHref: "/case-studies/trustbridge",
                     },
                   ].map((item, index) => {
@@ -783,14 +719,14 @@ export default function Page() {
                               <p className="text-xs text-muted-foreground">{item.subtitle}</p>
                             </div>
                           </div>
-                          <Icons.ChevronDown className={`h-5 w-5 text-muted-foreground transition-transform duration-300 flex-shrink-0 ml-auto ${isExpanded ? 'rotate-180' : ''}`} aria-hidden="true" />
+                          <Icons.ChevronDown className={`h-5 w-5 text-muted-foreground transition-transform duration-300 flex-shrink-0 ml-auto ${isExpanded ? "rotate-180" : ""}`} aria-hidden="true" />
                         </button>
                         <div
                           id={`expertise-content-${index}`}
                           className="overflow-hidden transition-all duration-300 ease-in-out"
                           role="region"
                           aria-hidden={!isExpanded}
-                          style={{ maxHeight: isExpanded ? '300px' : '0px', opacity: isExpanded ? 1 : 0 }}
+                          style={{ maxHeight: isExpanded ? "300px" : "0px", opacity: isExpanded ? 1 : 0 }}
                         >
                           <div className="px-4 pb-4 pt-2 border-t border-border/30">
                             <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
@@ -812,25 +748,20 @@ export default function Page() {
 
             <div className="lg:hidden mt-4">{ToolsUsedCard}</div>
           </div>
-
         </div>
       </main>
 
-      {/* Inside the Work - Full-width below case studies & expertise */}
       <section id="inside-the-work" className="container mx-auto px-4 scroll-mt-24 pt-0">
-        
       </section>
 
-      {/* My Process - Workshop Tools */}
       <section id="tools" className="container mx-auto px-4 py-16 scroll-mt-24">
         <div className="mb-10">
-          <h2 className="text-2xl font-bold mb-2" style={{ color: '#0a1628' }}>My Process</h2>
-          <p className="text-sm max-w-xl" style={{ color: '#64748b' }}>
+          <h2 className="text-2xl font-bold mb-2" style={{ color: "#0a1628" }}>My Process</h2>
+          <p className="text-sm max-w-xl" style={{ color: "#64748b" }}>
             I developed facilitation tools that turn complex stakeholder requirements into actionable outcomes.
           </p>
         </div>
 
-        {/* Process Steps */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
           {[
             {
@@ -858,13 +789,12 @@ export default function Page() {
                 <div className="h-px flex-1 bg-slate-200" />
                 <item.icon className="h-5 w-5 text-primary" />
               </div>
-              <h3 className="text-base font-bold mb-2" style={{ color: '#0a1628' }}>{item.title}</h3>
-              <p className="text-sm leading-relaxed" style={{ color: '#64748b' }}>{item.desc}</p>
+              <h3 className="text-base font-bold mb-2" style={{ color: "#0a1628" }}>{item.title}</h3>
+              <p className="text-sm leading-relaxed" style={{ color: "#64748b" }}>{item.desc}</p>
             </div>
           ))}
         </div>
 
-        {/* Workshop Toolkit CTA */}
         <Link href="/case-studies/workshop-tools" className="group block">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 p-5 bg-slate-50 border border-slate-200 rounded-md hover:border-primary/40 transition-colors">
             <div className="flex items-center gap-4">
@@ -872,8 +802,8 @@ export default function Page() {
                 <Icons.Layers className="h-5 w-5 text-primary" />
               </div>
               <div>
-                <h3 className="text-sm font-bold" style={{ color: '#0a1628' }}>Workshop Toolkit</h3>
-                <p className="text-xs" style={{ color: '#64748b' }}>Explore the facilitation artefacts I use in practice</p>
+                <h3 className="text-sm font-bold" style={{ color: "#0a1628" }}>Workshop Toolkit</h3>
+                <p className="text-xs" style={{ color: "#64748b" }}>Explore the facilitation artefacts I use in practice</p>
               </div>
             </div>
             <span className="text-sm font-semibold text-primary group-hover:underline flex items-center gap-1.5">
@@ -883,13 +813,12 @@ export default function Page() {
         </Link>
       </section>
 
-      {/* Sectors & Challenges - Clean Bundesdruckerei style */}
       <section className="container mx-auto px-4 py-12">
         <div className="mb-8">
-          <h2 className="text-2xl font-bold mb-2" style={{ color: '#0a1628' }}>
+          <h2 className="text-2xl font-bold mb-2" style={{ color: "#0a1628" }}>
             Sectors &amp; Challenges
           </h2>
-          <p className="text-sm" style={{ color: '#64748b' }}>
+          <p className="text-sm" style={{ color: "#64748b" }}>
             Organisations navigating these requirements
           </p>
         </div>
@@ -932,24 +861,17 @@ export default function Page() {
               className="flex gap-4 p-4 border-l-2 border-primary bg-white hover:bg-slate-50 transition-colors"
             >
               <item.icon className="h-5 w-5 mt-0.5 flex-shrink-0 text-primary" />
-                <div>
-                  <p className="text-sm font-bold mb-1" style={{ color: '#0a1628' }}>{item.title}</p>
-                  <p className="text-xs leading-relaxed" style={{ color: '#64748b' }}>{item.desc}</p>
-                </div>
+              <div>
+                <p className="text-sm font-bold mb-1" style={{ color: "#0a1628" }}>{item.title}</p>
+                <p className="text-xs leading-relaxed" style={{ color: "#64748b" }}>{item.desc}</p>
               </div>
-            ))}
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* Currently Available + Booking Section */}
       <section className="container mx-auto px-4 pb-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-
-          {/* Currently Available For */}
-          
-
-
-
         </div>
       </section>
 
