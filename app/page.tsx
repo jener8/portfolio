@@ -568,7 +568,7 @@ export default function Page() {
               </div>
             </div>
 
-           <section id="case-studies" aria-labelledby="case-studies-heading">
+  <section id="case-studies" aria-labelledby="case-studies-heading">
   <Card className="glass-card">
     <CardContent className="p-5 sm:p-6">
       <h2
@@ -649,7 +649,7 @@ export default function Page() {
             >
               <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5">
                 <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/jennifer-avatar-Ap5BfKFSx9SM1wfwz0gV6ZXbHs8pD2.jpg"
+                  src={study.image}
                   alt="Jennifer Simonds"
                   className="w-[88px] h-[88px] rounded-full object-cover flex-shrink-0"
                 />
