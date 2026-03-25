@@ -232,7 +232,7 @@ export default function TrustBridgeCaseStudy() {
         <header
           className="sticky top-0 z-40 py-3"
           style={{
-            background: "rgba(245, 240, 232, 0.6)",
+            background: "rgba(247, 249, 252, 0.85)",
             backdropFilter: "blur(20px)",
             WebkitBackdropFilter: "blur(20px)",
           }}
@@ -242,7 +242,7 @@ export default function TrustBridgeCaseStudy() {
               <Link
                 href="/"
                 className="flex items-center gap-2 text-sm min-h-[44px] transition-colors"
-                style={{ color: "#1a1200" }}
+                style={{ color: "#0a1628" }}
               >
                 <Icons.ArrowLeft className="h-4 w-4" />
                 Back to Start
@@ -250,8 +250,8 @@ export default function TrustBridgeCaseStudy() {
               <div className="flex items-center gap-3">
                 <Button
                   size="sm"
-                  className="h-9 min-h-[44px] font-bold px-5 rounded-full"
-                  style={{ background: "#1a1200", color: "#f5c842" }}
+                  className="h-9 min-h-[44px] font-bold px-5 rounded-md"
+                  style={{ background: "#0891b2", color: "#ffffff" }}
                   asChild
                 >
                   <a href="mailto:info@jennifersimonds.com">
@@ -264,7 +264,7 @@ export default function TrustBridgeCaseStudy() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Connect on LinkedIn"
-                  className="h-9 w-9 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full"
+                  className="h-9 w-9 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-md"
                   style={{ background: "#0A66C2", color: "white" }}
                 >
                   <Icons.Linkedin className="h-4 w-4" />
@@ -285,7 +285,7 @@ export default function TrustBridgeCaseStudy() {
                     key={tag}
                     variant="secondary"
                     className="bg-primary/10 border-primary/20 font-medium"
-                    style={{ color: "#5a4a20" }}
+                    style={{ color: "#0a1628" }}
                   >
                     {tag}
                   </Badge>
@@ -298,7 +298,7 @@ export default function TrustBridgeCaseStudy() {
                 style={{
                   fontSize: "clamp(2rem, 4vw, 3rem)",
                   fontWeight: 900,
-                  color: "#1a1200",
+                  color: "#0a1628",
                   lineHeight: 1.1,
                   letterSpacing: "-0.02em",
                   marginBottom: "16px",
@@ -308,7 +308,7 @@ export default function TrustBridgeCaseStudy() {
               </h1>
               <p
                 className="leading-relaxed max-w-2xl"
-                style={{ fontSize: "1.1rem", color: "#2d2000", fontWeight: 450, lineHeight: 1.8, marginBottom: "32px" }}
+                style={{ fontSize: "1.1rem", color: "#1e293b", fontWeight: 450, lineHeight: 1.8, marginBottom: "32px" }}
               >
                 Design proposals for helping vulnerable users navigate AI with confidence. From elderly banking to children{"'"}s education.
               </p>
@@ -318,9 +318,9 @@ export default function TrustBridgeCaseStudy() {
                 href="https://trustbridge.design/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 mb-8 px-6 py-3 rounded-full font-bold text-sm transition-all duration-200 hover:scale-[1.03] hover:shadow-lg"
+                className="inline-flex items-center gap-2 mb-8 px-6 py-3 rounded-md font-bold text-sm transition-all duration-200 hover:scale-[1.02] hover:shadow-lg"
                 style={{
-                  background: "#c9960a",
+                  background: "#0891b2",
                   color: "#fff",
                   textDecoration: "none",
                   letterSpacing: "0.01em",
@@ -331,7 +331,7 @@ export default function TrustBridgeCaseStudy() {
               </a>
 
               {/* Hero Image */}
-              <div className="w-full rounded-2xl overflow-hidden relative" style={{ marginBottom: "32px" }}>
+              <div className="w-full rounded-lg overflow-hidden relative" style={{ marginBottom: "32px" }}>
                 <Image
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/case-education-VNjJXEHmfV1qdpvkE6XPdJ4SK1U52w.jpg"
                   alt="Abstract representation of trust between humans and AI systems"
@@ -356,15 +356,15 @@ export default function TrustBridgeCaseStudy() {
                     <a
                       key={i}
                       href={`#case-${i}`}
-                      className="flex flex-col items-center text-center p-4 rounded-xl transition-all hover:shadow-md"
+                      className="flex flex-col items-center text-center p-4 rounded-md transition-all hover:shadow-md"
                       style={{
                         background: "rgba(255,255,255,0.55)",
-                        border: "1px solid rgba(212,201,168,0.5)",
+                        border: "1px solid rgba(148,163,184,0.5)",
                       }}
                     >
                       <NavIcon className="h-5 w-5 text-primary mb-2" />
-                      <span style={{ fontSize: "0.82rem", fontWeight: 700, color: "#1a1200" }}>{item.label}</span>
-                      <span style={{ fontSize: "0.7rem", color: "#6b5a30", marginTop: "2px" }}>{item.sub}</span>
+                      <span style={{ fontSize: "0.82rem", fontWeight: 700, color: "#0a1628" }}>{item.label}</span>
+                      <span style={{ fontSize: "0.7rem", color: "#64748b", marginTop: "2px" }}>{item.sub}</span>
                     </a>
                   )
                 })}
@@ -376,8 +376,8 @@ export default function TrustBridgeCaseStudy() {
           <div className="bg-background">
             <div className="container mx-auto px-4 max-w-4xl">
               <div
-                className="grid grid-cols-2 sm:grid-cols-4 overflow-hidden rounded-2xl"
-                style={{ gap: "1px", background: "rgba(201,150,10,0.15)", margin: "0 0 48px" }}
+                className="grid grid-cols-2 sm:grid-cols-4 overflow-hidden rounded-lg"
+                style={{ gap: "1px", background: "rgba(8,145,178,0.15)", margin: "0 0 48px" }}
               >
                 {STATS.map((stat) => (
                   <div
@@ -389,10 +389,10 @@ export default function TrustBridgeCaseStudy() {
                       backdropFilter: "blur(10px)",
                     }}
                   >
-                    <div style={{ fontSize: "1.6rem", fontWeight: 900, color: "#c9960a", lineHeight: 1, marginBottom: "4px" }}>
+                    <div style={{ fontSize: "1.6rem", fontWeight: 900, color: "#0891b2", lineHeight: 1, marginBottom: "4px" }}>
                       {stat.num}
                     </div>
-                    <div style={{ fontSize: "0.72rem", color: "#6b5a30", fontWeight: 600, letterSpacing: "0.04em" }}>
+                    <div style={{ fontSize: "0.72rem", color: "#64748b", fontWeight: 600, letterSpacing: "0.04em" }}>
                       {stat.label}
                     </div>
                   </div>
@@ -405,10 +405,10 @@ export default function TrustBridgeCaseStudy() {
           <div className="bg-background">
             <div className="container mx-auto px-4 max-w-4xl">
               {/* Opening */}
-              <p style={{ fontSize: "0.98rem", color: "#3d2800", lineHeight: 1.8, marginBottom: "16px" }}>
+              <p style={{ fontSize: "0.98rem", color: "#1e293b", lineHeight: 1.8, marginBottom: "16px" }}>
                 Today{"'"}s AI interfaces are designed for tech-savvy users. This leaves millions of elderly people, children, and other vulnerable groups exposed to harm.
               </p>
-              <p style={{ fontSize: "0.98rem", color: "#3d2800", lineHeight: 1.8, marginBottom: "16px" }}>
+              <p style={{ fontSize: "0.98rem", color: "#1e293b", lineHeight: 1.8, marginBottom: "16px" }}>
                 Through four case studies I designed and documented the interaction layer that determines whether AI builds trust or destroys it. The cases share a common finding: the technology was rarely the problem. The problem was the moment of contact between the system and the person it was supposed to serve.
               </p>
 
@@ -426,7 +426,7 @@ export default function TrustBridgeCaseStudy() {
                         padding: "20px",
                         borderRadius: "16px",
                         background: "rgba(255,255,255,0.5)",
-                        border: "1px solid rgba(212,201,168,0.4)",
+                        border: "1px solid rgba(148,163,184,0.4)",
                       }}
                     >
                       <div
@@ -441,10 +441,10 @@ export default function TrustBridgeCaseStudy() {
                         <RiskIcon className="h-5 w-5" style={{ color: "#c0392b" }} />
                       </div>
                       <div>
-                        <h4 style={{ fontSize: "0.95rem", fontWeight: 700, color: "#1a1200", marginBottom: "4px" }}>
+                        <h4 style={{ fontSize: "0.95rem", fontWeight: 700, color: "#0a1628", marginBottom: "4px" }}>
                           {risk.title}
                         </h4>
-                        <p style={{ fontSize: "0.85rem", color: "#6b5a30", margin: 0, lineHeight: 1.55 }}>
+                        <p style={{ fontSize: "0.85rem", color: "#64748b", margin: 0, lineHeight: 1.55 }}>
                           {risk.description}
                         </p>
                       </div>
@@ -460,7 +460,7 @@ export default function TrustBridgeCaseStudy() {
 
               {/* Four Interaction Principles */}
               <SectionHeading>Four Interaction Principles</SectionHeading>
-              <p style={{ fontSize: "0.98rem", color: "#3d2800", lineHeight: 1.8, marginBottom: "16px" }}>
+              <p style={{ fontSize: "0.98rem", color: "#1e293b", lineHeight: 1.8, marginBottom: "16px" }}>
                 Each case study was developed through a combination of interface prototyping, research framework design,
                 and testing with representative users. The Senior-First Design Principle ran through all four: if a
                 72-year-old who didn{"'"}t grow up with smartphones can understand the interaction, the design passes. If
@@ -476,7 +476,7 @@ export default function TrustBridgeCaseStudy() {
                       padding: "20px",
                       borderRadius: "16px",
                       background: "rgba(255,255,255,0.5)",
-                      border: "1px solid rgba(212,201,168,0.4)",
+                      border: "1px solid rgba(148,163,184,0.4)",
                     }}
                   >
                     <div
@@ -485,7 +485,7 @@ export default function TrustBridgeCaseStudy() {
                         width: "36px",
                         height: "36px",
                         borderRadius: "10px",
-                        background: "#c9960a",
+                        background: "#0891b2",
                         color: "white",
                         fontWeight: 900,
                         fontSize: "14px",
@@ -494,10 +494,10 @@ export default function TrustBridgeCaseStudy() {
                       {i + 1}
                     </div>
                     <div>
-                      <h4 style={{ fontSize: "0.95rem", fontWeight: 700, color: "#1a1200", marginBottom: "4px" }}>
+                      <h4 style={{ fontSize: "0.95rem", fontWeight: 700, color: "#0a1628", marginBottom: "4px" }}>
                         {p.title}
                       </h4>
-                      <p style={{ fontSize: "0.85rem", color: "#6b5a30", margin: 0, lineHeight: 1.55 }}>
+                      <p style={{ fontSize: "0.85rem", color: "#64748b", margin: 0, lineHeight: 1.55 }}>
                         {p.description}
                       </p>
                     </div>
@@ -509,7 +509,7 @@ export default function TrustBridgeCaseStudy() {
 
               {/* ========== THE FOUR CASE STUDIES ========== */}
               <SectionHeading>The Case Studies</SectionHeading>
-              <p style={{ fontSize: "0.98rem", color: "#3d2800", lineHeight: 1.8, marginBottom: "24px" }}>
+              <p style={{ fontSize: "0.98rem", color: "#1e293b", lineHeight: 1.8, marginBottom: "24px" }}>
                 Deep dives into solving trust challenges for vulnerable user groups. Each case includes interface designs, interview frameworks, and evidence of impact.
               </p>
 
@@ -522,15 +522,15 @@ export default function TrustBridgeCaseStudy() {
                     <div className="flex items-center gap-3" style={{ marginBottom: "16px" }}>
                       <div
                         className="flex items-center justify-center flex-shrink-0"
-                        style={{ width: "44px", height: "44px", borderRadius: "12px", background: "rgba(201,150,10,0.12)" }}
+                        style={{ width: "44px", height: "44px", borderRadius: "12px", background: "rgba(8,145,178,0.12)" }}
                       >
                         <CaseIcon className="h-6 w-6 text-primary" />
                       </div>
                       <div>
-                        <h3 style={{ fontSize: "1.3rem", fontWeight: 800, color: "#1a1200", lineHeight: 1.2 }}>
+                        <h3 style={{ fontSize: "1.3rem", fontWeight: 800, color: "#0a1628", lineHeight: 1.2 }}>
                           {c.title}
                         </h3>
-                        <p style={{ fontSize: "0.82rem", color: "#6b5a30", margin: 0 }}>{c.subtitle}</p>
+                        <p style={{ fontSize: "0.82rem", color: "#64748b", margin: 0 }}>{c.subtitle}</p>
                       </div>
                     </div>
 
@@ -540,23 +540,23 @@ export default function TrustBridgeCaseStudy() {
                       style={{
                         padding: "16px 20px",
                         borderRadius: "14px",
-                        background: "rgba(201,150,10,0.06)",
-                        border: "1px solid rgba(201,150,10,0.15)",
+                        background: "rgba(8,145,178,0.06)",
+                        border: "1px solid rgba(8,145,178,0.15)",
                         marginBottom: "20px",
                       }}
                     >
-                      <span style={{ fontSize: "2rem", fontWeight: 900, color: "#c9960a", lineHeight: 1 }}>{c.stat}</span>
-                      <span style={{ fontSize: "0.88rem", color: "#3d2800", lineHeight: 1.4 }}>{c.statLabel}</span>
+                      <span style={{ fontSize: "2rem", fontWeight: 900, color: "#0891b2", lineHeight: 1 }}>{c.stat}</span>
+                      <span style={{ fontSize: "0.88rem", color: "#1e293b", lineHeight: 1.4 }}>{c.statLabel}</span>
                     </div>
 
-                    <p style={{ fontSize: "0.95rem", color: "#3d2800", lineHeight: 1.8, marginBottom: "16px" }}>
+                    <p style={{ fontSize: "0.95rem", color: "#1e293b", lineHeight: 1.8, marginBottom: "16px" }}>
                       {c.description}
                     </p>
 
                     {/* Interface Mockup Image - Individual per case */}
                     <div
-                      className="w-full rounded-xl overflow-hidden"
-                      style={{ marginBottom: "20px", border: "1px solid rgba(212,201,168,0.4)" }}
+                      className="w-full rounded-md overflow-hidden"
+                      style={{ marginBottom: "20px", border: "1px solid rgba(148,163,184,0.4)" }}
                     >
                       {i === 0 && (
                         <Image
@@ -609,12 +609,12 @@ export default function TrustBridgeCaseStudy() {
                           style={{
                             padding: "12px 8px",
                             background: "rgba(255,255,255,0.55)",
-                            border: "1px solid rgba(212,201,168,0.4)",
+                            border: "1px solid rgba(148,163,184,0.4)",
                             borderRadius: "10px",
                           }}
                         >
                           <Icons.Check className="h-4 w-4 text-primary mx-auto mb-1" />
-                          <span style={{ fontSize: "0.75rem", fontWeight: 600, color: "#1a1200" }}>{feature}</span>
+                          <span style={{ fontSize: "0.75rem", fontWeight: 600, color: "#0a1628" }}>{feature}</span>
                         </div>
                       ))}
                     </div>
@@ -623,7 +623,7 @@ export default function TrustBridgeCaseStudy() {
                     <div
                       style={{
                         padding: "14px 16px",
-                        background: "rgba(201,150,10,0.08)",
+                        background: "rgba(8,145,178,0.08)",
                         borderRadius: "10px",
                         fontSize: "0.85rem",
                         color: "#8a5c00",
@@ -643,7 +643,7 @@ export default function TrustBridgeCaseStudy() {
 
               {/* Solution */}
               <SectionHeading>The Interaction Layer</SectionHeading>
-              <p style={{ fontSize: "0.98rem", color: "#3d2800", lineHeight: 1.8, marginBottom: "16px" }}>
+              <p style={{ fontSize: "0.98rem", color: "#1e293b", lineHeight: 1.8, marginBottom: "16px" }}>
                 Across all four cases, the same structural solution emerged: an interaction layer that sits between the
                 AI system and the human user, translating outputs into something the person can actually act on.
               </p>
@@ -664,8 +664,8 @@ export default function TrustBridgeCaseStudy() {
               <SectionHeading>With and Without the Trust Layer</SectionHeading>
 
               <div
-                className="grid grid-cols-1 sm:grid-cols-2 overflow-hidden rounded-2xl"
-                style={{ gap: "1px", background: "rgba(201,150,10,0.2)", margin: "20px 0" }}
+                className="grid grid-cols-1 sm:grid-cols-2 overflow-hidden rounded-lg"
+                style={{ gap: "1px", background: "rgba(8,145,178,0.2)", margin: "20px 0" }}
               >
                 {/* Without */}
                 <div style={{ padding: "24px", background: "rgba(255,240,240,0.7)", backdropFilter: "blur(10px)" }}>
@@ -685,7 +685,7 @@ export default function TrustBridgeCaseStudy() {
                     <div
                       key={i}
                       className="flex gap-2.5 items-start"
-                      style={{ fontSize: "0.82rem", color: "#3d2800", marginBottom: "10px", lineHeight: 1.5 }}
+                      style={{ fontSize: "0.82rem", color: "#1e293b", marginBottom: "10px", lineHeight: 1.5 }}
                     >
                       <span style={{ color: "#9ca3af", fontWeight: 700, flexShrink: 0 }}>{"\u2193"}</span>
                       <span>{step}</span>
@@ -724,9 +724,9 @@ export default function TrustBridgeCaseStudy() {
                     <div
                       key={i}
                       className="flex gap-2.5 items-start"
-                      style={{ fontSize: "0.82rem", color: "#3d2800", marginBottom: "10px", lineHeight: 1.5 }}
+                      style={{ fontSize: "0.82rem", color: "#1e293b", marginBottom: "10px", lineHeight: 1.5 }}
                     >
-                      <span style={{ color: "#c9960a", fontWeight: 700, flexShrink: 0 }}>{"\u2193"}</span>
+                      <span style={{ color: "#0891b2", fontWeight: 700, flexShrink: 0 }}>{"\u2193"}</span>
                       <span>{step}</span>
                     </div>
                   ))}
@@ -748,7 +748,7 @@ export default function TrustBridgeCaseStudy() {
 
               {/* Interaction Flow */}
               <SectionHeading>The Interaction Flow</SectionHeading>
-              <p style={{ fontSize: "0.98rem", color: "#3d2800", lineHeight: 1.8, marginBottom: "16px" }}>
+              <p style={{ fontSize: "0.98rem", color: "#1e293b", lineHeight: 1.8, marginBottom: "16px" }}>
                 Every TrustBridge interaction follows the same five-step pattern regardless of domain:
               </p>
 
@@ -765,21 +765,21 @@ export default function TrustBridgeCaseStudy() {
                         minWidth: "120px",
                         padding: "16px 12px",
                         background: "rgba(255,255,255,0.5)",
-                        border: "1px solid rgba(212,201,168,0.4)",
+                        border: "1px solid rgba(148,163,184,0.4)",
                         borderRadius: "12px",
                       }}
                     >
-                      <h4 style={{ fontSize: "0.8rem", color: "#c9960a", marginBottom: "4px", fontWeight: 700 }}>
+                      <h4 style={{ fontSize: "0.8rem", color: "#0891b2", marginBottom: "4px", fontWeight: 700 }}>
                         {step.title}
                       </h4>
-                      <p style={{ fontSize: "0.72rem", color: "#6b5a30", margin: 0, lineHeight: 1.4 }}>
+                      <p style={{ fontSize: "0.72rem", color: "#64748b", margin: 0, lineHeight: 1.4 }}>
                         {step.description}
                       </p>
                     </div>
                     {i < FLOW_STEPS.length - 1 && (
                       <span
                         className="sm:rotate-0 rotate-90 flex-shrink-0 px-1"
-                        style={{ fontSize: "18px", color: "#c9960a" }}
+                        style={{ fontSize: "18px", color: "#0891b2" }}
                       >
                         {"\u2192"}
                       </span>
@@ -792,7 +792,7 @@ export default function TrustBridgeCaseStudy() {
 
               {/* Where This Applies */}
               <SectionHeading>Where This Applies</SectionHeading>
-              <p style={{ fontSize: "0.98rem", color: "#3d2800", lineHeight: 1.8, marginBottom: "16px" }}>
+              <p style={{ fontSize: "0.98rem", color: "#1e293b", lineHeight: 1.8, marginBottom: "16px" }}>
                 The four case studies are evidence for a pattern that applies across any regulated domain where AI makes
                 decisions that affect real people.
               </p>
@@ -807,15 +807,15 @@ export default function TrustBridgeCaseStudy() {
                       style={{
                         padding: "18px",
                         background: "rgba(255,255,255,0.5)",
-                        border: "1px solid rgba(212,201,168,0.4)",
+                        border: "1px solid rgba(148,163,184,0.4)",
                         borderRadius: "14px",
                       }}
                     >
                       <DomainIcon className="h-5 w-5 text-primary mx-auto mb-2" />
-                      <h4 style={{ fontSize: "0.85rem", fontWeight: 700, color: "#1a1200", marginBottom: "6px" }}>
+                      <h4 style={{ fontSize: "0.85rem", fontWeight: 700, color: "#0a1628", marginBottom: "6px" }}>
                         {d.title}
                       </h4>
-                      <p style={{ fontSize: "0.75rem", color: "#6b5a30", margin: 0, lineHeight: 1.5 }}>
+                      <p style={{ fontSize: "0.75rem", color: "#64748b", margin: 0, lineHeight: 1.5 }}>
                         {d.description}
                       </p>
                     </div>
@@ -838,10 +838,10 @@ export default function TrustBridgeCaseStudy() {
                       style={{
                         padding: "14px 16px",
                         background: "rgba(255,255,255,0.5)",
-                        border: "1px solid rgba(212,201,168,0.4)",
+                        border: "1px solid rgba(148,163,184,0.4)",
                         borderRadius: "12px",
                         fontSize: "0.88rem",
-                        color: "#3d2800",
+                        color: "#1e293b",
                         lineHeight: 1.5,
                       }}
                     >
@@ -854,12 +854,12 @@ export default function TrustBridgeCaseStudy() {
 
               {/* Reflection */}
               <SectionHeading>Reflection</SectionHeading>
-              <p style={{ fontSize: "0.98rem", color: "#3d2800", lineHeight: 1.8, marginBottom: "16px" }}>
+              <p style={{ fontSize: "0.98rem", color: "#1e293b", lineHeight: 1.8, marginBottom: "16px" }}>
                 TrustBridge started from a single observation: the people most affected by AI systems are almost never
                 in the room when those systems are designed. Elderly adults, children, patients {"\u2014"} they appear in user
                 research documents, if at all, as edge cases or accessibility footnotes.
               </p>
-              <p style={{ fontSize: "0.98rem", color: "#3d2800", lineHeight: 1.8, marginBottom: "16px" }}>
+              <p style={{ fontSize: "0.98rem", color: "#1e293b", lineHeight: 1.8, marginBottom: "16px" }}>
                 What the four case studies demonstrated is that these groups are not edge cases. They are the most
                 accurate diagnostic of whether an AI interaction was designed for real people or for an imaginary average
                 user. When an interaction fails a 68-year-old retired teacher, the problem is not the teacher. The
@@ -870,7 +870,7 @@ export default function TrustBridgeCaseStudy() {
                 {'"'}Designing for the most demanding user doesn{"'"}t create a simpler product. It creates an honest one.{'"'}
               </PullQuote>
 
-              <p style={{ fontSize: "0.98rem", color: "#3d2800", lineHeight: 1.8, marginBottom: "16px" }}>
+              <p style={{ fontSize: "0.98rem", color: "#1e293b", lineHeight: 1.8, marginBottom: "16px" }}>
                 The research also reinforced a practical argument: organisations that invest in interaction design at the
                 human-AI boundary see better adoption, fewer helpdesk escalations, and {"\u2014"} from August 2026 {"\u2014"} stronger EU
                 AI Act compliance evidence. Trust is not a soft value. It is measurable, designable infrastructure.
@@ -878,13 +878,13 @@ export default function TrustBridgeCaseStudy() {
 
               {/* Platform */}
               <SectionHeading>Platform & Research</SectionHeading>
-              <p style={{ fontSize: "0.98rem", color: "#3d2800", lineHeight: 1.8, marginBottom: "16px" }}>
+              <p style={{ fontSize: "0.98rem", color: "#1e293b", lineHeight: 1.8, marginBottom: "16px" }}>
                 TrustBridge is published as an open design research portfolio at{" "}
                 <a
                   href="https://trustbridge.design"
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{ color: "#c9960a", fontWeight: 600 }}
+                  style={{ color: "#0891b2", fontWeight: 600 }}
                 >
                   trustbridge.design
                 </a>
@@ -900,14 +900,14 @@ export default function TrustBridgeCaseStudy() {
                 ]}
               />
 
-              <p style={{ fontSize: "0.98rem", color: "#3d2800", lineHeight: 1.8, marginBottom: "16px" }}>
+              <p style={{ fontSize: "0.98rem", color: "#1e293b", lineHeight: 1.8, marginBottom: "16px" }}>
                 The research was developed alongside the Trust by Design governance framework {"\u2014"} TrustBridge provides the
                 interaction-level evidence for the systemic arguments made at{" "}
                 <a
                   href="https://trust-by-design.org"
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{ color: "#c9960a", fontWeight: 600 }}
+                  style={{ color: "#0891b2", fontWeight: 600 }}
                 >
                   trust-by-design.org
                 </a>
@@ -921,7 +921,7 @@ export default function TrustBridgeCaseStudy() {
                   marginTop: "40px",
                   padding: "32px",
                   background: "rgba(255,255,255,0.5)",
-                  border: "1px solid rgba(212,201,168,0.5)",
+                  border: "1px solid rgba(148,163,184,0.5)",
                   borderRadius: "20px",
                 }}
               >
@@ -932,18 +932,18 @@ export default function TrustBridgeCaseStudy() {
                       width: "40px",
                       height: "40px",
                       borderRadius: "12px",
-                      background: "rgba(201,150,10,0.1)",
+                      background: "rgba(8,145,178,0.1)",
                       flexShrink: 0,
                     }}
                   >
-                    <Icons.Eye className="h-5 w-5" style={{ color: "#c9960a" }} />
+                    <Icons.Eye className="h-5 w-5" style={{ color: "#0891b2" }} />
                   </div>
-                  <h3 style={{ fontSize: "1.15rem", fontWeight: 700, color: "#1a1200", margin: 0 }}>
+                  <h3 style={{ fontSize: "1.15rem", fontWeight: 700, color: "#0a1628", margin: 0 }}>
                     How This Was Made
                   </h3>
                 </div>
 
-                <p style={{ fontSize: "0.92rem", color: "#3d2800", lineHeight: 1.75, marginBottom: "20px" }}>
+                <p style={{ fontSize: "0.92rem", color: "#1e293b", lineHeight: 1.75, marginBottom: "20px" }}>
                   I practice what I preach. This project was built with AI at every stage {"\u2014"} and I want you to see how.
                 </p>
 
@@ -975,13 +975,13 @@ export default function TrustBridgeCaseStudy() {
                       style={{
                         padding: "20px",
                         background: "rgba(255,255,255,0.4)",
-                        border: "1px solid rgba(212,201,168,0.35)",
+                        border: "1px solid rgba(148,163,184,0.35)",
                         borderRadius: "14px",
                       }}
                     >
                       <div className="flex items-center gap-2.5 mb-2.5">
-                        <item.icon className="h-4 w-4" style={{ color: "#c9960a", flexShrink: 0 }} />
-                        <span style={{ fontSize: "0.85rem", fontWeight: 700, color: "#1a1200" }}>{item.title}</span>
+                        <item.icon className="h-4 w-4" style={{ color: "#0891b2", flexShrink: 0 }} />
+                        <span style={{ fontSize: "0.85rem", fontWeight: 700, color: "#0a1628" }}>{item.title}</span>
                       </div>
                       <p style={{ fontSize: "0.82rem", color: "#5a4a20", lineHeight: 1.65, margin: 0 }}>
                         {item.text}
@@ -994,13 +994,13 @@ export default function TrustBridgeCaseStudy() {
                   style={{
                     marginTop: "20px",
                     padding: "16px 20px",
-                    background: "rgba(201,150,10,0.06)",
+                    background: "rgba(8,145,178,0.06)",
                     borderRadius: "12px",
-                    border: "1px solid rgba(201,150,10,0.15)",
+                    border: "1px solid rgba(8,145,178,0.15)",
                   }}
                 >
                   <p style={{ fontSize: "0.82rem", color: "#5a4a20", lineHeight: 1.65, margin: 0 }}>
-                    <strong style={{ color: "#1a1200" }}>Why disclose this?</strong> Because a trust designer who hides their own process isn{"'"}t one.
+                    <strong style={{ color: "#0a1628" }}>Why disclose this?</strong> Because a trust designer who hides their own process isn{"'"}t one.
                     AI is my medium {"\u2014"} I use it to build, to prototype, and to think. The design decisions, the ethical framing, and the human insight are mine. The tools are whatever gets the job done honestly.
                   </p>
                 </div>
@@ -1013,14 +1013,14 @@ export default function TrustBridgeCaseStudy() {
                   marginTop: "56px",
                   padding: "36px",
                   background: "rgba(255,255,255,0.45)",
-                  border: "1px solid rgba(212,201,168,0.4)",
+                  border: "1px solid rgba(148,163,184,0.4)",
                   borderRadius: "20px",
                 }}
               >
-                <h3 style={{ fontSize: "1.3rem", fontWeight: 700, color: "#1a1200", marginBottom: "10px" }}>
+                <h3 style={{ fontSize: "1.3rem", fontWeight: 700, color: "#0a1628", marginBottom: "10px" }}>
                   Want to be a trust designer too?
                 </h3>
-                <p style={{ fontSize: "0.9rem", color: "#6b5a30", marginBottom: "24px" }}>
+                <p style={{ fontSize: "0.9rem", color: "#64748b", marginBottom: "24px" }}>
                   We{"'"}re looking for partners who believe AI should work for everyone. Get in touch to explore how we can collaborate on building trustworthy AI experiences together.
                 </p>
                 <div className="flex gap-3 justify-center flex-wrap">
@@ -1029,7 +1029,7 @@ export default function TrustBridgeCaseStudy() {
                     className="inline-flex font-bold min-h-[44px] items-center"
                     style={{
                       padding: "12px 28px",
-                      background: "#1a1200",
+                      background: "#0a1628",
                       color: "#f5c842",
                       borderRadius: "100px",
                       fontSize: "14px",
@@ -1046,7 +1046,7 @@ export default function TrustBridgeCaseStudy() {
                     style={{
                       padding: "12px 28px",
                       border: "2px solid #1a1200",
-                      color: "#1a1200",
+                      color: "#0a1628",
                       borderRadius: "100px",
                       fontSize: "14px",
                       textDecoration: "none",
@@ -1076,7 +1076,7 @@ function SectionHeading({ children }: { children: React.ReactNode }) {
       style={{
         fontSize: "1.5rem",
         fontWeight: 800,
-        color: "#1a1200",
+        color: "#0a1628",
         margin: "48px 0 16px",
         letterSpacing: "-0.01em",
       }}
@@ -1091,7 +1091,7 @@ function PullQuote({ children }: { children: React.ReactNode }) {
     <div
       style={{
         padding: "28px 32px",
-        borderLeft: "3px solid #c9960a",
+        borderLeft: "3px solid #0891b2",
         background: "rgba(255,255,255,0.45)",
         borderRadius: "0 14px 14px 0",
         margin: "28px 0",
@@ -1101,7 +1101,7 @@ function PullQuote({ children }: { children: React.ReactNode }) {
         style={{
           fontSize: "1.05rem",
           fontStyle: "italic",
-          color: "#1a1200",
+          color: "#0a1628",
           fontWeight: 500,
           margin: 0,
           lineHeight: 1.7,
@@ -1117,8 +1117,8 @@ function DotList({ items }: { items: string[] }) {
   return (
     <ul className="flex flex-col gap-2.5" style={{ listStyle: "none", margin: "16px 0" }}>
       {items.map((item, i) => (
-        <li key={i} className="flex gap-2.5" style={{ fontSize: "0.92rem", color: "#3d2800", lineHeight: 1.6 }}>
-          <span style={{ color: "#c9960a", fontWeight: 900, flexShrink: 0, marginTop: "1px" }}>{"\u2022"}</span>
+        <li key={i} className="flex gap-2.5" style={{ fontSize: "0.92rem", color: "#1e293b", lineHeight: 1.6 }}>
+          <span style={{ color: "#0891b2", fontWeight: 900, flexShrink: 0, marginTop: "1px" }}>{"\u2022"}</span>
           <span>{item}</span>
         </li>
       ))}
@@ -1127,5 +1127,5 @@ function DotList({ items }: { items: string[] }) {
 }
 
 function Divider() {
-  return <div style={{ height: "1px", background: "rgba(201,150,10,0.2)", margin: "40px 0" }} />
+  return <div style={{ height: "1px", background: "rgba(8,145,178,0.2)", margin: "40px 0" }} />
 }
