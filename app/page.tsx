@@ -582,7 +582,7 @@ export default function Page() {
                           {/* Image placeholder - replace src with your uploaded image */}
                           <div className="relative h-40 bg-slate-100 overflow-hidden">
                             <Image
-                              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20Mar%2025%2C%202026%2C%2002_00_25%20PM-TMKxeFMyli8cuyOwVIljgEHcypFXKx.png"
+                              src={study.image}
                               alt={study.title}
                               fill
                               className="object-cover group-hover:scale-105 transition-transform duration-300"
@@ -785,69 +785,35 @@ export default function Page() {
         
       </section>
 
-      {/* Workshop Tools - Standalone Card */}
-      <section id="tools" className="container mx-auto px-4 pt-6 scroll-mt-24">
+      {/* Workshop Tools - Clean Bundesdruckerei style */}
+      <section id="tools" className="container mx-auto px-4 pt-8 scroll-mt-24">
         <Link href="/case-studies/workshop-tools" className="group block">
           <div
-            className="relative rounded-lg p-6 sm:p-8 transition-all duration-200 hover:shadow-lg overflow-hidden"
-            style={{
-              background: "rgba(255,255,255,0.55)",
-              backdropFilter: "blur(12px)",
-              border: "1px solid rgba(212,201,168,0.5)",
-            }}
+            className="relative p-6 sm:p-8 transition-all duration-200 hover:bg-slate-50/50 border-b border-slate-200"
           >
-            {/* Rainbow top border */}
-            <div
-              className="absolute top-0 left-0 right-0"
-              style={{
-                height: "3px",
-                background: "linear-gradient(90deg, #ff6b6b, #ffa94d, #ffd43b, #69db7c, #4dabf7, #9775fa, #f06595)",
-                opacity: 0.85,
-              }}
-            />
             <div className="flex flex-col lg:flex-row lg:items-center gap-6">
-              {/* Left: Thumbnail + Title */}
-              <div className="flex items-center gap-5 lg:w-2/5">
-                <div
-                  className="flex-shrink-0 rounded-lg overflow-hidden shadow-sm"
-                  style={{
-                    width: "120px",
-                    height: "120px",
-                    border: "2px solid rgba(212,201,168,0.5)",
-                  }}
-                >
-                  <img
-                    src="/images/workshop-tools-abstract.jpg"
-                    alt="Abstract illustration of workshop facilitation tools"
-                    className="w-full h-full object-cover"
-                  />
+              {/* Left: Icon + Title */}
+              <div className="flex items-center gap-4 lg:w-2/5">
+                <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded bg-primary/10">
+                  <Icons.Layers className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <h2 className="text-lg font-bold text-foreground">Workshop Tools</h2>
-                  <p className="text-sm text-muted-foreground mt-0.5">Facilitation artefacts I designed for hard conversations</p>
+                  <h2 className="text-lg font-bold" style={{ color: '#0a1628' }}>Workshop Tools</h2>
+                  <p className="text-sm" style={{ color: '#64748b' }}>Facilitation artefacts for complex stakeholder conversations</p>
                 </div>
               </div>
 
               {/* Middle: Quick stats */}
-              <div className="flex flex-wrap gap-3 lg:w-1/3 lg:justify-center">
-                <div className="flex items-center gap-2 rounded-md px-3 py-1.5" style={{ background: "rgba(255,255,255,0.65)", border: "1px solid rgba(148,163,184,0.3)" }}>
-                  <Icons.Layers className="h-3.5 w-3.5 text-primary" />
-                  <span className="text-xs font-semibold text-foreground">3 Contexts</span>
-                </div>
-                <div className="flex items-center gap-2 rounded-md px-3 py-1.5" style={{ background: "rgba(255,255,255,0.65)", border: "1px solid rgba(148,163,184,0.3)" }}>
-                  <Icons.CheckCircle className="h-3.5 w-3.5 text-primary" />
-                  <span className="text-xs font-semibold text-foreground">1 Toolkit Live</span>
-                </div>
-                <div className="flex items-center gap-2 rounded-md px-3 py-1.5" style={{ background: "rgba(255,255,255,0.65)", border: "1px solid rgba(148,163,184,0.3)" }}>
-                  <Icons.Check className="h-3.5 w-3.5 text-primary" />
-                  <span className="text-xs font-semibold text-foreground">EU AI Act Ready</span>
-                </div>
+              <div className="flex flex-wrap gap-2 lg:w-1/3 lg:justify-center">
+                <span className="text-xs font-medium px-3 py-1 rounded bg-slate-100" style={{ color: '#0a1628' }}>3 Contexts</span>
+                <span className="text-xs font-medium px-3 py-1 rounded bg-slate-100" style={{ color: '#0a1628' }}>1 Toolkit Live</span>
+                <span className="text-xs font-medium px-3 py-1 rounded bg-primary/10 text-primary">EU AI Act Ready</span>
               </div>
 
               {/* Right: CTA arrow */}
               <div className="lg:w-1/3 flex lg:justify-end">
                 <span className="text-sm font-semibold text-primary group-hover:underline flex items-center gap-1.5">
-                  Explore the tools <Icons.ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  Explore tools <Icons.ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </span>
               </div>
             </div>
@@ -855,119 +821,61 @@ export default function Page() {
         </Link>
       </section>
 
-      {/* Who I Work With */}
-      <section className="container mx-auto px-4 pb-6">
-        <div className="rounded-lg p-8 sm:p-12 lg:p-16 my-6 mb-0.5" style={{ background: '#F5F0E8' }}>
-          <div className="flex flex-col sm:flex-row sm:items-center gap-5 mb-8">
-            {/* Decorative illustration — connected nodes */}
-            <div
-              className="w-20 h-20 sm:w-24 sm:h-24 flex-shrink-0 flex items-center justify-center rounded-lg"
-              style={{ background: 'rgba(255,255,255,0.5)', border: '1px solid rgba(212,201,168,0.4)' }}
-            >
-              <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-                {/* Connection lines */}
-                <line x1="28" y1="14" x2="14" y2="34" stroke="#0891b2" strokeWidth="1.5" strokeOpacity="0.4" />
-                <line x1="28" y1="14" x2="42" y2="34" stroke="#0891b2" strokeWidth="1.5" strokeOpacity="0.4" />
-                <line x1="14" y1="34" x2="42" y2="34" stroke="#0891b2" strokeWidth="1.5" strokeOpacity="0.4" />
-                <line x1="28" y1="14" x2="28" y2="44" stroke="#0891b2" strokeWidth="1.5" strokeOpacity="0.4" />
-                <line x1="14" y1="34" x2="28" y2="44" stroke="#0891b2" strokeWidth="1.5" strokeOpacity="0.4" />
-                <line x1="42" y1="34" x2="28" y2="44" stroke="#0891b2" strokeWidth="1.5" strokeOpacity="0.4" />
-                {/* Nodes */}
-                <circle cx="28" cy="14" r="6" fill="#0891b2" fillOpacity="0.15" stroke="#0891b2" strokeWidth="1.5" />
-                <circle cx="28" cy="14" r="2.5" fill="#0891b2" />
-                <circle cx="14" cy="34" r="5" fill="#0891b2" fillOpacity="0.15" stroke="#0891b2" strokeWidth="1.5" />
-                <circle cx="14" cy="34" r="2" fill="#0891b2" />
-                <circle cx="42" cy="34" r="5" fill="#0891b2" fillOpacity="0.15" stroke="#0891b2" strokeWidth="1.5" />
-                <circle cx="42" cy="34" r="2" fill="#0891b2" />
-                <circle cx="28" cy="44" r="4" fill="#0891b2" fillOpacity="0.15" stroke="#0891b2" strokeWidth="1.5" />
-                <circle cx="28" cy="44" r="1.5" fill="#0891b2" />
-                {/* Small accent dots */}
-                <circle cx="21" cy="24" r="1.5" fill="#0891b2" fillOpacity="0.3" />
-                <circle cx="35" cy="24" r="1.5" fill="#0891b2" fillOpacity="0.3" />
-                <circle cx="21" cy="39" r="1" fill="#0891b2" fillOpacity="0.25" />
-                <circle cx="35" cy="39" r="1" fill="#0891b2" fillOpacity="0.25" />
-              </svg>
-            </div>
-            <div>
-              <h2 className="text-xl sm:text-2xl font-bold mb-1" style={{ color: '#0a1628' }}>
-                Sectors &amp; Challenges
-              </h2>
-              <p className="text-sm" style={{ color: '#64748b' }}>
-                Organisations navigating these requirements:
-              </p>
-            </div>
-          </div>
+      {/* Sectors & Challenges - Clean Bundesdruckerei style */}
+      <section className="container mx-auto px-4 py-12">
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold mb-2" style={{ color: '#0a1628' }}>
+            Sectors &amp; Challenges
+          </h2>
+          <p className="text-sm" style={{ color: '#64748b' }}>
+            Organisations navigating these requirements
+          </p>
+        </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {[
-              {
-                icon: Icons.ShieldCheck,
-                title: "EU AI Act Compliance",
-                desc: "High-risk AI systems requiring governance frameworks, risk assessment, and documentation for regulatory compliance.",
-              },
-              {
-                icon: Icons.Accessibility,
-                title: "BITV &amp; Accessibility Certification",
-                desc: "Government and public sector applications requiring full BITV 2.0 or WCAG 2.1 compliance and certification.",
-              },
-              {
-                icon: Icons.Brain,
-                title: "Critical Infrastructure",
-                desc: "Digital services for government, healthcare, and public administration requiring security-first research approaches.",
-              },
-              {
-                icon: Icons.Target,
-                title: "Digital Sovereignty",
-                desc: "Organisations prioritising data protection, transparent AI, and Made in Germany quality standards.",
-              },
-              {
-                icon: Icons.Handshake,
-                title: "Cross-Agency Coordination",
-                desc: "Federal programmes requiring stakeholder alignment across ministries, agencies, and technical partners.",
-              },
-              {
-                icon: Icons.Search,
-                title: "Evidence-Based Transformation",
-                desc: "Digital transformation initiatives requiring rigorous research to inform strategic decisions.",
-              },
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="flex gap-4 p-5"
-                style={{
-                  background: 'rgba(255,255,255,0.65)',
-                  border: '1px solid rgba(148,163,184,0.3)',
-                  borderRadius: '12px',
-                }}
-              >
-                <item.icon className="h-5 w-5 mt-0.5 flex-shrink-0" style={{ color: '#0891b2' }} />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {[
+            {
+              icon: Icons.ShieldCheck,
+              title: "EU AI Act Compliance",
+              desc: "Governance frameworks and risk assessment for high-risk AI systems.",
+            },
+            {
+              icon: Icons.Accessibility,
+              title: "BITV & Accessibility",
+              desc: "Full BITV 2.0 and WCAG 2.1 compliance for government applications.",
+            },
+            {
+              icon: Icons.Brain,
+              title: "Critical Infrastructure",
+              desc: "Security-first research for government and healthcare services.",
+            },
+            {
+              icon: Icons.Target,
+              title: "Digital Sovereignty",
+              desc: "Data protection and Made in Germany quality standards.",
+            },
+            {
+              icon: Icons.Handshake,
+              title: "Cross-Agency Coordination",
+              desc: "Stakeholder alignment across ministries and agencies.",
+            },
+            {
+              icon: Icons.Search,
+              title: "Evidence-Based Transformation",
+              desc: "Rigorous research for digital transformation initiatives.",
+            },
+          ].map((item, i) => (
+            <div
+              key={i}
+              className="flex gap-4 p-4 border-l-2 border-primary bg-white hover:bg-slate-50 transition-colors"
+            >
+              <item.icon className="h-5 w-5 mt-0.5 flex-shrink-0 text-primary" />
                 <div>
                   <p className="text-sm font-bold mb-1" style={{ color: '#0a1628' }}>{item.title}</p>
                   <p className="text-xs leading-relaxed" style={{ color: '#64748b' }}>{item.desc}</p>
                 </div>
               </div>
             ))}
-          </div>
-
-          {/* Callout */}
-          <div className="mt-6 rounded-md p-5" style={{ background: 'rgba(8,145,178,0.06)', border: '2px solid rgba(8,145,178,0.25)' }}>
-            <p className="text-sm leading-relaxed" style={{ color: '#1e293b' }}>
-              I partner with organisations who understand that trust, security, and compliance are competitive advantages {"—"} not obstacles.
-            </p>
-          </div>
-
-          {/* Stat pills */}
-          <div className="flex flex-wrap items-center justify-center gap-3 mt-6">
-            {["Federal Government", "EU AI Act Specialist", "BITV 2.0 Certified"].map((stat) => (
-              <span
-                key={stat}
-                className="px-4 py-2 rounded-md text-xs font-semibold"
-                style={{ background: '#0a1628', color: '#ffffff' }}
-              >
-                {stat}
-              </span>
-            ))}
-          </div>
         </div>
       </section>
 
