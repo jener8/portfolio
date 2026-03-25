@@ -495,73 +495,78 @@ export default function Page() {
         <div className="flex flex-col lg:grid lg:grid-cols-3 gap-6">
           {/* LEFT COLUMN: Hero + Case Studies */}
           <div className="lg:col-span-2 order-1 space-y-6">
-            {/* Hero Card - Consulting Portfolio */}
-            <Card className="glass-card overflow-hidden" style={{ padding: '36px', marginBottom: '48px' }}>
-              <CardContent className="p-0 max-w-4xl mx-auto sm:p-4 lg:p-8">
-                <div className="flex flex-col md:flex-row md:items-start gap-6 md:gap-10">
-                  {/* Photo */}
-                  <div className="flex-shrink-0">
-                    <div className="relative w-28 h-28 md:w-36 md:h-36 rounded-md overflow-hidden border-2 border-slate-200">
-                      <Image
-                        src={JENNIFER_PHOTO}
-                        alt="Jennifer Simonds"
-                        fill
-                        className="object-cover"
-                        priority
-                      />
-                    </div>
-                  </div>
+            {/* Hero - Split Layout */}
+            <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-start mb-12">
+              {/* Left: Text Content */}
+              <div className="flex-1">
+                {/* Label */}
+                <p className="mb-3" style={{ fontSize: '11px', letterSpacing: '0.12em', fontWeight: 600, color: '#0891b2', textTransform: 'uppercase' }}>
+                  Research &amp; Discovery | Digital Trust
+                </p>
 
-                  {/* Content */}
-                  <div className="flex-1">
-                    {/* Label */}
-                    <p className="section-label mb-0" style={{ fontSize: '10px', letterSpacing: '0.14em', fontWeight: 700, color: '#0891b2', textTransform: 'uppercase' }}>Research &amp; Discovery | Digital Trust | Made in Germany</p>
+                {/* H1 */}
+                <h1 className="text-balance" style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 800, color: '#0a1628', lineHeight: 1.1, letterSpacing: '-0.02em', marginBottom: '20px' }}>
+                  Creating Trust in Digital Systems
+                </h1>
 
-                    {/* H1 */}
-                    <h1 className="text-balance" style={{ fontSize: 'clamp(1.75rem, 3vw, 2.5rem)', fontWeight: 900, color: '#0a1628', lineHeight: 1.1, letterSpacing: '-0.02em', marginBottom: '16px' }}>
-                      Creating Trust in Digital Systems
-                    </h1>
+                {/* Primary body */}
+                <p style={{ fontSize: '1.05rem', color: '#1e293b', lineHeight: 1.75, marginBottom: '24px' }}>
+                  I lead research and discovery programmes for organisations building secure, compliant digital products. From EU AI Act governance to accessible government services, I deliver the evidence that enables confident decisions.
+                </p>
 
-                    {/* Primary body */}
-                    <p style={{ fontSize: '0.95rem', color: '#1e293b', lineHeight: 1.7, marginBottom: '20px' }}>
-                      I lead research and discovery programmes for organisations building secure, compliant digital products. From EU AI Act governance to accessible government services.
-                    </p>
-
-                    {/* Primary CTA */}
-                    <div className="flex flex-wrap items-center gap-3" style={{ marginBottom: '16px' }}>
-                      <Button
-                        onClick={() => {
-                          const element = document.getElementById("case-studies")
-                          if (element) {
-                            const offset = 80
-                            const elementPosition = element.getBoundingClientRect().top + window.scrollY
-                            window.scrollTo({ top: elementPosition - offset, behavior: "smooth" })
-                          }
-                        }}
-                        size="default"
-                        className="font-bold px-6 shadow-sm min-h-[44px]"
-                        style={{ background: '#0891b2', color: '#ffffff', borderRadius: '6px' }}
-                      >
-                        {"View Case Studies"}
-                      </Button>
-                      <a
-                        href="https://www.linkedin.com/in/jennifer-simonds/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-sm font-medium text-primary hover:underline flex items-center gap-1"
-                      >
-                        <Icons.Linkedin className="h-4 w-4" /> LinkedIn
-                      </a>
-                    </div>
-
-                    {/* Credentials */}
-                    <p style={{ fontSize: '11px', color: '#64748b' }}>
-                      EU AI Act | BITV 2.0 Compliant | Government &amp; Critical Infrastructure
-                    </p>
-                  </div>
+                {/* Primary CTA */}
+                <div className="flex flex-wrap items-center gap-4">
+                  <Button
+                    onClick={() => {
+                      const element = document.getElementById("case-studies")
+                      if (element) {
+                        const offset = 80
+                        const elementPosition = element.getBoundingClientRect().top + window.scrollY
+                        window.scrollTo({ top: elementPosition - offset, behavior: "smooth" })
+                      }
+                    }}
+                    size="lg"
+                    className="font-bold px-8 shadow-sm min-h-[48px]"
+                    style={{ background: '#0891b2', color: '#ffffff', borderRadius: '6px' }}
+                  >
+                    View Case Studies
+                  </Button>
+                  <a
+                    href="https://www.linkedin.com/in/jennifer-simonds/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm font-medium hover:underline flex items-center gap-1.5"
+                    style={{ color: '#0a1628' }}
+                  >
+                    <Icons.Linkedin className="h-4 w-4" /> Connect on LinkedIn
+                  </a>
                 </div>
-              </CardContent>
-            </Card>
+
+                {/* Credentials */}
+                <div className="flex flex-wrap gap-2 mt-6">
+                  {["EU AI Act", "BITV 2.0", "Government", "Critical Infrastructure"].map((tag) => (
+                    <span key={tag} className="text-xs font-medium px-3 py-1 rounded bg-slate-100" style={{ color: '#64748b' }}>
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Right: Photo */}
+              <div className="flex-shrink-0 w-full md:w-auto">
+                <div className="relative w-48 h-56 md:w-56 md:h-64 rounded-md overflow-hidden shadow-lg">
+                  <Image
+                    src="/images/jennifer-avatar.jpg"
+                    alt="Jennifer Simonds - Research & Discovery Lead"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                </div>
+                <p className="text-center mt-3 text-sm font-medium" style={{ color: '#0a1628' }}>Jennifer Simonds</p>
+                <p className="text-center text-xs" style={{ color: '#64748b' }}>Research & Discovery Lead</p>
+              </div>
+            </div>
 
             <section id="case-studies" aria-labelledby="case-studies-heading">
               {/* Case Studies Card */}
