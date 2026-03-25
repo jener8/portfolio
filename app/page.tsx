@@ -352,7 +352,7 @@ export default function Page() {
               <div>
                         <h1 className="text-sm font-semibold" style={{ color: '#0a1628' }}>Jennifer Simonds</h1>
                         <p className="text-xs hidden sm:block" style={{ color: '#64748b' }}>
-                  AI UX Designer · Service Designer · Design Strategist
+                  UX CX AI Researcher · Design Strategist
                 </p>
               </div>
             </div>
@@ -556,7 +556,7 @@ export default function Page() {
               <div className="flex-shrink-0 w-full md:w-auto">
                 <div className="relative w-48 h-56 md:w-56 md:h-64 rounded-md overflow-hidden shadow-lg">
                   <Image
-                    src={JENNIFER_PHOTO}
+                    src="/images/jennifer-avatar.jpg"
                     alt="Jennifer Simonds - Research & Discovery Lead"
                     fill
                     className="object-cover"
