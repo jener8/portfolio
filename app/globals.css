@@ -256,12 +256,12 @@ h1, h2, h3, h4, h5, h6 {
     0 4px 24px rgba(10, 22, 40, 0.06);
 }
 
-/* ---- Glass navigation pill ---- */
+/* ---- Glass navigation bar ---- */
 .glass-nav {
   background: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(20px) saturate(50%) brightness(1.02);
   -webkit-backdrop-filter: blur(20px) saturate(50%) brightness(1.02);
-  border-radius: 100px;
+  border-radius: 6px;
   border: 1px solid rgba(255, 255, 255, 0.85);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.9),

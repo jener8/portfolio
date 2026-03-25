@@ -357,15 +357,15 @@ export default function Page() {
             </div>
 
             <nav aria-label="Main navigation" className="hidden sm:flex items-center gap-1 text-sm">
-              <a href="#case-studies" className="px-3 py-2 rounded-full text-sm font-medium transition-colors hover:bg-black/5" style={{ color: '#3d2800' }}>Work</a>
-              <a href="#about" className="px-3 py-2 rounded-full text-sm font-medium transition-colors hover:bg-black/5" style={{ color: '#3d2800' }}>About</a>
-              <a href="#expertise" className="px-3 py-2 rounded-full text-sm font-medium transition-colors hover:bg-black/5" style={{ color: '#3d2800' }}>Expertise</a>
-              <a href="#inside-the-work" className="px-3 py-2 rounded-full text-sm font-medium transition-colors hover:bg-black/5" style={{ color: '#3d2800' }}>Gallery</a>
-              <a href="#tools" className="px-3 py-2 rounded-full text-sm font-medium transition-colors hover:bg-black/5" style={{ color: '#3d2800' }}>Tools</a>
+<a href="#case-studies" className="px-3 py-2 rounded-md text-sm font-medium transition-colors hover:bg-black/5" style={{ color: '#1e293b' }}>Work</a>
+                <a href="#about" className="px-3 py-2 rounded-md text-sm font-medium transition-colors hover:bg-black/5" style={{ color: '#1e293b' }}>About</a>
+                <a href="#expertise" className="px-3 py-2 rounded-md text-sm font-medium transition-colors hover:bg-black/5" style={{ color: '#1e293b' }}>Expertise</a>
+                <a href="#inside-the-work" className="px-3 py-2 rounded-md text-sm font-medium transition-colors hover:bg-black/5" style={{ color: '#1e293b' }}>Gallery</a>
+                <a href="#tools" className="px-3 py-2 rounded-md text-sm font-medium transition-colors hover:bg-black/5" style={{ color: '#1e293b' }}>Tools</a>
               
               <Button
                 size="sm"
-                className="h-9 min-h-[44px] font-bold rounded-full px-5"
+                className="h-9 min-h-[44px] font-bold rounded-md px-5"
                 style={{ background: '#0891b2', color: '#ffffff' }}
                 asChild
               >
@@ -374,7 +374,7 @@ export default function Page() {
                   Contact
                 </a>
               </Button>
-              <Button size="sm" className="h-9 w-9 min-w-[44px] min-h-[44px] p-0 bg-[#0A66C2] hover:bg-[#004182] text-white rounded-full" asChild>
+              <Button size="sm" className="h-9 w-9 min-w-[44px] min-h-[44px] p-0 bg-[#0A66C2] hover:bg-[#004182] text-white rounded-md" asChild>
                 <a
                   href="https://www.linkedin.com/in/simondsjennifer/"
                   target="_blank"
@@ -463,7 +463,7 @@ export default function Page() {
               <div className="p-4 border-t border-border space-y-3">
                 <Button
                   size="sm"
-                  className="w-full font-semibold h-10 min-h-[44px] shadow-sm rounded-full"
+                  className="w-full font-semibold h-10 min-h-[44px] shadow-sm rounded-md"
                         style={{ background: '#0891b2', color: '#ffffff' }}
                   asChild
                 >
@@ -528,7 +528,7 @@ export default function Page() {
                     }}
                     size="lg"
                     className="font-bold px-8 shadow-lg min-h-[44px]"
-                    style={{ background: '#0891b2', color: '#ffffff', borderRadius: '100px' }}
+                    style={{ background: '#0891b2', color: '#ffffff', borderRadius: '6px' }}
                   >
                     {"View Case Studies"}
                   </Button>
@@ -589,7 +589,7 @@ export default function Page() {
                       },
                     ].map((study, i) => (
                       <Link key={i} href={study.href} aria-label={`View case study: ${study.title}`} className="group block">
-                        <div className="bg-white/60 hover:bg-white/70 transition-all duration-200 rounded-xl border border-slate-200 hover:border-primary/50 p-6 sm:p-5 lg:p-7 flex flex-col items-center text-center h-full">
+                        <div className="bg-white/60 hover:bg-white/70 transition-all duration-200 rounded-md border border-slate-200 hover:border-primary/50 p-6 sm:p-5 lg:p-7 flex flex-col items-center text-center h-full">
                           <study.icon className="h-8 w-8 text-primary mb-4" />
                           <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground mb-2">{study.label}</p>
                           <h3 className="text-base font-bold text-foreground mb-2">{study.title}</h3>
@@ -615,7 +615,7 @@ export default function Page() {
             {/* How I Got Here */}
             <div
               id="about"
-              className="mt-4 rounded-xl p-6 sm:p-8 scroll-mt-24"
+              className="mt-4 rounded-md p-6 sm:p-8 scroll-mt-24"
               style={{ background: '#f1f5f9', border: '1px solid rgba(148,163,184,0.3)' }}
             >
               <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5">
@@ -744,7 +744,7 @@ export default function Page() {
                     return (
                       <div
                         key={index}
-                        className="w-full rounded-xl glass-card overflow-hidden transition-all duration-200 hover:shadow-md hover:shadow-[rgba(0,0,0,0.08)]"
+                        className="w-full rounded-md glass-card overflow-hidden transition-all duration-200 hover:shadow-md hover:shadow-[rgba(0,0,0,0.08)]"
                       >
                         <button
                           type="button"
@@ -797,7 +797,7 @@ export default function Page() {
 
       {/* Inside the Work - Full-width below case studies & expertise */}
       <section id="inside-the-work" className="container mx-auto px-4 scroll-mt-24 pt-0">
-        <div className="glass-card rounded-2xl p-4 lg:p-5">
+        <div className="glass-card rounded-lg p-4 lg:p-5">
           <div className="flex items-center justify-between mb-3">
             <div>
               <h3 className="text-base lg:text-lg font-semibold text-foreground">Inside the Work</h3>
@@ -818,7 +818,7 @@ export default function Page() {
                 onClick={handleGalleryClick}
                 className="flex-shrink-0 w-[260px] lg:w-[320px] 2xl:w-[380px] focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-lg"
               >
-                <div className="glass-card-solid rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer border border-glass-border hover:border-primary/30">
+                <div className="glass-card-solid rounded-md overflow-hidden shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer border border-glass-border hover:border-primary/30">
                   <div className="aspect-[4/3] relative">
                     <img
                       src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20Feb%2012%2C%202026%2C%2004_03_56%20PM-XdSjEVNbdZME28ONow9B8HPraoh3Kx.png"
@@ -839,7 +839,7 @@ export default function Page() {
                 onClick={handleGalleryClick}
                 className="flex-shrink-0 w-[260px] lg:w-[320px] 2xl:w-[380px] focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-lg"
               >
-                <div className="glass-card-solid rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer border border-glass-border hover:border-primary/30">
+                <div className="glass-card-solid rounded-md overflow-hidden shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer border border-glass-border hover:border-primary/30">
                   <div className="aspect-[4/3] relative">
                     <img
                       src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20Feb%2012%2C%202026%2C%2004_12_12%20PM-VfkUOiUO0Cx1lb2BRIRNAJzb8ovvaz.png"
@@ -860,7 +860,7 @@ export default function Page() {
                 onClick={handleGalleryClick}
                 className="flex-shrink-0 w-[260px] lg:w-[320px] 2xl:w-[380px] focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-lg"
               >
-                <div className="glass-card-solid rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer border border-glass-border hover:border-primary/30">
+                <div className="glass-card-solid rounded-md overflow-hidden shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer border border-glass-border hover:border-primary/30">
                   <div className="aspect-[4/3] relative">
                     <img
                       src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20Feb%2012%2C%202026%2C%2004_12_17%20PM-1yftyVDDwPWVwEDyrkjXj8OoWGczLg.png"
@@ -881,7 +881,7 @@ export default function Page() {
                 onClick={handleGalleryClick}
                 className="flex-shrink-0 w-[260px] lg:w-[320px] 2xl:w-[380px] focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-lg"
               >
-                <div className="glass-card-solid rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer border border-glass-border hover:border-primary/30">
+                <div className="glass-card-solid rounded-md overflow-hidden shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer border border-glass-border hover:border-primary/30">
                   <div className="aspect-[4/3] relative">
                     <img
                       src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20Feb%2012%2C%202026%2C%2004_12_18%20PM-ceq2RndAumXrwKt0NGxsqnX1ycPvgc.png"
@@ -902,7 +902,7 @@ export default function Page() {
                 onClick={handleGalleryClick}
                 className="flex-shrink-0 w-[260px] lg:w-[320px] 2xl:w-[380px] focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-lg"
               >
-                <div className="glass-card-solid rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer border border-glass-border hover:border-primary/30">
+                <div className="glass-card-solid rounded-md overflow-hidden shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer border border-glass-border hover:border-primary/30">
                   <div className="aspect-[4/3] relative">
                     <img
                       src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20Feb%2012%2C%202026%2C%2004_25_46%20PM-4loRj3v503tpXMdCGipoh3q61yEssX.png"
@@ -925,7 +925,7 @@ export default function Page() {
       <section id="tools" className="container mx-auto px-4 pt-6 scroll-mt-24">
         <Link href="/case-studies/workshop-tools" className="group block">
           <div
-            className="relative rounded-2xl p-6 sm:p-8 transition-all duration-200 hover:shadow-lg overflow-hidden"
+            className="relative rounded-lg p-6 sm:p-8 transition-all duration-200 hover:shadow-lg overflow-hidden"
             style={{
               background: "rgba(255,255,255,0.55)",
               backdropFilter: "blur(12px)",
@@ -945,7 +945,7 @@ export default function Page() {
               {/* Left: Thumbnail + Title */}
               <div className="flex items-center gap-5 lg:w-2/5">
                 <div
-                  className="flex-shrink-0 rounded-2xl overflow-hidden shadow-sm"
+                  className="flex-shrink-0 rounded-lg overflow-hidden shadow-sm"
                   style={{
                     width: "120px",
                     height: "120px",
@@ -966,15 +966,15 @@ export default function Page() {
 
               {/* Middle: Quick stats */}
               <div className="flex flex-wrap gap-3 lg:w-1/3 lg:justify-center">
-                <div className="flex items-center gap-2 rounded-full px-3 py-1.5" style={{ background: "rgba(255,255,255,0.65)", border: "1px solid rgba(148,163,184,0.3)" }}>
+                <div className="flex items-center gap-2 rounded-md px-3 py-1.5" style={{ background: "rgba(255,255,255,0.65)", border: "1px solid rgba(148,163,184,0.3)" }}>
                   <Icons.Layers className="h-3.5 w-3.5 text-primary" />
                   <span className="text-xs font-semibold text-foreground">3 Contexts</span>
                 </div>
-                <div className="flex items-center gap-2 rounded-full px-3 py-1.5" style={{ background: "rgba(255,255,255,0.65)", border: "1px solid rgba(148,163,184,0.3)" }}>
+                <div className="flex items-center gap-2 rounded-md px-3 py-1.5" style={{ background: "rgba(255,255,255,0.65)", border: "1px solid rgba(148,163,184,0.3)" }}>
                   <Icons.CheckCircle className="h-3.5 w-3.5 text-primary" />
                   <span className="text-xs font-semibold text-foreground">1 Toolkit Live</span>
                 </div>
-                <div className="flex items-center gap-2 rounded-full px-3 py-1.5" style={{ background: "rgba(255,255,255,0.65)", border: "1px solid rgba(148,163,184,0.3)" }}>
+                <div className="flex items-center gap-2 rounded-md px-3 py-1.5" style={{ background: "rgba(255,255,255,0.65)", border: "1px solid rgba(148,163,184,0.3)" }}>
                   <Icons.Check className="h-3.5 w-3.5 text-primary" />
                   <span className="text-xs font-semibold text-foreground">EU AI Act Ready</span>
                 </div>
@@ -993,11 +993,11 @@ export default function Page() {
 
       {/* Who I Work With */}
       <section className="container mx-auto px-4 pb-6">
-        <div className="rounded-2xl p-8 sm:p-12 lg:p-16 my-6 mb-0.5" style={{ background: '#F5F0E8' }}>
+        <div className="rounded-lg p-8 sm:p-12 lg:p-16 my-6 mb-0.5" style={{ background: '#F5F0E8' }}>
           <div className="flex flex-col sm:flex-row sm:items-center gap-5 mb-8">
             {/* Decorative illustration — connected nodes */}
             <div
-              className="w-20 h-20 sm:w-24 sm:h-24 flex-shrink-0 flex items-center justify-center rounded-2xl"
+              className="w-20 h-20 sm:w-24 sm:h-24 flex-shrink-0 flex items-center justify-center rounded-lg"
               style={{ background: 'rgba(255,255,255,0.5)', border: '1px solid rgba(212,201,168,0.4)' }}
             >
               <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1086,7 +1086,7 @@ export default function Page() {
           </div>
 
           {/* Callout */}
-          <div className="mt-6 rounded-xl p-5" style={{ background: 'rgba(8,145,178,0.06)', border: '2px solid rgba(8,145,178,0.25)' }}>
+          <div className="mt-6 rounded-md p-5" style={{ background: 'rgba(8,145,178,0.06)', border: '2px solid rgba(8,145,178,0.25)' }}>
             <p className="text-sm leading-relaxed" style={{ color: '#1e293b' }}>
               I partner with organisations who understand that trust, security, and compliance are competitive advantages {"—"} not obstacles.
             </p>
@@ -1097,7 +1097,7 @@ export default function Page() {
             {["Federal Government", "EU AI Act Specialist", "BITV 2.0 Certified"].map((stat) => (
               <span
                 key={stat}
-                className="px-4 py-2 rounded-full text-xs font-semibold"
+                className="px-4 py-2 rounded-md text-xs font-semibold"
                 style={{ background: '#0a1628', color: '#ffffff' }}
               >
                 {stat}
@@ -1112,7 +1112,7 @@ export default function Page() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
 
           {/* Currently Available For */}
-          <div className="rounded-2xl p-8 flex flex-col justify-center" style={{ background: '#f9f6f0' }}>
+          <div className="rounded-lg p-8 flex flex-col justify-center" style={{ background: '#f9f6f0' }}>
                 <h2 className="text-xl sm:text-2xl font-bold mb-6 text-center" style={{ color: '#0a1628' }}>
               Currently available for
             </h2>
@@ -1120,7 +1120,7 @@ export default function Page() {
               {["AI Governance", "Discovery Lead", "Accessibility Specialist", "Regulated Industries"].map((tag) => (
                 <span
                 key={tag}
-                className="px-4 py-2 rounded-full text-sm font-medium"
+                className="px-4 py-2 rounded-md text-sm font-medium"
                 style={{ background: 'rgba(8,145,178,0.1)', color: '#0a1628', border: '1px solid rgba(8,145,178,0.25)' }}
                 >
                   {tag}
@@ -1221,7 +1221,7 @@ export default function Page() {
       <Button
         type="submit"
         disabled={bookingSubmitting}
-        className="w-full font-semibold min-h-[44px]" style={{ background: '#0891b2', color: '#ffffff', borderRadius: '12px' }}
+        className="w-full font-semibold min-h-[44px]" style={{ background: '#0891b2', color: '#ffffff', borderRadius: '6px' }}
       >
         {bookingSubmitting ? (
           <>

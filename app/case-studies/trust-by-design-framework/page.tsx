@@ -132,7 +132,7 @@ export default function TrustByDesignCaseStudy() {
               <div className="flex items-center gap-3">
                 <Button
                   size="sm"
-                  className="h-9 min-h-[44px] font-bold px-5 rounded-full"
+                  className="h-9 min-h-[44px] font-bold px-5 rounded-md"
                   style={{ background: "#0891b2", color: "#ffffff" }}
                   asChild
                 >
@@ -146,7 +146,7 @@ export default function TrustByDesignCaseStudy() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Connect on LinkedIn"
-                  className="h-9 w-9 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full"
+                  className="h-9 w-9 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-md"
                   style={{ background: "#0A66C2", color: "white" }}
                 >
                   <Icons.Linkedin className="h-4 w-4" />

@@ -2097,7 +2097,7 @@ export default function CaseStudyPageClient({ params }: { params: { slug: string
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Connect on LinkedIn"
-                  className="h-9 w-9 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full"
+                  className="h-9 w-9 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-md"
                   style={{ background: '#0A66C2', color: 'white' }}
                 >
                   <Icons.Linkedin className="h-4 w-4" />
