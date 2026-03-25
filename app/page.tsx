@@ -568,68 +568,78 @@ export default function Page() {
               </div>
             </div>
 
-            <section id="case-studies" aria-labelledby="case-studies-heading">
-              {/* Case Studies Card */}
-              <Card className="glass-card">
-                <CardContent className="p-5 sm:p-6">
-                  <h2 id="case-studies-heading" className="text-xl sm:text-2xl font-bold mb-5 text-primary">
-                    Case Studies
-                  </h2>
+           <section id="case-studies" aria-labelledby="case-studies-heading">
+  <Card className="glass-card">
+    <CardContent className="p-5 sm:p-6">
+      <h2
+        id="case-studies-heading"
+        className="text-xl sm:text-2xl font-bold mb-5 text-primary"
+      >
+        Case Studies
+      </h2>
 
-                  <div className="flex flex-col gap-4 sm:grid sm:grid-cols-2 sm:gap-4">
-                    {[
-                      {
-                        href: "/case-studies/trust-by-design-framework",
-                        title: "Trust by Design",
-                        stat: "EU AI Act",
-                        image: "/images/case-study-trust.jpg",
-                      },
-                      {
-                        href: "/case-studies/digital-drivers-licence",
-                        title: "i-Kfz Digital Services",
-                        stat: "1M+ Users",
-                        image: "/images/case-study-ikfz.jpg",
-                      },
-                      {
-                        href: "/case-studies/digital-identity-services",
-                        title: "BITV Certification",
-                        stat: "98/98 Criteria",
-                        image: "/images/case-study-bitv.jpg",
-                      },
-                      {
-                        href: "/case-studies/trustbridge",
-                        title: "TrustBridge",
-                        stat: "4 Verticals",
-                        image: "/images/case-study-trustbridge.jpg",
-                      },
-                    ].map((study, i) => (
-                      <Link key={i} href={study.href} aria-label={`View case study: ${study.title}`} className="group block">
-                        <div className="bg-white/70 hover:bg-white/80 transition-all duration-200 rounded-md border border-slate-200 hover:border-primary/50 overflow-hidden h-full">
-                          {/* Image placeholder - replace src with your uploaded image */}
-                          <div className="relative h-40 bg-slate-100 overflow-hidden">
-                            <Image
-                              src={study.image}
-                              alt={study.title}
-                              fill
-                              className="object-cover group-hover:scale-105 transition-transform duration-300"
-                            />
-                            <div className="absolute top-3 right-3 px-2 py-1 bg-white/90 rounded text-xs font-bold text-primary">
-                              {study.stat}
-                            </div>
-                          </div>
-                          <div className="p-4">
-                            <h3 className="text-base font-bold text-foreground mb-2">{study.title}</h3>
-                            <span className="text-sm font-medium text-primary group-hover:underline flex items-center gap-1">
-                              {"View Case Study"} <Icons.ArrowRight className="h-3.5 w-3.5" />
-                            </span>
-                          </div>
-                        </div>
-                      </Link>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            </section>
+      <div className="flex flex-col gap-4 sm:grid sm:grid-cols-2 sm:gap-4">
+        {[
+          {
+            href: "/case-studies/trust-by-design-framework",
+            title: "Trust by Design",
+            stat: "EU AI Act",
+            image: "/images/case-study-trust.jpg",
+          },
+          {
+            href: "/case-studies/digital-drivers-licence",
+            title: "i-Kfz Digital Services",
+            stat: "1M+ Users",
+            image: "/images/case-study-ikfz.jpg",
+          },
+          {
+            href: "/case-studies/digital-identity-services",
+            title: "BITV Certification",
+            stat: "98/98 Criteria",
+            image: "/images/case-study-bitv.jpg",
+          },
+          {
+            href: "/case-studies/trustbridge",
+            title: "TrustBridge",
+            stat: "4 Verticals",
+            image: "/images/case-study-trustbridge.jpg",
+          },
+        ].map((study) => (
+          <Link
+            key={study.href}
+            href={study.href}
+            aria-label={`View case study: ${study.title}`}
+            className="group block"
+          >
+            <div className="bg-white/70 hover:bg-white/80 transition-all duration-200 rounded-md border border-slate-200 hover:border-primary/50 overflow-hidden h-full">
+              <div className="relative h-40 bg-slate-100 overflow-hidden">
+                <Image
+                  src={study.image}
+                  alt={study.title}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute top-3 right-3 px-2 py-1 bg-white/90 rounded text-xs font-bold text-primary">
+                  {study.stat}
+                </div>
+              </div>
+
+              <div className="p-4">
+                <h3 className="text-base font-bold text-foreground mb-2">
+                  {study.title}
+                </h3>
+                <span className="text-sm font-medium text-primary group-hover:underline flex items-center gap-1">
+                  View Case Study{" "}
+                  <Icons.ArrowRight className="h-3.5 w-3.5" />
+                </span>
+              </div>
+            </div>
+          </Link>
+        ))}
+      </div>
+    </CardContent>
+  </Card>
+</section>
 
             {/* How I Got Here */}
             <div
