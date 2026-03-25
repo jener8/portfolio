@@ -640,13 +640,7 @@ export default function Page() {
 
           <div className="lg:col-span-1 space-y-6 order-4">
             <Card className="glass-card p-0 overflow-hidden" role="region" aria-labelledby="about-heading">
-              <div className="relative h-32 overflow-hidden" style={{ background: 'linear-gradient(135deg, #0a1628, #164e63)' }}>
-                <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/f8f19abf-9d96-47d9-8b32-26be54979267-4IKbuW7Ee5jefw7w9jmpaghNW5iSZy.png"
-                  alt=""
-                  className="w-full h-full object-cover"
-                />
-              </div>
+              
 
               <CardContent className="p-8 relative z-10" style={{ padding: '36px' }}>
                 <h2 id="about-heading" className="text-xl font-bold mb-6 text-primary">Expertise &amp; Capabilities</h2>
@@ -660,9 +654,7 @@ export default function Page() {
                   <p className="text-sm leading-relaxed" style={{ color: '#1e293b' }}>
                     {"Stakeholder alignment across engineering, legal, product, and executive teams \u2014 turning research into decisive action."}
                   </p>
-                  <p className="text-sm leading-relaxed" style={{ color: '#1e293b' }}>
-                    {"Trusted by federal agencies, the Bundesdruckerei ecosystem, and organisations building secure digital services."}
-                  </p>
+                  
                 </div>
               </CardContent>
             </Card>
