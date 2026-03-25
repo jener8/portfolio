@@ -19,23 +19,23 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: "Jennifer Simonds-Spellmann — Senior CX Researcher & Discovery Lead",
-  description: "Discovery programmes and mixed-method research for complex, regulated digital products — AI, accessibility, and public services.",
+  title: "Jennifer Simonds-Spellmann | Research & Discovery for Secure Digital Systems",
+  description: "Creating trust in digital systems. AI governance, accessibility compliance, and evidence-based discovery for government and regulated industries. Made in Germany.",
   generator: "v0.app",
   icons: {
     icon: "/favicon.png",
   },
   openGraph: {
-    title: "Jennifer Simonds-Spellmann — Senior CX Researcher & Discovery Lead",
-    description: "Discovery programmes and mixed-method research for complex, regulated digital products — AI, accessibility, and public services.",
+    title: "Jennifer Simonds-Spellmann | Research & Discovery for Secure Digital Systems",
+    description: "Creating trust in digital systems. AI governance, accessibility compliance, and evidence-based discovery for government and regulated industries. Made in Germany.",
     type: "website",
     url: "https://jennifersimonds.com",
     siteName: "Jennifer Simonds-Spellmann",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jennifer Simonds-Spellmann — Senior CX Researcher & Discovery Lead",
-    description: "Discovery programmes and mixed-method research for complex, regulated digital products — AI, accessibility, and public services.",
+    title: "Jennifer Simonds-Spellmann | Research & Discovery for Secure Digital Systems",
+    description: "Creating trust in digital systems. AI governance, accessibility compliance, and evidence-based discovery for government and regulated industries. Made in Germany.",
   },
 }
 
@@ -48,7 +48,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} font-sans antialiased`}>
         {/* Fixed blob background for iOS 26 Liquid Glass aesthetic */}
-        <div className="fixed inset-0 z-0 overflow-hidden" aria-hidden="true" style={{ backgroundColor: '#f5f0e8' }}>
+        <div className="fixed inset-0 z-0 overflow-hidden" aria-hidden="true" style={{ backgroundColor: '#f7f9fc' }}>
           <div className="blob blob-1" />
           <div className="blob blob-2" />
           <div className="blob blob-3" />

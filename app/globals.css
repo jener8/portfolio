@@ -4,54 +4,55 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* iOS 26 Liquid Glass - Light cream warm palette */
-  --background: #f5f0e8;
-  --foreground: #1a1200;
-  --card: rgba(255, 255, 255, 0.42);
-  --card-foreground: #1a1200;
+  /* Bundesdruckerei-inspired - Professional Navy/Teal/Cool White palette */
+  --background: #f7f9fc;
+  --foreground: #0a1628;
+  --card: rgba(255, 255, 255, 0.65);
+  --card-foreground: #0a1628;
   --popover: #ffffff;
-  --popover-foreground: #1a1200;
-  --primary: #c9960a;
-  --primary-foreground: #f5f0e8;
-  --secondary: #ede6d8;
-  --secondary-foreground: #2d2000;
-  --muted: #ede6d8;
-  --muted-foreground: #5a4a20;
-  --accent: #c9960a;
-  --accent-foreground: #1a1200;
-  --destructive: #c53030;
+  --popover-foreground: #0a1628;
+  --primary: #0891b2;
+  --primary-foreground: #ffffff;
+  --secondary: #e2e8f0;
+  --secondary-foreground: #1e293b;
+  --muted: #e2e8f0;
+  --muted-foreground: #64748b;
+  --accent: #0891b2;
+  --accent-foreground: #ffffff;
+  --destructive: #dc2626;
   --destructive-foreground: #fafafa;
-  --border: rgba(0, 0, 0, 0.08);
-  --input: #ede6d8;
-  --ring: #c9960a;
+  --border: rgba(10, 22, 40, 0.08);
+  --input: #e2e8f0;
+  --ring: #0891b2;
 
-  --hero-golden: #c9960a;
-  --hero-golden-foreground: #1a1200;
+  --hero-primary: #0891b2;
+  --hero-primary-foreground: #ffffff;
+  --hero-navy: #0a1628;
 
-  /* Glass tokens - iOS 26 frosted glass on light cream */
-  --glass: rgba(255, 255, 255, 0.42);
-  --glass-border: rgba(255, 255, 255, 0.75);
-  --glass-border-bottom: rgba(255, 255, 255, 0.3);
-  --glass-highlight: rgba(255, 255, 255, 0.9);
+  /* Glass tokens - Cool professional frosted glass */
+  --glass: rgba(255, 255, 255, 0.65);
+  --glass-border: rgba(255, 255, 255, 0.85);
+  --glass-border-bottom: rgba(255, 255, 255, 0.4);
+  --glass-highlight: rgba(255, 255, 255, 0.95);
 
-  --chart-1: #c9960a;
-  --chart-2: #1a6c7a;
-  --chart-3: #3d6a42;
-  --chart-4: #b07d2e;
-  --chart-5: #8c4a6e;
-  --chart-6: #2a7a8e;
-  --chart-7: #9e5a2a;
-  --chart-8: #3a8e5a;
+  --chart-1: #0891b2;
+  --chart-2: #0a1628;
+  --chart-3: #0e7490;
+  --chart-4: #1e293b;
+  --chart-5: #06b6d4;
+  --chart-6: #334155;
+  --chart-7: #22d3ee;
+  --chart-8: #475569;
 
-  --radius: 1rem;
-  --sidebar: #f5f0e8;
-  --sidebar-foreground: #1a1200;
-  --sidebar-primary: #c9960a;
-  --sidebar-primary-foreground: #f5f0e8;
-  --sidebar-accent: #ede6d8;
-  --sidebar-accent-foreground: #2d2000;
-  --sidebar-border: rgba(0, 0, 0, 0.08);
-  --sidebar-ring: #c9960a;
+  --radius: 0.375rem;
+  --sidebar: #f7f9fc;
+  --sidebar-foreground: #0a1628;
+  --sidebar-primary: #0891b2;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #e2e8f0;
+  --sidebar-accent-foreground: #1e293b;
+  --sidebar-border: rgba(10, 22, 40, 0.08);
+  --sidebar-ring: #0891b2;
 }
 
 @theme inline {
@@ -79,8 +80,9 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
 
-  --color-hero-golden: var(--hero-golden);
-  --color-hero-golden-foreground: var(--hero-golden-foreground);
+  --color-hero-primary: var(--hero-primary);
+  --color-hero-primary-foreground: var(--hero-primary-foreground);
+  --color-hero-navy: var(--hero-navy);
 
   --color-glass: var(--glass);
   --color-glass-border: var(--glass-border);
@@ -115,7 +117,7 @@
   body {
     @apply text-foreground;
     min-height: 100vh;
-    background-color: #f5f0e8;
+    background-color: #f7f9fc;
   }
 }
 
@@ -179,8 +181,8 @@ body.reduced .blob {
   height: 500px;
   top: -100px;
   left: -100px;
-  background: radial-gradient(circle, #d4860a, transparent 70%);
-  opacity: 0.55;
+  background: radial-gradient(circle, #0891b2, transparent 70%);
+  opacity: 0.25;
   animation: blob-drift-1 40s ease-in-out infinite;
 }
 .blob-2 {
@@ -188,8 +190,8 @@ body.reduced .blob {
   height: 400px;
   top: -50px;
   right: -80px;
-  background: radial-gradient(circle, #f5c842, transparent 70%);
-  opacity: 0.4;
+  background: radial-gradient(circle, #06b6d4, transparent 70%);
+  opacity: 0.2;
   animation: blob-drift-2 45s ease-in-out infinite;
 }
 .blob-3 {
@@ -198,8 +200,8 @@ body.reduced .blob {
   bottom: -50px;
   left: 50%;
   transform: translateX(-50%);
-  background: radial-gradient(circle, #b36b00, transparent 70%);
-  opacity: 0.3;
+  background: radial-gradient(circle, #0a1628, transparent 70%);
+  opacity: 0.15;
   animation: blob-drift-3 38s ease-in-out infinite;
 }
 
@@ -209,61 +211,61 @@ body.reduced .blob {
   display: block;
   width: 28px;
   height: 2px;
-  background: #c9960a;
+  background: #0891b2;
   margin-top: 10px;
   margin-bottom: 20px;
 }
 
-/* ---- Typography - dark text on light glass, NO text shadows ---- */
+/* ---- Typography - dark navy text on light glass, NO text shadows ---- */
 h1, h2, h3, h4, h5, h6 {
-  color: #1a1200;
+  color: #0a1628;
   text-shadow: none;
 }
 
-/* ---- Focus visible - gold ring ---- */
+/* ---- Focus visible - teal ring ---- */
 *:focus-visible {
-  outline: 2px solid rgba(201, 150, 10, 0.8);
+  outline: 2px solid rgba(8, 145, 178, 0.8);
   outline-offset: 4px;
   border-radius: 6px;
 }
 
-/* ---- Glass card utility - iOS 26 Liquid Glass ---- */
+/* ---- Glass card utility - Professional cool glass ---- */
 .glass-card {
-  backdrop-filter: blur(28px) saturate(60%) brightness(1.08);
-  -webkit-backdrop-filter: blur(28px) saturate(60%) brightness(1.08);
-  background: rgba(255, 255, 255, 0.42);
-  border-radius: 24px;
-  border: 1px solid rgba(255, 255, 255, 0.75);
-  border-bottom-color: rgba(255, 255, 255, 0.3);
-  border-right-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(24px) saturate(50%) brightness(1.02);
+  -webkit-backdrop-filter: blur(24px) saturate(50%) brightness(1.02);
+  background: rgba(255, 255, 255, 0.65);
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-bottom-color: rgba(255, 255, 255, 0.4);
+  border-right-color: rgba(255, 255, 255, 0.6);
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.9),
-    0 8px 32px rgba(0, 0, 0, 0.1);
+    inset 0 1px 0 rgba(255, 255, 255, 0.95),
+    0 4px 24px rgba(10, 22, 40, 0.08);
 }
 
 .glass-card-solid {
-  backdrop-filter: blur(28px) saturate(60%) brightness(1.05);
-  -webkit-backdrop-filter: blur(28px) saturate(60%) brightness(1.05);
-  background: rgba(255, 255, 255, 0.55);
-  border-radius: 24px;
-  border: 1px solid rgba(255, 255, 255, 0.75);
-  border-bottom-color: rgba(255, 255, 255, 0.3);
-  border-right-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(24px) saturate(50%) brightness(1.01);
+  -webkit-backdrop-filter: blur(24px) saturate(50%) brightness(1.01);
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-bottom-color: rgba(255, 255, 255, 0.4);
+  border-right-color: rgba(255, 255, 255, 0.6);
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.9),
-    0 8px 32px rgba(0, 0, 0, 0.08);
+    inset 0 1px 0 rgba(255, 255, 255, 0.95),
+    0 4px 24px rgba(10, 22, 40, 0.06);
 }
 
-/* ---- Glass navigation pill ---- */
+/* ---- Glass navigation bar ---- */
 .glass-nav {
-  background: rgba(255, 255, 255, 0.55);
-  backdrop-filter: blur(20px) saturate(70%) brightness(1.05);
-  -webkit-backdrop-filter: blur(20px) saturate(70%) brightness(1.05);
-  border-radius: 100px;
-  border: 1px solid rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(20px) saturate(50%) brightness(1.02);
+  -webkit-backdrop-filter: blur(20px) saturate(50%) brightness(1.02);
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.85);
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.8),
-    0 4px 20px rgba(0, 0, 0, 0.08);
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    0 2px 16px rgba(10, 22, 40, 0.06);
 }
 
 
