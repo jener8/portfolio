@@ -549,61 +549,53 @@ export default function Page() {
                     Case Studies
                   </h2>
 
-                  <div className="flex flex-col gap-3 sm:grid sm:grid-cols-2 sm:gap-3">
+                  <div className="flex flex-col gap-4 sm:grid sm:grid-cols-2 sm:gap-4">
                     {[
                       {
                         href: "/case-studies/trust-by-design-framework",
-                        label: "AI Governance \u00B7 EU Compliance \u00B7 Framework",
                         title: "Trust by Design",
-                        role: "Lead Researcher \u00B7 Regulatory Translation \u00B7 Governance Framework",
-                        icon: Icons.Brain,
                         stat: "EU AI Act",
-                        context: "Governance framework for high-risk AI systems meeting EU regulatory requirements",
+                        image: "/images/case-study-trust.jpg",
                       },
                       {
                         href: "/case-studies/digital-drivers-licence",
-                        label: "Government \u00B7 Critical Infrastructure \u00B7 Scale",
                         title: "i-Kfz Digital Services",
-                        role: "Research Lead \u00B7 Federal Government \u00B7 KBA",
-                        icon: Icons.Smartphone,
                         stat: "1M+ Users",
-                        context: "Research programme for Germany\u2019s most-used government digital service",
+                        image: "/images/case-study-ikfz.jpg",
                       },
                       {
                         href: "/case-studies/digital-identity-services",
-                        label: "Accessibility \u00B7 BITV 2.0 \u00B7 Compliance",
-                        title: "Full BITV Certification",
-                        role: "Accessibility Lead \u00B7 Audit \u00B7 Certification",
-                        icon: Icons.Accessibility,
+                        title: "BITV Certification",
                         stat: "98/98 Criteria",
-                        context: "Germany\u2019s first fully BITV-compliant government mobile application",
+                        image: "/images/case-study-bitv.jpg",
                       },
                       {
                         href: "/case-studies/trustbridge",
-                        label: "AI Trust \u00B7 Security \u00B7 Regulated Industries",
-                        title: "TrustBridge Framework",
-                        role: "Discovery Lead \u00B7 Health \u00B7 Finance \u00B7 Education",
-                        icon: Icons.ShieldCheck,
+                        title: "TrustBridge",
                         stat: "4 Verticals",
-                        context: "AI trust and consent frameworks for regulated industry applications",
+                        image: "/images/case-study-trustbridge.jpg",
                       },
                     ].map((study, i) => (
                       <Link key={i} href={study.href} aria-label={`View case study: ${study.title}`} className="group block">
-                        <div className="bg-white/60 hover:bg-white/70 transition-all duration-200 rounded-md border border-slate-200 hover:border-primary/50 p-6 sm:p-5 lg:p-7 flex flex-col items-center text-center h-full">
-                          <study.icon className="h-8 w-8 text-primary mb-4" />
-                          <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground mb-2">{study.label}</p>
-                          <h3 className="text-base font-bold text-foreground mb-2">{study.title}</h3>
-                          <p className="text-[11px] text-muted-foreground mb-6">{study.role}</p>
-
-                          <div className="flex-1 flex flex-col items-center justify-center mb-6">
-                            <div className="text-3xl lg:text-4xl font-bold text-primary leading-tight">{study.stat}</div>
+                        <div className="bg-white/70 hover:bg-white/80 transition-all duration-200 rounded-md border border-slate-200 hover:border-primary/50 overflow-hidden h-full">
+                          {/* Image placeholder - replace src with your uploaded image */}
+                          <div className="relative h-40 bg-slate-100 overflow-hidden">
+                            <Image
+                              src={study.image}
+                              alt={study.title}
+                              fill
+                              className="object-cover group-hover:scale-105 transition-transform duration-300"
+                            />
+                            <div className="absolute top-3 right-3 px-2 py-1 bg-white/90 rounded text-xs font-bold text-primary">
+                              {study.stat}
+                            </div>
                           </div>
-
-                          <p className="text-xs text-muted-foreground mb-5 leading-relaxed">{study.context}</p>
-
-                          <span className="text-sm font-semibold text-primary group-hover:underline mt-auto flex items-center gap-1">
-                            {"View Case Study"} <Icons.ArrowRight className="h-3.5 w-3.5" />
-                          </span>
+                          <div className="p-4">
+                            <h3 className="text-base font-bold text-foreground mb-2">{study.title}</h3>
+                            <span className="text-sm font-medium text-primary group-hover:underline flex items-center gap-1">
+                              {"View Case Study"} <Icons.ArrowRight className="h-3.5 w-3.5" />
+                            </span>
+                          </div>
                         </div>
                       </Link>
                     ))}
