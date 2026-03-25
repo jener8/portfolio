@@ -976,25 +976,7 @@ export default function Page() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
 
           {/* Currently Available For */}
-          <div className="rounded-lg p-8 flex flex-col justify-center" style={{ background: '#f9f6f0' }}>
-                <h2 className="text-xl sm:text-2xl font-bold mb-6 text-center" style={{ color: '#0a1628' }}>
-              Currently available for
-            </h2>
-            <div className="flex flex-wrap items-center justify-center gap-3 mb-6">
-              {["AI Governance", "Discovery Lead", "Accessibility Specialist", "Regulated Industries"].map((tag) => (
-                <span
-                key={tag}
-                className="px-4 py-2 rounded-md text-sm font-medium"
-                style={{ background: 'rgba(8,145,178,0.1)', color: '#0a1628', border: '1px solid rgba(8,145,178,0.25)' }}
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
-                <p className="text-sm text-center" style={{ color: '#64748b' }}>
-              Based in Berlin {"\u00B7"} Remote-first {"\u00B7"} English and German
-            </p>
-          </div>
+          
 
           {/* Booking Card */}
           <Card className="rounded-3xl shadow-sm glass-card overflow-hidden">
