@@ -688,140 +688,59 @@ export default function Page() {
               </CardContent>
             </Card>
 
-            {/* My Expertise Card */}
-            <Card id="expertise" className="glass-card scroll-mt-24" role="region" aria-labelledby="expertise-heading">
-              <CardContent className="p-6 sm:p-8">
-                <div className="mb-6">
-                  <h2 id="expertise-heading" className="text-lg font-semibold mb-1" style={{ color: '#0a1628' }}>Services</h2>
-                  <p className="text-sm" style={{ color: '#64748b' }}>What I can help you with</p>
-                </div>
-
-                <div className="grid grid-cols-1 gap-3">
-                  {[
-                    {
-                      icon: Icons.ShieldCheck,
-                      title: "AI Governance & Compliance",
-                      subtitle: "EU AI Act | High-Risk Systems | Regulatory Translation",
-                      description: "Governance frameworks for high-risk AI systems. Translating EU AI Act requirements into actionable product constraints and compliance roadmaps.",
-                      linkText: "Trust by Design Framework \u2192",
-                      linkHref: "/case-studies/trust-by-design-framework",
-                    },
-                    {
-                      icon: Icons.Search,
-                      title: "Discovery & Research",
-                      subtitle: "Evidence-Based Decision Making | Field Studies",
-                      description: "End-to-end discovery programmes delivering the evidence needed for confident product decisions in complex, regulated environments.",
-                      linkText: "i-Kfz Research Programme \u2192",
-                      linkHref: "/case-studies/digital-drivers-licence",
-                    },
-                    {
-                      icon: Icons.Accessibility,
-                      title: "Accessibility & BITV",
-                      subtitle: "BITV 2.0 | WCAG 2.1 | Inclusive Design",
-                      description: "Comprehensive accessibility programmes from audit to certification. Achieving full BITV compliance for government and public sector applications.",
-                      linkText: "BITV Certification Programme \u2192",
-                      linkHref: "/case-studies/digital-identity-services",
-                    },
-                    {
-                      icon: Icons.Handshake,
-                      title: "Stakeholder Alignment",
-                      subtitle: "Cross-Functional Coordination | Governance Workshops",
-                      description: "Aligning engineering, legal, product, and executive stakeholders around research findings. Turning evidence into decisive organisational action.",
-                      linkText: "Governance Workshop Approach \u2192",
-                      linkHref: "/case-studies/trust-by-design-framework",
-                    },
-                    {
-                      icon: Icons.Brain,
-                      title: "Regulated Industries",
-                      subtitle: "Government | Healthcare | Critical Infrastructure",
-                      description: "Research and discovery in high-stakes environments. Navigating compliance requirements, ethics boards, and sensitive user groups.",
-                      linkText: "Government Services Portfolio \u2192",
-                      linkHref: "/case-studies/trust-by-design-framework",
-                    },
-                    {
-                      icon: Icons.Accessibility,
-                      title: "Inclusive Research",
-                      subtitle: "Reaching the users others miss",
-                      description: "I\u2019ve run research with assistive technology users, elderly citizens, non-native speakers, and low-digital-literacy groups. Accessibility isn\u2019t an afterthought \u2014 it\u2019s built into my research design.",
-                      linkText: "See the BITV accessibility programme \u2192",
-                      linkHref: "/case-studies/digital-identity-services",
-                    },
-                    {
-                      icon: Icons.Users,
-                      title: "Research Ops & Scaling",
-                      subtitle: "Building research culture in teams",
-                      description: "I set up participant panels, research repositories, and insight-sharing rituals. I\u2019ve embedded research practices across 14+ product teams.",
-                      linkText: "See my research approach \u2192",
-                      linkHref: "/case-studies/digital-drivers-licence",
-                    },
-                    {
-                      icon: Icons.Sparkles,
-                      title: "Generative & Evaluative Research",
-                      subtitle: "Exploring the unknown, validating the known",
-                      description: "I run generative research to uncover new opportunities and evaluative research to test assumptions. I know when to explore and when to validate.",
-                      linkText: "See the TrustBridge discovery sprints \u2192",
-                      linkHref: "/case-studies/trustbridge",
-                    },
-                  ].map((item, index) => {
-                    const isExpanded = expandedExpertise === index
-                    const IconComponent = item.icon
-                    return (
-                      <div
-                        key={index}
-                        className="w-full rounded-md glass-card overflow-hidden transition-all duration-200 hover:shadow-md hover:shadow-[rgba(0,0,0,0.08)]"
-                      >
-                        <button
-                          type="button"
-                          aria-expanded={isExpanded}
-                          aria-controls={`expertise-content-${index}`}
-                          onClick={() => setExpandedExpertise(isExpanded ? null : index)}
-                          className="w-full text-left p-4 flex items-center justify-between cursor-pointer hover:bg-white/30 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:ring-offset-2"
-                        >
-                          <div className="flex items-center gap-3">
-                            <div className="w-10 h-10 rounded-full bg-primary/8 flex items-center justify-center flex-shrink-0">
-                              <IconComponent className="h-5 w-5 text-[#c4a052]" aria-hidden="true" />
-                            </div>
-                            <div>
-                              <h4 className="text-sm font-bold text-foreground">{item.title}</h4>
-                              <p className="text-xs text-muted-foreground">{item.subtitle}</p>
-                            </div>
-                          </div>
-                          <Icons.ChevronDown className={`h-5 w-5 text-muted-foreground transition-transform duration-300 flex-shrink-0 ml-auto ${isExpanded ? 'rotate-180' : ''}`} aria-hidden="true" />
-                        </button>
-                        <div
-                          id={`expertise-content-${index}`}
-                          className="overflow-hidden transition-all duration-300 ease-in-out"
-                          role="region"
-                          aria-hidden={!isExpanded}
-                          style={{ maxHeight: isExpanded ? '300px' : '0px', opacity: isExpanded ? 1 : 0 }}
-                        >
-                          <div className="px-4 pb-4 pt-2 border-t border-border/30">
-                            <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
-                            <Link
-                              href={item.linkHref}
-                              onClick={(e) => e.stopPropagation()}
-                              className="mt-3 inline-flex items-center text-xs font-medium text-primary hover:underline transition-colors"
-                            >
-                              {item.linkText}
-                            </Link>
-                          </div>
-                        </div>
-                      </div>
-                    )
-                  })}
-                </div>
-              </CardContent>
-            </Card>
-
             <div className="lg:hidden mt-4">{ToolsUsedCard}</div>
           </div>
 
         </div>
       </main>
 
-      {/* Inside the Work - Full-width below case studies & expertise */}
-      <section id="inside-the-work" className="container mx-auto px-4 scroll-mt-24 pt-0">
-        
+      {/* Services Section - Full width, calm grid */}
+      <section id="expertise" className="container mx-auto px-4 py-12 scroll-mt-24">
+        <div className="mb-8">
+          <h2 className="text-xl font-semibold mb-2" style={{ color: '#0a1628' }}>Services</h2>
+          <p className="text-sm max-w-lg" style={{ color: '#64748b' }}>
+            What I can help you with
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          {[
+            {
+              icon: Icons.ShieldCheck,
+              title: "AI Governance",
+              desc: "EU AI Act compliance frameworks for high-risk systems",
+            },
+            {
+              icon: Icons.Search,
+              title: "Discovery & Research",
+              desc: "Evidence-based programmes for complex decisions",
+            },
+            {
+              icon: Icons.Accessibility,
+              title: "Accessibility",
+              desc: "BITV 2.0 and WCAG 2.1 certification programmes",
+            },
+            {
+              icon: Icons.Handshake,
+              title: "Stakeholder Alignment",
+              desc: "Cross-functional coordination and governance",
+            },
+          ].map((item, index) => {
+            const IconComponent = item.icon
+            return (
+              <div
+                key={index}
+                className="p-5 bg-white border border-slate-200 rounded-md hover:border-primary/40 transition-colors"
+              >
+                <div className="w-9 h-9 rounded bg-primary/10 flex items-center justify-center mb-3">
+                  <IconComponent className="h-4 w-4 text-primary" aria-hidden="true" />
+                </div>
+                <h3 className="text-sm font-semibold mb-1" style={{ color: '#0a1628' }}>{item.title}</h3>
+                <p className="text-xs leading-relaxed" style={{ color: '#64748b' }}>{item.desc}</p>
+              </div>
+            )
+          })}
+        </div>
       </section>
 
       {/* My Process - Workshop Tools */}
