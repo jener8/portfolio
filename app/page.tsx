@@ -582,7 +582,7 @@ export default function Page() {
                           {/* Image placeholder - replace src with your uploaded image */}
                           <div className="relative h-40 bg-slate-100 overflow-hidden">
                             <Image
-                              src={study.image}
+                              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Woman%20in%20hijab%20stopped%20by%20officer-rMGcZNzH1BCNNSgvh66OZpHVMjwcqR.png"
                               alt={study.title}
                               fill
                               className="object-cover group-hover:scale-105 transition-transform duration-300"
