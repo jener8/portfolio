@@ -20,24 +20,36 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: "Jennifer Simonds-Spellmann | Research & Discovery for Secure Digital Systems",
-  description: "Creating trust in digital systems. AI governance, accessibility compliance, and evidence-based discovery for government and regulated industries. Made in Germany.",
+  description:
+    "Creating trust in digital systems. AI governance, accessibility compliance, and evidence-based discovery for government and regulated industries. Made in Germany.",
   generator: "v0.app",
   icons: {
     icon: "/favicon.png",
   },
   openGraph: {
     title: "Jennifer Simonds-Spellmann | Research & Discovery for Secure Digital Systems",
-    description: "Creating trust in digital systems. AI governance, accessibility compliance, and evidence-based discovery for government and regulated industries. Made in Germany.",
+    description:
+      "Creating trust in digital systems. AI governance, accessibility compliance, and evidence-based discovery for government and regulated industries. Made in Germany.",
     type: "website",
     url: "https://jennifersimonds.com",
     siteName: "Jennifer Simonds-Spellmann",
+    images: [
+      {
+        url: "https://jennifersimonds.com/images/profile.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Jennifer Simonds-Spellmann",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Jennifer Simonds-Spellmann | Research & Discovery for Secure Digital Systems",
-    description: "Creating trust in digital systems. AI governance, accessibility compliance, and evidence-based discovery for government and regulated industries. Made in Germany.",
+    description:
+      "Creating trust in digital systems. AI governance, accessibility compliance, and evidence-based discovery for government and regulated industries. Made in Germany.",
+    images: ["https://jennifersimonds.com/images/me.png"],
   },
-}
+};
 
 export default function RootLayout({
   children,
