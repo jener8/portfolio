@@ -334,7 +334,7 @@ export default function Page() {
           <div className="glass-nav px-4 py-2.5 flex items-center justify-between gap-3">
             <div className="flex items-center gap-3">
               <Avatar className="h-11 w-11 min-w-[44px] min-h-[44px]" style={{ background: "linear-gradient(135deg, #0891b2, #164e63)", padding: "2px" }}>
-                <AvatarImage src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/me%20gold-jqUw9JRBFNYLumFONY7dGqY8lrmEB1.jpg" alt="Jennifer Simonds-Spellmann" className="rounded-full" />
+               <AvatarImage src="/images/jennifer.png" />
                 <AvatarFallback style={{ background: "linear-gradient(135deg, #0891b2, #164e63)", color: "#ffffff" }} className="text-sm font-bold">JS</AvatarFallback>
               </Avatar>
               <div>
@@ -498,7 +498,7 @@ export default function Page() {
               <div className="flex-shrink-0 w-full md:w-auto">
                 <div className="relative w-48 h-56 md:w-56 md:h-64 rounded-md overflow-hidden shadow-lg">
                   <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202026-03-25%20at%2015.47.28-lWKANJftraPKvr85RD5V9gbSuN10yH.png"
+                    src="/images/me.png"
                     alt="Jennifer Simonds - Research & Discovery Lead"
                     fill
                     className="object-cover"
@@ -510,96 +510,9 @@ export default function Page() {
               </div>
             </div>
 
-            <section id="case-studies" aria-labelledby="case-studies-heading">
-              <Card className="glass-card">
-                <CardContent className="p-5 sm:p-6">
-                  <h2 id="case-studies-heading" className="text-xl sm:text-2xl font-bold mb-5 text-primary">
-                    Case Studies
-                  </h2>
+            
 
-                  <div className="flex flex-col gap-4 sm:grid sm:grid-cols-2 sm:gap-4">
-                    {[
-                      {
-                        href: "/case-studies/trust-by-design-framework",
-                        title: "Trust by Design",
-                        stat: "EU AI Act",
-                        image: "/images/case-study-trust.jpg",
-                      },
-                      {
-                        href: "/case-studies/digital-drivers-licence",
-                        title: "i-Kfz Digital Services",
-                        stat: "1M+ Users",
-                        image: "/images/case-study-ikfz.jpg",
-                      },
-                      {
-                        href: "/case-studies/digital-identity-services",
-                        title: "BITV Certification",
-                        stat: "98/98 Criteria",
-                        image: "/images/case-study-bitv.jpg",
-                      },
-                      {
-                        href: "/case-studies/trustbridge",
-                        title: "TrustBridge",
-                        stat: "4 Verticals",
-                        image: "/images/case-study-trustbridge.jpg",
-                      },
-                    ].map((study) => (
-                      <Link
-                        key={study.href}
-                        href={study.href}
-                        aria-label={`View case study: ${study.title}`}
-                        className="group block"
-                      >
-                        <div className="bg-white/70 hover:bg-white/80 transition-all duration-200 rounded-md border border-slate-200 hover:border-primary/50 overflow-hidden h-full">
-                          <div className="relative h-40 bg-slate-100 overflow-hidden">
-                            <Image
-                              src={study.image}
-                              alt={study.title}
-                              fill
-                              className="object-cover group-hover:scale-105 transition-transform duration-300"
-                            />
-                            <div className="absolute top-3 right-3 px-2 py-1 bg-white/90 rounded text-xs font-bold text-primary">
-                              {study.stat}
-                            </div>
-                          </div>
-
-                          <div className="p-4">
-                            <h3 className="text-base font-bold text-foreground mb-2">
-                              {study.title}
-                            </h3>
-                            <span className="text-sm font-medium text-primary group-hover:underline flex items-center gap-1">
-                              View Case Study <Icons.ArrowRight className="h-3.5 w-3.5" />
-                            </span>
-                          </div>
-                        </div>
-                      </Link>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            </section>
-
-            <div
-              id="about"
-              className="mt-4 rounded-md p-6 sm:p-8 scroll-mt-24"
-              style={{ background: "#f1f5f9", border: "1px solid rgba(148,163,184,0.3)" }}
-            >
-              <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5">
-                <img
-                  src="/images/jennifer-avatar.jpg"
-                  alt="Jennifer Simonds"
-                  className="w-[88px] h-[88px] rounded-full object-cover flex-shrink-0"
-                />
-                <div>
-                  <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground mb-3">
-                    How I got here
-                  </p>
-                  <p className="text-sm leading-relaxed" style={{ color: "#1e293b" }}>
-                    {"With over a decade of experience in research and discovery, I’ve led programmes across government, critical infrastructure, and regulated industries. Based in Berlin, I specialise in translating complex regulatory requirements into actionable product strategy — from EU AI Act compliance to BITV accessibility certification."}
-                  </p>
-                </div>
-              </div>
-            </div>
+            
 
             <div className="hidden lg:block mt-4">{ToolsUsedCard}</div>
           </div>
@@ -626,7 +539,99 @@ export default function Page() {
           </div>
         </div>
       </main>
+      <section id="case-studies" aria-labelledby="case-studies-heading" className="container mx-auto px-4 py-6">
+  <Card className="glass-card w-full">
+    <CardContent className="p-5 sm:p-6">
+      <h2 id="case-studies-heading" className="text-xl sm:text-2xl font-bold mb-5 text-primary">
+        Case Studies
+      </h2>
 
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
+        {[
+          {
+            href: "/case-studies/trust-by-design-framework",
+            title: "Trust by Design",
+            stat: "EU AI Act",
+            image: "/images/AI meeting.png",
+          },
+          {
+            href: "/case-studies/digital-drivers-licence",
+            title: "i-Kfz Digital Services",
+            stat: "1M+ Users",
+            image: "/images/ikfz.png",
+          },
+          {
+            href: "/case-studies/digital-identity-services",
+            title: "BITV Certification",
+            stat: "98/98 Criteria",
+            image: "/images/cardriver.png",
+          },
+          {
+            href: "/case-studies/trustbridge",
+            title: "TrustBridge",
+            stat: "4 Verticals",
+            image: "/images/phones.png",
+          },
+        ].map((study) => (
+          <Link
+            key={study.href}
+            href={study.href}
+            aria-label={`View case study: ${study.title}`}
+            className="group block"
+          >
+            <div className="bg-white/70 hover:bg-white/80 transition-all duration-200 rounded-md border border-slate-200 hover:border-primary/50 overflow-hidden h-full">
+              <div className="relative h-40 bg-slate-100 overflow-hidden">
+                <Image
+                  src={study.image}
+                  alt={study.title}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute top-3 right-3 px-2 py-1 bg-white/90 rounded text-xs font-bold text-primary">
+                  {study.stat}
+                </div>
+              </div>
+
+              <div className="p-4">
+                <h3 className="text-base font-bold text-foreground mb-2">
+                  {study.title}
+                </h3>
+                <span className="text-sm font-medium text-primary group-hover:underline flex items-center gap-1">
+                  View Case Study <Icons.ArrowRight className="h-3.5 w-3.5" />
+                </span>
+              </div>
+            </div>
+          </Link>
+        ))}
+      </div>
+    </CardContent>
+  </Card>
+</section>
+<section id="about" className="container mx-auto px-4 py-4 scroll-mt-24">
+  <div
+    className="rounded-md p-6 sm:p-8"
+    style={{ background: "#f1f5f9", border: "1px solid rgba(148,163,184,0.3)" }}
+  >
+    <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5">
+      <img
+        src="/images/me.png"
+        alt="Jennifer Simonds"
+        className="w-[88px] h-[88px] rounded-full object-cover flex-shrink-0"
+      />
+      <div>
+        <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground mb-3">
+          How I got here
+        </p>
+        <p className="text-sm leading-relaxed" style={{ color: "#1e293b" }}>
+          With over a decade of experience in research and discovery, I’ve led programmes across government,
+          critical infrastructure, and regulated industries. Based in Berlin, I specialise in translating
+          complex regulatory requirements into actionable product strategy — from EU AI Act compliance to
+          BITV accessibility certification.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
       <section id="tools" className="container mx-auto px-4 py-16 scroll-mt-24">
         <div className="mb-10">
           <h2 className="text-2xl font-bold mb-2" style={{ color: "#0a1628" }}>My Process</h2>
@@ -669,21 +674,40 @@ export default function Page() {
         </div>
 
         <Link href="/case-studies/workshop-tools" className="group block">
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 p-5 bg-slate-50 border border-slate-200 rounded-md hover:border-primary/40 transition-colors">
-            <div className="flex items-center gap-4">
-              <div className="w-10 h-10 flex items-center justify-center rounded bg-primary/10">
-                <Icons.Layers className="h-5 w-5 text-primary" />
-              </div>
-              <div>
-                <h3 className="text-sm font-bold" style={{ color: "#0a1628" }}>Workshop Toolkit</h3>
-                <p className="text-xs" style={{ color: "#64748b" }}>Explore the facilitation artefacts I use in practice</p>
-              </div>
-            </div>
-            <span className="text-sm font-semibold text-primary group-hover:underline flex items-center gap-1.5">
-              View toolkit <Icons.ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 p-5 bg-slate-50 border border-slate-200 rounded-md hover:border-primary/40 transition-colors">
+    <div className="flex items-start gap-4">
+      <div className="w-10 h-10 flex items-center justify-center rounded bg-primary/10 flex-shrink-0">
+        <Icons.Layers className="h-5 w-5 text-primary" />
+      </div>
+
+      <div>
+        <h3 className="text-sm font-bold mb-1" style={{ color: "#0a1628" }}>
+          Research &amp; Co-Creation Toolkit
+        </h3>
+
+        <p className="text-xs sm:text-sm mb-3" style={{ color: "#64748b" }}>
+          Qualitative, quantitative, and mixed-method approaches for discovery, testing, and evidence-based decision-making.
+        </p>
+
+        <div className="flex flex-wrap gap-2">
+          {["Co-creation", "Interviews", "Surveys", "Mixed Methods", "Usability Testing"].map((tag) => (
+            <span
+              key={tag}
+              className="text-[11px] font-medium px-2.5 py-1 rounded bg-white border border-slate-200"
+              style={{ color: "#64748b" }}
+            >
+              {tag}
             </span>
-          </div>
-        </Link>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <span className="text-sm font-semibold text-primary group-hover:underline flex items-center gap-1.5 whitespace-nowrap">
+      Explore methods <Icons.ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+    </span>
+  </div>
+</Link>
       </section>
 
       <section className="container mx-auto px-4 py-12">
