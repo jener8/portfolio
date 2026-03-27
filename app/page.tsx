@@ -505,8 +505,8 @@ export default function Page() {
                     priority
                   />
                 </div>
-                <p className="text-center mt-3 text-sm font-medium" style={{ color: "#0a1628" }}>Jennifer Simonds</p>
-                <p className="text-center text-xs" style={{ color: "#64748b" }}>Research & Discovery Lead</p>
+                <p className="mt-3 text-sm font-medium text-left md:text-center" style={{ color: "#0a1628" }}>Jennifer Simonds</p>
+                <p className="text-xs text-left md:text-center" style={{ color: "#64748b" }}>Research & Discovery Lead</p>
               </div>
             </div>
 
